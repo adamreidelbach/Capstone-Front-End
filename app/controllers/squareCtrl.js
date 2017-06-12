@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('SquareCtrl', function(/*$scope, DataFactory, $location*/) {
+app.controller('SquareCtrl', function(DataFactory/*$scope, DataFactory, $location*/) {
 
     $("#userSubmit").click(function () {
         if ($("#userText").val() === "git init") {
@@ -26,6 +26,8 @@ app.controller('SquareCtrl', function(/*$scope, DataFactory, $location*/) {
         //     console.log("error");
         // }
     });
+
+    DataFactory.getInstructions();
 
     //regular expression
 

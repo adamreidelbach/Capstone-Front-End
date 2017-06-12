@@ -1,0 +1,19 @@
+{
+  "sections": [
+    {
+      "title": "Getting Started Tutorial",
+      "artist": "Mayer Hawthorne",
+      "instructions": "How Do You Do"
+    },
+    {
+      "title": "Medicine",
+      "artist": "Grace Potter",
+      "album": "Grace Potter and the Nocturnals"
+    },
+    {
+      "title": "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator"
+    }
+  ]
+}
