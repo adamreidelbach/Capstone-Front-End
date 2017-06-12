@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terminal</title>
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="TerminalApp">
+    <div ng-include="'partials/navbar.html'"></div>
+
+    <div ng-view></div>
+
+    <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+
+    <script type="text/javascript" src="app/app.js"></script>
+<!-- <script type="text/javascript" src="app/values/fb-creds.js"></script>-->
+
+    <!--Factories-->
+<!--     <script type="text/javascript" src="./app/factories/authFactory.js"></script>
+    <script type="text/javascript" src="./app/factories/dataFactory.js"></script> -->
+
+    <!--Controllers-->
+    <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/squareCtrl.js"></script>
+</body>
+</html>
