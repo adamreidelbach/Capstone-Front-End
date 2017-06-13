@@ -1,19 +1,17 @@
 {
-  "sections": [
+  "exercises": [
     {
-      "title": "Getting Started Tutorial",
-      "artist": "Mayer Hawthorne",
-      "instructions": "How Do You Do"
-    },
-    {
-      "title": "Medicine",
-      "artist": "Grace Potter",
-      "album": "Grace Potter and the Nocturnals"
-    },
-    {
-      "title": "Legs",
-      "artist": "ZZ Top",
-      "album": "Eliminator"
+      "tutorial1" : {
+        "title": "Getting Started Tutorial",
+        "steps": {
+          "step1": {
+            "learn": "When you first begin working on a new project, you will want to get your basic file structure put in place. I have taken the liberty of creating a few essential files and directories (or folders). We are currently inside of a directory called myProject which contains all of these necessary files to get us started. In this tutorial, I have created a terminal emulator. This the area where we will enter all of our commands. These commands often seem to have strange names, but they are always shorthand for something.",
+            "instructions": "In this case, we want to see a “list” of all of our fies. To do so, after the $ in the terminal, type in type in “ls” followed by enter. Notice, “ls” is just a shorter way of writing list.",
+            "additional": "Notice in the terminal is now a list of all the files inside of the myProject directory (folder). Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
+            "terminal": "README.md, css, index.html, javascripts"
+          }
+        }
+      }
     }
   ]
 }

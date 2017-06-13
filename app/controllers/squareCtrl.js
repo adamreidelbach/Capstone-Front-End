@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('SquareCtrl', function(DataFactory/*$scope, DataFactory, $location*/) {
+app.controller('SquareCtrl', function(DataFactory, $scope) {
 
     $("#userSubmit").click(function () {
         if ($("#userText").val() === "git init") {
@@ -27,26 +27,17 @@ app.controller('SquareCtrl', function(DataFactory/*$scope, DataFactory, $locatio
         // }
     });
 
-    DataFactory.getInstructions();
+    $scope.getInstructions = function () {
+        // get the task list
+        DataFactory.getInstructions()
+        .then( (instructions) => {
+          $scope.instructions = instructions;
+          console.log("instructions", $scope.instructions);
+        });
+    };
+
+    $scope.getInstructions();
 
     //regular expression
 
 });
-
-
-// app.controller('AddTaskCtrl', function($scope, DataFactory, $location) {
-
-//   $scope.newTask = {
-//     isCompleted: false
-//   };
-
-//   $scope.submitTask = function () {
-//     // stuff goes here
-//     console.log("$scope.task", $scope.task);
-//     DataFactory.addTask($scope.task)
-//     .then( (data) => {
-//         $location.path("/");
-//     });
-//   };
-
-// });

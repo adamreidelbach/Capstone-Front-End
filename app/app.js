@@ -1,6 +1,6 @@
 "use strict";
 
-const app = angular.module('TerminalApp', ["ngRoute"]);
+const app = angular.module('GitApp', ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider.
