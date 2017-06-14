@@ -1,3 +1,10 @@
+textarea {
+  margin-top: 10px;
+  height: 350px;
+  background-color: black;
+  color: white;
+}
+
 .box {
     height: 100px;
     width: 100px;
@@ -32,10 +39,6 @@
     border: 2px solid red;
 }
 
-#instructions {
-    border: 1px solid black;
-}
-
 .learnHeader {
     background-color: lightgrey;
 }
@@ -56,6 +59,27 @@
 
 #error {
     color: red;
+}
+
+#visualize {
+    margin-top: 10px;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+#help {
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+     -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2em;
 }
 
 // /* The console container element */

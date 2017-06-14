@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('SquareCtrl', function(DataFactory, $scope) {
+app.controller('TestingCtrl', function(DataFactory, $scope) {
 
     $("#userSubmit").click(function () {
         if ($("#userText").val() === "git init") {
@@ -27,17 +27,14 @@ app.controller('SquareCtrl', function(DataFactory, $scope) {
         // }
     });
 
-    $scope.getInstructions = function () {
-        // get the task list
-        DataFactory.getInstructions()
+    $scope.getTestingInstructions = function () {
+        DataFactory.getTestingInstructions()
         .then( (instructions) => {
           $scope.instructions = instructions;
-          console.log("instructions", $scope.instructions);
+          console.log("Testing Instructions", $scope.instructions);
         });
     };
 
-    $scope.getInstructions();
-
-    //regular expression
+    $scope.getTestingInstructions();
 
 });

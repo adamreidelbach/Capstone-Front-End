@@ -1,0 +1,45 @@
+<div ng-controller="TestingCtrl">
+
+    <div class="row">
+        <div id="instructions" class="col s4">
+            <div class="learnHeader">
+                <h4><i class="material-icons">library_books</i> Learn</h4>
+            </div>
+            <div class="learnText">
+                <p>In this exercise, we will learn the one way street that is workign with your local files and files stored in GitHub.</p>
+            </div>
+
+            <div class="instHeader">
+                <h4><i class="material-icons">subject</i> Instructions</h4>
+            </div>
+            <div class="instText">
+                <p>1) Let's first start by making a branch off of your master. Type in </p>
+                <p class="commands">git checkout -b myBranch</p>
+                <p> to create a new branch and immediately begin working in that new branch</p>
+            </div>
+        </div>
+
+        <div id="terminal" class="col s4">
+            <textarea rows="4" cols="35" id="userText"></textarea>
+            <button type="button" id="userSubmit">Test</button>
+            <div id="error"></div>
+        </div>
+
+        <div id="visualize" class="col s4">
+            <img class="github" src="images/github.png">
+
+            <div class="box1Label">GitHub Master</div>
+            <div class="box" id="box1"></div>
+
+            <div class="box2Label">GitHub Branch</div>
+            <div class="box" id="box2"></div>
+
+            <div class="box3Label">Local Master</div>
+            <div class="box" id="box3"></div>
+
+            <div class="box4Label">Local Branch</div>
+            <div class="box" id="box4"></div>
+        </div>
+    </div>
+
+</div>
