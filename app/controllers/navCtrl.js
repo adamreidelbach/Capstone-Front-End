@@ -1,17 +1,13 @@
 "use strict";
 
-app.controller('NavCtrl', function () {
+app.controller('NavCtrl', function (DataFactory, $rootScope, $scope) {
 
-    // let getTutorial = (whichOne) => {
-    //     console.log("route", $routeParams.id);
-    //     DataFactory.getTutorial(whichOne)
-    //     .then( (instructions) => {
-    //       $scope.instructions = instructions;
-    //       console.log("Nav Tutorial", instructions);
-    //       return instructions;
-    //     });
-    // };
+    console.log("root scope in nav", $rootScope);
 
-    // getTutorial($routeParams.id);
+        DataFactory.getTitle()
+        .then( (instructions) => {
+          console.log("instructions in nav", instructions.data);
+        });
+
 
 });

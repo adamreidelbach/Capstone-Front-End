@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams) {
+app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepFactory, $rootScope) {
 
     $("#userSubmit").click(function () {
         if ($("#userText").val() === "git init") {
@@ -38,6 +38,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams) {
         // }
     });
 
+    console.log("route params", $routeParams.id);
+
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
         DataFactory.getTutorial(whichOne)
@@ -45,16 +47,20 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams) {
           $scope.instructions = instructions;
           console.log("Got the tutorial", instructions);
           $scope.getStep(0, $scope.instructions);
+          StepFactory.setStepsNum(instructions.steps.length);
+          console.log("steps", instructions.steps.length);
+          $rootScope.steps = instructions.steps.length;
           return instructions;
         });
     };
 
     getTutorial($routeParams.id);
 
-    $scope.stepCounter = 0;
+    $scope.stepCounter = StepFactory.pageNum;
 
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
+        $rootScope.page = index;
     };
 
     $scope.nextStep = () => {
