@@ -1,0 +1,54 @@
+<div ng-controller="ExerciseCtrl">
+    <div class="row">
+        <div id="instructText" class="col s4">
+            <div class="learnHeader">
+                <h4><i class="material-icons">library_books</i> Learn</h4>
+            </div>
+            <div class="learnText">
+    <!--                 <div ng-repeat="step in instructions.steps">
+                    <p>{{step.stepNum}}</p>
+    <!--              <div ng-repeat="item in step.learn">{{item}}</div>
+                </div> -->
+                <div>
+                    <p>{{currentStep.learn}}</p>
+                </div>
+            </div>
+
+            <div class="instHeader">
+                <h4><i class="material-icons">subject</i> Instructions</h4>
+            </div>
+            <div class="instText">
+                <input type="checkbox" id="test5" />
+                <label for="test5">{{currentStep.instructions}}</label>
+            </div>
+        </div>
+
+        <div id="terminal" class="col s4">
+            <textarea rows="4" cols="35" id="userText"></textarea>
+            <div id="terminalText"></div>
+            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action" ng-click="nextStep()">Next Page
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+        <div id="visualize" class="col s4">
+            <img class="github" src="images/github.png">
+
+            <div class="box1Label">GitHub Master</div>
+            <div class="box" id="box1"></div>
+
+            <div class="box2Label">GitHub Branch</div>
+            <div class="box" id="box2"></div>
+
+            <div class="box3Label">Local Master</div>
+            <div class="box" id="box3"></div>
+
+            <div class="box4Label">Local Branch</div>
+            <div class="box" id="box4"></div>
+        </div>
+    </div>
+</div>
+
