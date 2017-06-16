@@ -1,21 +1,17 @@
 "use strict";
 
-app.controller('NavCtrl', function (/*$scope, AuthFactory, $window*/) {
+app.controller('NavCtrl', function () {
 
-  // Log Button Function
+    // let getTutorial = (whichOne) => {
+    //     console.log("route", $routeParams.id);
+    //     DataFactory.getTutorial(whichOne)
+    //     .then( (instructions) => {
+    //       $scope.instructions = instructions;
+    //       console.log("Nav Tutorial", instructions);
+    //       return instructions;
+    //     });
+    // };
 
-  // $scope.isLoggedIn = false;
-
-  // firebase.auth().onAuthStateChanged(function (user) {
-  //   if (user) {
-  //     $scope.isLoggedIn = true;
-  //     console.log("currentUser logged in", user, $scope.isLoggedIn);
-  //     $scope.$apply();
-  //   } else {
-  //     $scope.isLoggedIn = false;
-  //     console.log("currentUser logged in", $scope.isLoggedIn);
-  //     $window.location.href = "#/login";
-  //   }
-  // });
+    // getTutorial($routeParams.id);
 
 });

@@ -1,28 +1,37 @@
-<div ng-controller="TestingCtrl">
-
+<div ng-controller="ExerciseCtrl">
     <div class="row">
-        <div id="instructions" class="col s4">
+        <div id="instructText" class="col s4">
             <div class="learnHeader">
                 <h4><i class="material-icons">library_books</i> Learn</h4>
             </div>
             <div class="learnText">
-                <p>In this exercise, we will learn the one way street that is workign with your local files and files stored in GitHub.</p>
+    <!--                 <div ng-repeat="step in instructions.steps">
+                    <p>{{step.stepNum}}</p>
+    <!--              <div ng-repeat="item in step.learn">{{item}}</div>
+                </div> -->
+                <div>
+                    <p>{{currentStep.learn}}</p>
+                </div>
             </div>
 
             <div class="instHeader">
                 <h4><i class="material-icons">subject</i> Instructions</h4>
             </div>
             <div class="instText">
-                <p>1) Let's first start by making a branch off of your master. Type in </p>
-                <p class="commands">git checkout -b myBranch</p>
-                <p> to create a new branch and immediately begin working in that new branch</p>
+                <input type="checkbox" id="test5" />
+                <label for="test5">{{currentStep.instructions}}</label>
             </div>
         </div>
 
         <div id="terminal" class="col s4">
             <textarea rows="4" cols="35" id="userText"></textarea>
-            <button type="button" id="userSubmit">Test</button>
-            <div id="error"></div>
+            <div id="terminalText"></div>
+            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action" ng-click="nextStep()">Next Page
+                <i class="material-icons right">send</i>
+            </button>
         </div>
 
         <div id="visualize" class="col s4">
@@ -41,5 +50,5 @@
             <div class="box" id="box4"></div>
         </div>
     </div>
-
 </div>
+

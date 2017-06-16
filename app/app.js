@@ -4,9 +4,13 @@ const app = angular.module('GitApp', ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider.
-    when('/', {
-        templateUrl: 'partials/testingcode.html',
-        controller: 'TestingCtrl'
+    when(`/`, {
+        templateUrl: 'partials/splash.html',
+        controller: 'SplashCtrl'
+    }).
+    when('/exercises/:id', {
+        templateUrl: 'partials/exercises.html',
+        controller: 'ExerciseCtrl'
     }).
     otherwise('/');
 
