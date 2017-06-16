@@ -68,5 +68,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
+    $scope.backStep = () => {
+        $scope.stepCounter--;
+        $scope.getStep($scope.stepCounter, $scope.instructions);
+    };
+
 
 });
