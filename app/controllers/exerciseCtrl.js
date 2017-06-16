@@ -5,11 +5,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $("#userSubmit").click(function () {
         if ($("#userText").val() === "git init") {
             $("#box1").addClass("highlight");
-            console.log("test");
+            $("#test5").prop("checked", true);
         }
         if ($("#userText").val() === "git checkout -b myBranch") {
             $("#box4").addClass("highlight");
-            console.log("git checkout -b myBranch");
+            $("#test5").prop("checked", true);
             $("#error").hide();
         }
         if ($("#userText").val() === "git checkout -b JohnStyling") {
@@ -28,14 +28,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
         if ($("#userText").val() === "git add . git commit -m") {
             $("#test5").prop("checked", true);
-            $scope.counter++;
-            console.log("counter", $scope.counter);
         }
-        // else {
-        //     $("#error").show();
-        //     $("#error").html("Oops, try again");
-        //     console.log("error");
-        // }
     });
 
     console.log("route params", $routeParams.id);
@@ -70,8 +63,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.backStep = () => {
         $scope.stepCounter--;
+
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
-
 
 });
