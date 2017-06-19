@@ -58,6 +58,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
+    // if there is not more than one instruction, hide the empty div
     $scope.showMoreInstructions = (currentInstructions) => {
         if (currentInstructions.command2 === "") {
             $scope.secondInst = false;
@@ -65,6 +66,12 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.secondInst = true;
         }
      };
+
+     // adding and remove classes for the visualization area
+    $scope.styling = (previousBox, newBox) => {
+        previousBox.removeClass("highlight");
+        newBox.addClass("highlight");
+    };
 
     $scope.getStyling = (currentStep) => {
         switch($scope.userAnswer) {
@@ -96,45 +103,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
-    $scope.styling = (previousBox, newBox) => {
-        previousBox.removeClass("highlight");
-        newBox.addClass("highlight");
-    };
-
      // if statement for ensuring users complete answers in the appropriate order
      // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
      //    alert("What the hell bro!");
      // };
-
-
-
-        // $("#userSubmit").click(function () {
-    //     if ($("#userText").val() === "git init") {
-    //         $("#box1").addClass("highlight");
-    //         $("#test5").prop("checked", true);
-    //     }
-    //     if ($("#userText").val() === "git checkout -b myBranch") {
-    //         $("#box4").addClass("highlight");
-    //         $("#test5").prop("checked", true);
-    //         $("#error").hide();
-    //     }
-    //     if ($("#userText").val() === "git checkout -b JohnStyling") {
-    //         $("#box4").addClass("highlight");
-    //         $("#terminalText").append("terminal text");
-    //         $(".part2").removeClass("hide");
-    //         $("#test5").prop("checked", true);
-    //     }
-    //     if ($("#userText").val() === "git push origin") {
-    //         $("#box3").addClass("highlight");
-    //         console.log("git push origin");
-    //     }
-    //     if ($("#userText").val() === "git pull master") {
-    //         $("#box2").addClass("highlight");
-    //         console.log("git pull master");
-    //     }
-    //     if ($("#userText").val() === "git add . git commit -m") {
-    //         $("#test5").prop("checked", true);
-    //     }
-    // });
 
 });
