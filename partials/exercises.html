@@ -1,54 +1,70 @@
-<div ng-controller="ExerciseCtrl">
-    <div class="row">
-        <div id="instructText" class="col s4">
-            <div class="learnHeader">
-                <h4><i class="material-icons">library_books</i> Learn</h4>
-            </div>
-            <div class="learnText">
-    <!--                 <div ng-repeat="step in instructions.steps">
-                    <p>{{step.stepNum}}</p>
-    <!--              <div ng-repeat="item in step.learn">{{item}}</div>
-                </div> -->
-                <div>
-                    <p>{{currentStep.learn}}</p>
-                </div>
-            </div>
 
-            <div class="instHeader">
-                <h4><i class="material-icons">subject</i> Instructions</h4>
-            </div>
-            <div class="instText">
-                <input type="checkbox" id="test5" />
-                <label for="test5">{{currentStep.instructions}}</label>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Get Git</a>
+    <a href="#" class="brand-logo center">{{instructions.name}} - {{instructions.title}}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li id="help">?
+        <span class="animate-show">
+          <a class="showHint">{{currentStep.hint}}</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+    <div id="instructText" class="col s4">
+        <div class="learnHeader">
+            <h4><i class="material-icons">library_books</i> Learn</h4>
+        </div>
+        <div class="learnText">
+            <div>
+                <p>{{currentStep.learn}}</p>
             </div>
         </div>
 
-        <div id="terminal" class="col s4">
-            <textarea rows="4" cols="35" id="userText"></textarea>
-            <div id="terminalText"></div>
-            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-            </button>
-            <button class="btn waves-effect waves-light" id="userSubmit" type="submit" name="action" ng-click="nextStep()">Next Page
-                <i class="material-icons right">send</i>
-            </button>
+        <div class="instHeader">
+            <h4><i class="material-icons">subject</i> Instructions</h4>
         </div>
-
-        <div id="visualize" class="col s4">
-            <img class="github" src="images/github.png">
-
-            <div class="box1Label">GitHub Master</div>
-            <div class="box" id="box1"></div>
-
-            <div class="box2Label">GitHub Branch</div>
-            <div class="box" id="box2"></div>
-
-            <div class="box3Label">Local Master</div>
-            <div class="box" id="box3"></div>
-
-            <div class="box4Label">Local Branch</div>
-            <div class="box" id="box4"></div>
+        <div class="instText">
+            <input type="checkbox" id="test5" />
+            <label for="test5">{{currentStep.instructions}}</label>
         </div>
     </div>
+
+    <div id="terminal" class="col s4">
+        <textarea rows="4" cols="35" id="userText"></textarea>
+        <button id="userSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+    <div id="visualize" class="col s4">
+        <img class="github" src="images/github.png">
+
+        <div class="box1Label">GitHub Master</div>
+        <div class="box" id="box1"></div>
+
+        <div class="box2Label">GitHub Branch</div>
+        <div class="box" id="box2"></div>
+
+        <div class="box3Label">Local Master</div>
+        <div class="box" id="box3"></div>
+
+        <div class="box4Label">Local Branch</div>
+        <div class="box" id="box4"></div>
+    </div>
 </div>
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="row">
+        <a class="grey-text text-lighten-4 col s4" ng-click="backStep()">Back</a>
+        <a class="grey-text text-lighten-4 col s4" href="#!">{{page + 1}} / {{steps}}</a>
+        <a class="grey-text text-lighten-4 col s4" ng-click="nextStep()">Next</a>
+        </button>
+      </div>
+    </div>
+</footer>
 
