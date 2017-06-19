@@ -23,8 +23,7 @@
                     "instructions": "To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Go ahead and add add and commit your work. Don't forget a log message when you commit",
                     "terminal": "2 files changed, 2 insertions(+)",
                     "hint": "git add git commit -m",
-                    "answer": "git init",
-                    "answer2": ["git add .", "git commit -m 'hi there'"]
+                    "answer": ["git add .", "git commit -m \"hi there\""]
                 },
                 {
                     "stepNum": 2,
