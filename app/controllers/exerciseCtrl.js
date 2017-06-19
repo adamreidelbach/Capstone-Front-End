@@ -22,11 +22,18 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
+        //pass currentStep to showSecondInst to hide or show second instructions
+        $scope.showMoreInstructions($scope.currentStep);
     };
 
     $scope.nextStep = () => {
         $scope.stepCounter++;
         $scope.getStep($scope.stepCounter, $scope.instructions);
+        $scope.userAnswer = "";
+        $("#inst1").prop("checked", false);
+        $("#inst2").prop("checked", false);
+        $("#appendText").html("");
+        //eventually will need to keep all previous code and add a line break
     };
 
     $scope.backStep = () => {
@@ -34,14 +41,36 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
+    $scope.getAnswer = () => {
+        console.log("do we have currentStep", $scope.currentStep.answer1, $scope.currentStep.answer2);
+        console.log("append", $scope.currentStep.append);
+        if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
+            console.log("CORRECT");
+            $("#inst1").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append);
+            $scope.userAnswer = "";
+        } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
+            console.log("CORRECT");
+            $("#inst2").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append);
+        } else {
+            console.log("INCORRECT");
+            $scope.userAnswer = "";
+        }
+    };
 
-    // /n
+     $scope.showMoreInstructions = (currentInstructions) => {
+        if (currentInstructions.command2 === "") {
+            $scope.secondInst = false;
+        } else {
+            $scope.secondInst = true;
+        }
+     };
 
-    // if (currentStep.answer.includes(answer)) {
-    //     console.log("correct asnwer");
-    // };
-
-
+     // //if statement for ensuring users complete answers in the appropriate order
+     // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
+     //    alert("What the hell bro!");
+     // };
 
         // $("#userSubmit").click(function () {
     //     if ($("#userText").val() === "git init") {

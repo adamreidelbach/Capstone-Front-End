@@ -28,17 +28,21 @@
             <h4><i class="material-icons">subject</i> Instructions</h4>
         </div>
         <div class="instText">
-            <input type="checkbox" id="test5" />
-            <label for="test5">{{currentStep.instructions}}</label>
+            <input type="checkbox" id="inst1" />
+            <label for="inst1">{{currentStep.instructions1}}</label>
+            <div class="command">{{currentStep.command1}}</div>
+            <input type="checkbox" id="inst2" />
+            <label for="inst2" ng-show="secondInst">{{currentStep.instructions2}}</label>
+            <div class="command" ng-show="secondInst">{{currentStep.command2}}</div>
+
+            <div id="appendText"></div>
         </div>
     </div>
 
-    <div id="terminal" class="col s4">
-        <textarea rows="4" cols="35" id="userText"></textarea>
-        <button id="userSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-        </button>
-    </div>
+    <form ng-submit="getAnswer()" id="terminal" class="col s4">
+        <h4>Terminal</h4>
+        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
+    </form>
 
     <div id="visualize" class="col s4">
         <img class="github" src="images/github.png">
