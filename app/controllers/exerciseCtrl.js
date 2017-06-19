@@ -66,28 +66,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
      };
 
-    // $scope.getAnswer = (currentStep) => {
-    //     console.log("do we have currentStep", $scope.currentStep.answer);
-    //     console.log("append", $scope.currentStep.append);
-    //     let answerData = $scope.currentStep.answer;
-    //     let userAnswer = $scope.userAnswer;
-    //     if (answerData[0].match(userAnswer) !== null) {
-    //         console.log("CORRECT");
-    //         $("#test5").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append);
-    //     } else {
-    //         console.log("INCORRECT");
-    //         $scope.userAnswer = "";
-    //     }
-    // };
-
-
-    // $scope.getAnswer($scope.currentStep);
-
-    // if ($scope.currentStep.answer.includes(answer)) {
-    //     console.log("correct asnwer");
-    // };
-
+     // //if statement for ensuring users complete answers in the appropriate order
+     // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
+     //    alert("What the hell bro!");
+     // };
 
 
         // $("#userSubmit").click(function () {
