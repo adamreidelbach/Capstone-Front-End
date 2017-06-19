@@ -22,15 +22,16 @@
                     "learn": "It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves. Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while, so we’ll need to checkout to a new branch to take a look at John’s work.",
                     "instructions": "To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Go ahead and add and commit your work. Don't forget a log message when you commit",
                     "terminal": "2 files changed, 2 insertions(+)",
-                    "hint": "git add . git commit -m",
-                    "answer": "git add . git commit -m"
+                    "hint": "git add git commit -m",
+                    "answer": ["git add .", "git commit -m 'hi there'"]
                 },
                 {
                     "stepNum": 2,
                     "learn": "Next, let’s make that new branch to store the branch that we will be testing. Once again, let’s name it the same name as our teammates. If you recall, John’s branch is called JohnStyling.",
                     "instructions": "Type in 'git checkout -b JohnStyling'",
                     "terminal": "Switched to a new branch 'JohnStyling'",
-                    "append": "We have now pulled down a copy of JohnStyling to test it out."
+                    "append": "We have now pulled down a copy of JohnStyling to test it out.",
+                    "answer": "git checkout -b JohnStyling"
                 },
                 {
                     "stepNum": 3,
