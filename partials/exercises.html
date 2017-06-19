@@ -30,14 +30,12 @@
         <div class="instText">
             <input type="checkbox" id="test5" />
             <label for="test5">{{currentStep.instructions}}</label>
+            <div id="appendText"></div>
         </div>
     </div>
 
     <form ng-submit="getAnswer()" id="terminal" class="col s4">
         <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
-  <!--       <button id="userSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-        </button> -->
     </form>
 
     <div id="visualize" class="col s4">
