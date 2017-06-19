@@ -26,7 +26,8 @@
                     "command2": "git commit -m \"building splash page\"",
                     "terminal": "2 files changed, 2 insertions(+)",
                     "hint": "",
-                    "answer": ["git add .", "git commit -m \"building splash page\""]
+                    "answer1": "git add .",
+                    "answer2": "git commit -m \"building splash page\""
                 },
                 {
                     "stepNum": 2,
@@ -36,7 +37,7 @@
                     "command2": "",
                     "terminal": "Switched to a new branch 'JohnStyling'",
                     "append": "We have now pulled down a copy of JohnStyling to test it out.",
-                    "answer": "git checkout -b JohnStyling"
+                    "answer1": "git checkout -b JohnStyling"
                 },
                 {
                     "stepNum": 3,
@@ -46,7 +47,7 @@
                     "command2": "",
                     "terminal": "Check out screenshot",
                     "append": "We have now pulled down a copy of JohnStyling to test it out.",
-                    "answer": "git pull origin JohnStyling"
+                    "answer1": "git pull origin JohnStyling"
                 },
                 {
                     "stepNum": 4,
@@ -56,7 +57,8 @@
                     "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
                     "command2": "git pull origin master",
                     "terminal": "Test",
-                    "answer": ["git checkout master", "git pull origin master"]
+                    "answer1": "git checkout master",
+                    "answer2": "git pull origin master"
                 },
                 {
                     "stepNum": 5,
@@ -65,7 +67,7 @@
                     "command1": "git checkout myBranch",
                     "command2": "",
                     "terminal": "Test",
-                    "answer": "git checkout myBranch"
+                    "answer1": "git checkout myBranch"
                 },
                 {
                     "stepNum": 6,
@@ -74,7 +76,7 @@
                     "command1": "git merge master",
                     "command2": "",
                     "terminal": "Test",
-                    "answer": "git merge master"
+                    "answer1": "git merge master"
                 },
                 {
                     "stepNum": 7,
@@ -84,7 +86,7 @@
                     "command2": "",
                     "append": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal": "Test",
-                    "answer": "git branch -D JohnStyling"
+                    "answer1": "git branch -D JohnStyling"
                 }
             ]
         }

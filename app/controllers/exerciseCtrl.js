@@ -45,9 +45,13 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getAnswer = (currentStep) => {
         console.log("do we have currentStep", $scope.currentStep.answer);
         console.log("append", $scope.currentStep.append);
-        if ($scope.currentStep.answer.includes($scope.userAnswer)) {
+        if ($scope.currentStep.answer1.includes($scope.userAnswer)) {
             console.log("CORRECT");
             $("#inst1").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append);
+        } else if ($scope.currentStep.answer2.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+            $("#inst2").prop("checked", true);
             $("#appendText").append($scope.currentStep.append);
         } else {
             console.log("INCORRECT");
@@ -55,26 +59,12 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
-
      $scope.showMoreInstructions = (currentInstructions) => {
-        console.log("currentInstructions", currentInstructions.command2);
         if (currentInstructions.command2 === "") {
             $scope.secondInst = false;
         } else {
             $scope.secondInst = true;
         }
-        // if (currentStep.command2.length > 0) {
-        //     $scope.secondInst = true;
-        // } else {
-        //     $scope.secondInst = false;
-        // }
-        // if (steps.command2 > 0) {
-        //     $scope.secondInst = true;
-        // } else {
-        //     $scope.secondInst = false;
-        // }
-        // if data is more than zero, make it true
-        // $scope.secondInst = false;
      };
 
     // $scope.getAnswer = (currentStep) => {
