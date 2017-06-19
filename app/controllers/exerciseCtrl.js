@@ -9,6 +9,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.instructions = instructions;
           console.log("Got the tutorial", instructions);
           $scope.getStep(0, $scope.instructions);
+          // $scope.showMoreInstructions($scope.instructions.steps[0]);
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
           return instructions;
@@ -22,13 +23,16 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
+        //pass currentStep to showSecondInst to hide or show second instructions
+        $scope.showMoreInstructions($scope.currentStep);
     };
 
     $scope.nextStep = () => {
         $scope.stepCounter++;
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.userAnswer = "";
-        $("#test5").prop("checked", false);
+        $("#inst1").prop("checked", false);
+        $("#inst2").prop("checked", false);
         $("#appendText").html("");
         //eventually will need to keep all previous code and add a line break
     };
@@ -38,20 +42,56 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
-    // /n
-
     $scope.getAnswer = (currentStep) => {
         console.log("do we have currentStep", $scope.currentStep.answer);
         console.log("append", $scope.currentStep.append);
         if ($scope.currentStep.answer.includes($scope.userAnswer)) {
             console.log("CORRECT");
-            $("#test5").prop("checked", true);
+            $("#inst1").prop("checked", true);
             $("#appendText").append($scope.currentStep.append);
         } else {
             console.log("INCORRECT");
             $scope.userAnswer = "";
         }
     };
+
+
+     $scope.showMoreInstructions = (currentInstructions) => {
+        console.log("currentInstructions", currentInstructions.command2);
+        if (currentInstructions.command2 === "") {
+            $scope.secondInst = false;
+        } else {
+            $scope.secondInst = true;
+        }
+        // if (currentStep.command2.length > 0) {
+        //     $scope.secondInst = true;
+        // } else {
+        //     $scope.secondInst = false;
+        // }
+        // if (steps.command2 > 0) {
+        //     $scope.secondInst = true;
+        // } else {
+        //     $scope.secondInst = false;
+        // }
+        // if data is more than zero, make it true
+        // $scope.secondInst = false;
+     };
+
+    // $scope.getAnswer = (currentStep) => {
+    //     console.log("do we have currentStep", $scope.currentStep.answer);
+    //     console.log("append", $scope.currentStep.append);
+    //     let answerData = $scope.currentStep.answer;
+    //     let userAnswer = $scope.userAnswer;
+    //     if (answerData[0].match(userAnswer) !== null) {
+    //         console.log("CORRECT");
+    //         $("#test5").prop("checked", true);
+    //         $("#appendText").append($scope.currentStep.append);
+    //     } else {
+    //         console.log("INCORRECT");
+    //         $scope.userAnswer = "";
+    //     }
+    // };
+
 
     // $scope.getAnswer($scope.currentStep);
 

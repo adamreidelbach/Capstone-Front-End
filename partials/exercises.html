@@ -28,8 +28,13 @@
             <h4><i class="material-icons">subject</i> Instructions</h4>
         </div>
         <div class="instText">
-            <input type="checkbox" id="test5" />
-            <label for="test5">{{currentStep.instructions}}</label>
+            <input type="checkbox" id="inst1" />
+            <label for="inst1">{{currentStep.instructions1}}</label>
+            <div class="command">{{currentStep.command1}}</div>
+            <input type="checkbox" id="inst2" />
+            <label for="inst2" ng-show="secondInst">{{currentStep.instructions2}}</label>
+            <div class="command" ng-show="secondInst">{{currentStep.command2}}</div>
+
             <div id="appendText"></div>
         </div>
     </div>

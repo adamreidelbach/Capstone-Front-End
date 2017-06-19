@@ -20,15 +20,20 @@
                 {
                     "stepNum": 1,
                     "learn": "It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves. Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while, so we’ll need to checkout to a new branch to take a look at John’s work.",
-                    "instructions": "To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Go ahead and add add and commit your work. Don't forget a log message when you commit",
+                    "instructions1": "1. To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Type in:",
+                    "command1": "git add .",
+                    "instructions2": "2. Next, let's commit our work. For this example, let's say we are in the middle of building a splash page for when users first visit our site. Type in:",
+                    "command2": "git commit -m \"building splash page\"",
                     "terminal": "2 files changed, 2 insertions(+)",
-                    "hint": "git add git commit -m",
-                    "answer": ["git add .", "git commit -m \"hi there\""]
+                    "hint": "",
+                    "answer": ["git add .", "git commit -m \"building splash page\""]
                 },
                 {
                     "stepNum": 2,
                     "learn": "Next, let’s make that new branch to store the branch that we will be testing. Once again, let’s name it the same name as our teammates. If you recall, John’s branch is called JohnStyling.",
-                    "instructions": "Type in 'git checkout -b JohnStyling'",
+                    "instructions1": "Type in:",
+                    "command1": "git checkout -b JohnStyling",
+                    "command2": "",
                     "terminal": "Switched to a new branch 'JohnStyling'",
                     "append": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer": "git checkout -b JohnStyling"
@@ -36,36 +41,47 @@
                 {
                     "stepNum": 3,
                     "learn": "Notice that we now have a new branch called JohnStyling. There’s nothing in it just yet. Our old branch, myBranch, is still there.",
-                    "instructions": "Now, let’s pull down John’s branch and test it. Type in 'git pull origin JohnStyling'",
+                    "instructions1": "Now, let’s pull down John’s branch and test it. Type in:",
+                    "command1": "'git pull origin JohnStyling'",
+                    "command2": "",
                     "terminal": "Check out screenshot",
                     "append": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer": "git pull origin JohnStyling"
                 },
                 {
-                    "stepNum": 5,
+                    "stepNum": 4,
                     "learn": "Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.",
-                    "instructions": "1. Let’s pull down the Github Master to your Local Master. We have to do something first before we can pull down the new version. We need to checkout to the master. Type in 'git checkout master' 2. We are now ready to pull down the files into our master. Type in 'git pull origin master'",
+                    "instructions1": "1. Let’s pull down the Github Master to your Local Master. We have to do something first before we can pull down the new version. We need to checkout to the master. Type in:",
+                    "command1": "git checkout master",
+                    "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
+                    "command2": "git pull origin master",
                     "terminal": "Test",
                     "answer": ["git checkout master", "git pull origin master"]
                 },
                 {
-                    "stepNum": 6,
+                    "stepNum": 5,
                     "learn": "The next step is an important step. Remember, we were working on our branch and committed some files in that folder before we started testing John’s code. We want to continue to work on that branch after the testing is complete, and be sure to include the new updates we just merged into our Github Master.",
-                    "instructions": "Let’s check back out to myBranch. Type in ‘git checkout myBranch’",
+                    "instructions1": "Let’s check back out to myBranch. Type in:",
+                    "command1": "git checkout myBranch",
+                    "command2": "",
                     "terminal": "Test",
                     "answer": "git checkout myBranch"
                 },
                 {
-                    "stepNum": 7,
+                    "stepNum": 6,
                     "learn": "In the future, you will undoubtedly encounter what are called merge conflicts. These occur when code on the branch conflicts with code saved on the master. The process of keeping your branch continually up to date with changes to the master can save you some headache down the road. There may be the occasional conflict, but resolving them early is the best policy.",
-                    "instructions": "Now, let’s apply this new updated master into our branch we have been working. Type in ‘git merge master’",
+                    "instructions1": "Now, let’s apply this new updated master into our branch we have been working. Type in:",
+                    "command1": "git merge master",
+                    "command2": "",
                     "terminal": "Test",
                     "answer": "git merge master"
                 },
                 {
-                    "stepNum": 8,
+                    "stepNum": 7,
                     "learn": "We are back to working in myBranch and we also have all those new updates we just merged into our master.",
-                    "instructions": "For our last step, let’s go ahead and delete the JohnStyling branch, so we don’t need it anymore. Type in ‘git branch -D JohnStyling’",
+                    "instructions1": "For our last step, let’s go ahead and delete the JohnStyling branch, so we don’t need it anymore. Type in:",
+                    "command1": "git branch -D JohnStyling",
+                    "command2": "",
                     "append": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal": "Test",
                     "answer": "git branch -D JohnStyling"
