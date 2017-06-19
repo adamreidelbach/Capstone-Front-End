@@ -23,7 +23,8 @@
                     "instructions": "To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Go ahead and add and commit your work. Don't forget a log message when you commit",
                     "terminal": "2 files changed, 2 insertions(+)",
                     "hint": "git add git commit -m",
-                    "answer": ["git add .", "git commit -m 'hi there'"]
+                    "answer": "git init",
+                    "answer2": ["git add index.html", "git commit -m 'hi there'"]
                 },
                 {
                     "stepNum": 2,
@@ -38,13 +39,15 @@
                     "learn": "Notice that we now have a new branch called JohnStyling. There’s nothing in it just yet. Our old branch, myBranch, is still there.",
                     "instructions": "Now, let’s pull down John’s branch and test it. Type in 'git pull origin JohnStyling'",
                     "terminal": "Check out screenshot",
-                    "append": "We have now pulled down a copy of JohnStyling to test it out."
+                    "append": "We have now pulled down a copy of JohnStyling to test it out.",
+                    "answer": "git pull origin JohnStyling"
                 },
                 {
                     "stepNum": 5,
                     "learn": "Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.",
                     "instructions": "1. Let’s pull down the Github Master to your Local Master. We have to do something first before we can pull down the new version. We need to checkout to the master. Type in 'git checkout master' 2. We are now ready to pull down the files into our master. Type in 'git pull origin master'",
-                    "terminal": "Test"
+                    "terminal": "Test",
+                    "answer": ["", "git commit -m 'hi there'"]
                 },
                 {
                     "stepNum": 6,

@@ -27,6 +27,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.nextStep = () => {
         $scope.stepCounter++;
         $scope.getStep($scope.stepCounter, $scope.instructions);
+        $scope.userAnswer = "";
+        //eventually will need to keep all previous code and add a line break
     };
 
     $scope.backStep = () => {
@@ -34,10 +36,21 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
-
     // /n
 
-    // if (currentStep.answer.includes(answer)) {
+    $scope.getAnswer = (currentStep) => {
+        console.log("do we have currentStep", $scope.currentStep.answer);
+        if ($scope.currentStep.answer.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+        } else {
+            console.log("INCORRECT");
+            $scope.userAnswer = "";
+        }
+    };
+
+    // $scope.getAnswer($scope.currentStep);
+
+    // if ($scope.currentStep.answer.includes(answer)) {
     //     console.log("correct asnwer");
     // };
 
