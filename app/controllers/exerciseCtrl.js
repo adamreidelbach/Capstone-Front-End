@@ -9,7 +9,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.instructions = instructions;
           console.log("Got the tutorial", instructions);
           $scope.getStep(0, $scope.instructions);
-          // $scope.showMoreInstructions($scope.instructions.steps[0]);
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
           return instructions;
@@ -42,14 +41,14 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
-    $scope.getAnswer = (currentStep) => {
-        console.log("do we have currentStep", $scope.currentStep.answer);
+    $scope.getAnswer = () => {
+        console.log("do we have currentStep", $scope.currentStep.answer1, $scope.currentStep.answer2);
         console.log("append", $scope.currentStep.append);
-        if ($scope.currentStep.answer1.includes($scope.userAnswer)) {
+        if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
             console.log("CORRECT");
             $("#inst1").prop("checked", true);
             $("#appendText").append($scope.currentStep.append);
-        } else if ($scope.currentStep.answer2.includes($scope.userAnswer)) {
+        } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
             console.log("CORRECT");
             $("#inst2").prop("checked", true);
             $("#appendText").append($scope.currentStep.append);
