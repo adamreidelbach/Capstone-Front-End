@@ -48,6 +48,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             console.log("CORRECT");
             $("#inst1").prop("checked", true);
             $("#appendText").append($scope.currentStep.append);
+            $scope.userAnswer = "";
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
             console.log("CORRECT");
             $("#inst2").prop("checked", true);
@@ -70,7 +71,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
      // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
      //    alert("What the hell bro!");
      // };
-
 
         // $("#userSubmit").click(function () {
     //     if ($("#userText").val() === "git init") {
