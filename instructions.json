@@ -43,7 +43,7 @@
                     "stepNum": 3,
                     "learn": "Notice that we now have a new branch called JohnStyling. There’s nothing in it just yet. Our old branch, myBranch, is still there.",
                     "instructions1": "Now, let’s pull down John’s branch and test it. Type in:",
-                    "command1": "'git pull origin JohnStyling'",
+                    "command1": "git pull origin JohnStyling",
                     "command2": "",
                     "terminal": "Check out screenshot",
                     "append": "We have now pulled down a copy of JohnStyling to test it out.",
@@ -56,7 +56,7 @@
                     "command1": "git checkout master",
                     "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
                     "command2": "git pull origin master",
-                    "terminal": "Test",
+                    "terminal": "Check out screenshot",
                     "answer1": "git checkout master",
                     "answer2": "git pull origin master"
                 },
@@ -66,7 +66,7 @@
                     "instructions1": "Let’s check back out to myBranch. Type in:",
                     "command1": "git checkout myBranch",
                     "command2": "",
-                    "terminal": "Test",
+                    "terminal": "Check out screenshot",
                     "answer1": "git checkout myBranch"
                 },
                 {
@@ -75,7 +75,7 @@
                     "instructions1": "Now, let’s apply this new updated master into our branch we have been working. Type in:",
                     "command1": "git merge master",
                     "command2": "",
-                    "terminal": "Test",
+                    "terminal": "Check out screenshot",
                     "answer1": "git merge master"
                 },
                 {
@@ -85,7 +85,7 @@
                     "command1": "git branch -D JohnStyling",
                     "command2": "",
                     "append": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
-                    "terminal": "Test",
+                    "terminal": "Check out screenshot",
                     "answer1": "git branch -D JohnStyling"
                 }
             ]

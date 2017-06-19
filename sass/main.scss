@@ -59,6 +59,10 @@ textarea {
 
 /* Learn / Instructions Area */
 
+#instructText {
+    overflow: auto;
+}
+
 .learnHeader {
     background-color: lightgrey;
 }
