@@ -43,6 +43,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
+    //get correct answer from data
+    //if true, check the box and append the appropriate instructions text, if applicable
     $scope.getAnswer = () => {
         if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
             console.log("CORRECT");
@@ -58,11 +60,17 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
+    //show instructions div by default
+    $scope.firstInst = true;
     // if there is not more than one instruction, hide the empty div
     $scope.showMoreInstructions = (currentInstructions) => {
-        if (currentInstructions.command2 === "") {
+        if (currentInstructions.command1 === "") {
+            $scope.firstInst = false;
+        }
+        else if (currentInstructions.command2 === "") {
             $scope.secondInst = false;
-        } else {
+        }
+        else {
             $scope.secondInst = true;
         }
      };
@@ -98,6 +106,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
                 $scope.styling($("#box3"), $("#box4"));
                 break;
             case "git merge master":
+                $("#addTerminalText").append($scope.currentStep.terminal);
+                break;
+            case "git status":
                 $("#addTerminalText").append($scope.currentStep.terminal);
                 break;
         }
