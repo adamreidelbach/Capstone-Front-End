@@ -30,11 +30,23 @@
             </div>
             <div class="instText">
                 <input type="checkbox" id="inst1" />
-                <label for="inst1">{{currentStep.instructions1}}</label>
-                <div class="command">{{currentStep.command1}}</div>
+                <label for="inst1" ng-show="currentStep.instructions1">{{currentStep.instructions1}}</label>
+                <div class="command" ng-show="currentStep.command1">{{currentStep.command1}}</div>
                 <input type="checkbox" id="inst2" />
                 <label for="inst2" ng-show="currentStep.instructions2">{{currentStep.instructions2}}</label>
-                <div class="command" ng-show="currentStep.instructions2">{{currentStep.command2}}</div>
+                <div class="command" ng-show="currentStep.command2">{{currentStep.command2}}</div>
+                <input type="checkbox" id="inst3" />
+                <label for="inst3" ng-show="currentStep.instructions3">{{currentStep.instructions3}}</label>
+                <div class="command" ng-show="currentStep.command3">{{currentStep.command3}}</div>
+                <input type="checkbox" id="inst4" />
+                <label for="inst4" ng-show="currentStep.instructions4">{{currentStep.instructions4}}</label>
+                <div class="command" ng-show="currentStep.command4">{{currentStep.command4}}</div>
+                <input type="checkbox" id="inst5" />
+                <label for="inst5" ng-show="currentStep.instructions5">{{currentStep.instructions5}}</label>
+                <div class="command" ng-show="currentStep.command5">{{currentStep.command5}}</div>
+                <input type="checkbox" id="inst6" />
+                <label for="inst6" ng-show="currentStep.instructions6">{{currentStep.instructions6}}</label>
+                <div class="command" ng-show="currentStep.command6">{{currentStep.command6}}</div>
 
                 <div id="appendText"></div>
             </div>

@@ -47,11 +47,27 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
             console.log("CORRECT");
             $("#inst1").prop("checked", true);
-            $("#appendText").append($scope.currentStep.append);
+            $("#appendText").append($scope.currentStep.append1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
             console.log("CORRECT");
             $("#inst2").prop("checked", true);
-            $("#appendText").append($scope.currentStep.append);
+            $("#appendText").append($scope.currentStep.append2);
+        } else if ($scope.currentStep.answer3.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+            $("#inst3").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append3);
+        } else if ($scope.currentStep.answer4.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+            $("#inst4").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append4);
+        } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+            $("#inst5").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append5);
+        } else if ($scope.currentStep.answer6.includes($scope.userAnswer)) {
+            console.log("CORRECT");
+            $("#inst6").prop("checked", true);
+            $("#appendText").append($scope.currentStep.append6);
         } else {
             console.log("INCORRECT");
             $scope.userAnswer = "";
@@ -70,30 +86,30 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             case "git add .":
                 break;
             case "git commit -m \"building splash page\"":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 break;
             case "git checkout -b JohnStyling":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 $("#box4").addClass("highlight");
                 break;
             case "git pull origin JohnStyling":
                 $("#box4").addClass("highlight");
                 break;
             case "git checkout master":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 $scope.styling($("#box4"), $("#box3"));
                 break;
             case "git pull origin master":
                 break;
             case "git checkout myBranch":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 $scope.styling($("#box3"), $("#box4"));
                 break;
             case "git merge master":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 break;
             case "git status":
-                $("#addTerminalText").append($scope.currentStep.terminal);
+                $("#addTerminalText").append($scope.currentStep.terminal1);
                 break;
         }
     };
