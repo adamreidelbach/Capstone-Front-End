@@ -22,8 +22,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
-        //pass currentStep to showSecondInst to hide or show second instructions
-        $scope.showMoreInstructions($scope.currentStep);
         $scope.getStyling($scope.currentStep);
     };
 
@@ -60,20 +58,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
-    //show instructions div by default
-    $scope.firstInst = true;
-    // if there is not more than one instruction, hide the empty div
-    $scope.showMoreInstructions = (currentInstructions) => {
-        if (currentInstructions.command1 === "") {
-            $scope.firstInst = false;
-        }
-        else if (currentInstructions.command2 === "") {
-            $scope.secondInst = false;
-        }
-        else {
-            $scope.secondInst = true;
-        }
-     };
 
      // adding and remove classes for the visualization area
     $scope.styling = (previousBox, newBox) => {

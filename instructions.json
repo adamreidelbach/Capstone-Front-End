@@ -67,8 +67,6 @@
                 "command1": "git checkout master",
                 "instructions2": "Next, let's take a look at the files",
                 "command2": "git status",
-                "instructions2": "",
-                "command2": "",
                 "terminal": "check phone screen shot",
                 "hint": "",
                 "answer1": "git checkout master",
