@@ -90,26 +90,44 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
                 break;
             case "git checkout -b JohnStyling":
                 $("#addTerminalText").append($scope.currentStep.terminal1);
-                $("#box4").addClass("highlight");
+                $("#lb").addClass("highlight");
                 break;
             case "git pull origin JohnStyling":
-                $("#box4").addClass("highlight");
+                $("#lb").addClass("highlight");
                 break;
             case "git checkout master":
                 $("#addTerminalText").append($scope.currentStep.terminal1);
-                $scope.styling($("#box4"), $("#box3"));
-                break;
-            case "git pull origin master":
+                $scope.styling($("#lb"), $("#lm"));
                 break;
             case "git checkout myBranch":
                 $("#addTerminalText").append($scope.currentStep.terminal1);
-                $scope.styling($("#box3"), $("#box4"));
+                $scope.styling($("#lm"), $("#lb"));
                 break;
             case "git merge master":
                 $("#addTerminalText").append($scope.currentStep.terminal1);
                 break;
             case "git status":
                 $("#addTerminalText").append($scope.currentStep.terminal1);
+                break;
+            case "git checkout -b myNavbar":
+                $("#addTerminalText").append($scope.currentStep.terminal1);
+                $("#lb").addClass("highlight");
+                break;
+            case "git commit -m \"completed the navbar\"":
+                $("#addTerminalText").append($scope.currentStep.terminal3);
+                console.log("terminal3", $scope.currentStep.terminal3);
+                break;
+            case "git push origin myNavbar":
+                $("#addTerminalText").append($scope.currentStep.terminal4);
+                $scope.styling($("#lb"), $("#gb"));
+                break;
+            case "git pull origin master":
+                $("#addTerminalText").append($scope.currentStep.terminal5);
+                $scope.styling($("#gb"), $("#lm"));
+                break;
+            case "git checkout -b myFooter":
+                $("#addTerminalText").append($scope.currentStep.terminal6);
+                $scope.styling($("#lm"), $("#lb"));
                 break;
         }
     };
