@@ -74,7 +74,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
-
      // adding and remove classes for the visualization area
     $scope.styling = (previousBox, newBox) => {
         previousBox.removeClass("highlight");

@@ -4,6 +4,7 @@
             "id": "tut1",
             "name": "Tutorial 1",
             "title": "Github Workflow",
+            "image": "images/baseball.png",
             "steps": [
               {
                 "stepNum": 1,
@@ -93,6 +94,7 @@
             "id": "tut2",
             "name": "Tutorial 2",
             "title": "Git Checkout",
+            "image": "images/checkout.png",
             "steps": [
               {
                 "stepNum": 1,
@@ -140,6 +142,7 @@
             "id": "tut3",
             "name": "Tutorial 3",
             "title": "Testing A Teammates Code",
+            "image": "images/bugs.jpg",
             "steps": [
                 {
                     "stepNum": 1,
