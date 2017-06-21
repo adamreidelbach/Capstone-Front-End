@@ -4,6 +4,7 @@
             "id": "tut1",
             "name": "Tutorial 1",
             "title": "Github Workflow",
+            "image": "images/baseball.png",
             "steps": [
               {
                 "stepNum": 1,
@@ -15,7 +16,9 @@
                 "terminal1": "Switched to a new branch 'myNavbar'",
                 "hint": "",
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
-                "answer1": "git checkout -b myNavbar"
+                "answer1": "git checkout -b myNavbar",
+                "styleStart": "#lb",
+                "style1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -24,11 +27,13 @@
                 "command1": "git add .",
                 "instructions2": "Followed by:",
                 "command2": "git commit -m \"completed the navbar\"",
-                "terminal1": "check out phone screenshot",
+                "terminal1": "check out phone screenshot<br>",
+                "terminal2": "check out phone",
                 "hint": "",
                 "answer1": "git add .",
                 "answer2": "git commit -m \"completed the navbar\"",
-                "append1": "Pro tip: If you ever want to see exactly what files you have modified before adding and committing. Type in “git status” to see a list of the files."
+                "append1": "Pro tip: If you ever want to see exactly what files you have modified before adding and committing. Type in “git status” to see a list of the files.",
+                "style1": "#lb"
               },
               {
                 "stepNum": 3,
@@ -37,7 +42,9 @@
                 "command1": "git push origin myNavbar",
                 "terminal1": "check out phone screenshot",
                 "hint": "",
-                "answer1": "git push origin myNavbar"
+                "answer1": "git push origin myNavbar",
+                "removeStyle1": "#lb",
+                "style1": "#gb"
               },
               {
                 "stepNum": 4,
@@ -46,7 +53,11 @@
                 "command1": "git pull origin master",
                 "terminal1": "check out phone screenshot",
                 "hint": "",
-                "answer1": "git pull origin master"
+                "answer1": "git pull origin master",
+                "style1": "#lm",
+                "removeStyle1": "#gm",
+                "preStyle": "#gm",
+                "removeOldStyle": "#gb"
               },
               {
                 "stepNum": 5,
@@ -55,7 +66,9 @@
                 "command1": "git checkout -b myFooter",
                 "terminal1": "Switched to a new branch 'myFooter'",
                 "hint": "",
-                "answer1": "git checkout -b myFooter"
+                "answer1": "git checkout -b myFooter",
+                "style1": "#lb",
+                "removeStyle1": "#lm"
               },
               {
                 "stepNum": 6,
@@ -85,7 +98,37 @@
                 "answer3": "git commit -m \"completed the navbar\"",
                 "answer4": "git push origin myNavbar",
                 "answer5": "git pull origin master",
-                "answer6": "git checkout -b myFooter"
+                "answer6": "git checkout -b myFooter",
+                "style1": "#lb",
+                "style2": "#lb",
+                "style3": "#lb",
+                "style4": "#gb",
+                "style5": "#lm",
+                "style6": "#lb",
+                "removeStyle4": "#lb",
+                "removeStyle5": "#gm",
+                "removeStyle6": "#lm",
+                "preStyle4": "#gm",
+                "removeOldStyle4": "#gb"
+              }
+            ]
+        },
+        {
+            "id": "challenge1",
+            "name": "Challenge 1",
+            "title": "Github Workflow Challenge",
+            "image": "images/checkout.png",
+            "steps": [
+              {
+                "stepNum": 1,
+                "learn": "",
+                "instructions1": "",
+                "command1": "",
+                "terminal1": "",
+                "hint": "",
+                "answer1": "",
+                "append1": "",
+                "style1": ""
               }
             ]
         },
@@ -93,6 +136,7 @@
             "id": "tut2",
             "name": "Tutorial 2",
             "title": "Git Checkout",
+            "image": "images/checkout.png",
             "steps": [
               {
                 "stepNum": 1,
@@ -102,7 +146,9 @@
                 "terminal1": "modified: index.html, css/main.css",
                 "hint": "",
                 "answer1": "git status",
-                "append1": ""
+                "append1": "",
+                "style1": "#lb",
+                "styleStart": "#lb"
               },
               {
                 "stepNum": 2,
@@ -112,20 +158,24 @@
                 "terminal1": "check phone screen shot term1<br>",
                 "instructions2": "Next, let's take a look at the files",
                 "command2": "git status",
-                "terminal2": "check phone screen shot term2<br>",
+                "terminal2": "modified: index.html, css/main.css<br>",
                 "hint": "",
                 "answer1": "git checkout master",
                 "answer2": "git status",
-                "append1": "Notice how these same files are now moved over to our Local Master. As you might expect, this could create some problems if we added and committed these changes to the master instead of to the branch we wanted to push to Github."
+                "append1": "Notice how these same files are now moved over to our Local Master. As you might expect, this could create some problems if we added and committed these changes to the master instead of to the branch we wanted to push to Github.",
+                "style1": "#lm",
+                "removeStyle1": "#lb"
               },
               {
                 "stepNum": 3,
                 "learn": "One advantage that git will offer you, if there are conflicts that would occur during the checkout, it will warn you. It will say something like: ///error: Your local changes to the following files would be overwritten by checkout: index.html css/main.css Please commit your changes or stash them before you switch branches. Aborting/// This git error will often save you some headache, but this tutorial is to show you what to do when that error is not given. Notice that we are now in the Local Master with some files we need to commit elsewhere. We need to move back to our branch and commit them there, not in our master.",
                 "instructions1": " Type in the command below, notice the files will follow you back to myBranch.",
                 "command1": "git checkout myBranch",
-                "terminal1": "modified: index.html, css/main.css",
+                "terminal1": "not sure about this one",
                 "hint": "",
-                "answer1": "git checkout myBranch"
+                "answer1": "git checkout myBranch",
+                "style1": "#lb",
+                "removeStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -137,9 +187,29 @@
             ]
         },
         {
+            "id": "challenge2",
+            "name": "Challenge 2",
+            "title": "Checkout Challenge",
+            "image": "images/checkout.png",
+            "steps": [
+              {
+                "stepNum": 1,
+                "learn": "",
+                "instructions1": "",
+                "command1": "",
+                "terminal1": "",
+                "hint": "",
+                "answer1": "",
+                "append1": "",
+                "style1": ""
+              }
+            ]
+        },
+        {
             "id": "tut3",
             "name": "Tutorial 3",
             "title": "Testing A Teammates Code",
+            "image": "images/bugs.jpg",
             "steps": [
                 {
                     "stepNum": 1,
@@ -148,10 +218,12 @@
                     "command1": "git add .",
                     "instructions2": "2. Next, let's commit our work. For this example, let's say we are in the middle of building a splash page for when users first visit our site. Type in:",
                     "command2": "git commit -m \"building splash page\"",
-                    "terminal1": "2 files changed, 2 insertions(+)",
+                    "terminal2": "2 files changed, 2 insertions(+)",
                     "hint": "",
                     "answer1": "git add .",
-                    "answer2": "git commit -m \"building splash page\""
+                    "answer2": "git commit -m \"building splash page\"",
+                    "style1": "#lb",
+                    "styleStart": "#lb"
                 },
                 {
                     "stepNum": 2,
@@ -161,7 +233,8 @@
                     "command2": "",
                     "terminal1": "Switched to a new branch 'JohnStyling'",
                     "append1": "We have now pulled down a copy of JohnStyling to test it out.",
-                    "answer1": "git checkout -b JohnStyling"
+                    "answer1": "git checkout -b JohnStyling",
+                    "style1": "#lb"
                 },
                 {
                     "stepNum": 3,
@@ -171,7 +244,8 @@
                     "command2": "",
                     "terminal1": "Check out screenshot",
                     "append1": "We have now pulled down a copy of JohnStyling to test it out.",
-                    "answer1": "git pull origin JohnStyling"
+                    "answer1": "git pull origin JohnStyling",
+                    "style1": "#lb"
                 },
                 {
                     "stepNum": 4,
@@ -182,7 +256,9 @@
                     "command2": "git pull origin master",
                     "terminal1": "Check out screenshot",
                     "answer1": "git checkout master",
-                    "answer2": "git pull origin master"
+                    "answer2": "git pull origin master",
+                    "style1": "#lm",
+                    "removeStyle1": "#lb"
                 },
                 {
                     "stepNum": 5,
@@ -191,7 +267,9 @@
                     "command1": "git checkout myBranch",
                     "command2": "",
                     "terminal1": "Check out screenshot",
-                    "answer1": "git checkout myBranch"
+                    "answer1": "git checkout myBranch",
+                    "style1": "#lb",
+                    "removeStyle1": "#lm"
                 },
                 {
                     "stepNum": 6,
@@ -200,7 +278,8 @@
                     "command1": "git merge master",
                     "command2": "",
                     "terminal1": "Check out screenshot",
-                    "answer1": "git merge master"
+                    "answer1": "git merge master",
+                    "style1": "#lb"
                 },
                 {
                     "stepNum": 7,
@@ -210,8 +289,28 @@
                     "command2": "",
                     "append1": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal1": "Check out screenshot",
-                    "answer1": "git branch -D JohnStyling"
+                    "answer1": "git branch -D JohnStyling",
+                    "style1": "#lb"
                 }
+            ]
+        },
+        {
+            "id": "challenge3",
+            "name": "Challenge 3",
+            "title": "Testing A Teammates Code Challenge",
+            "image": "images/checkout.png",
+            "steps": [
+              {
+                "stepNum": 1,
+                "learn": "",
+                "instructions1": "",
+                "command1": "",
+                "terminal1": "",
+                "hint": "",
+                "answer1": "",
+                "append1": "",
+                "style1": ""
+              }
             ]
         }
     ]

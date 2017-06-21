@@ -3,16 +3,13 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Get Git</a>
         <a href="#" class="brand-logo center">Choose An Exercise</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>?</li>
-        </ul>
       </div>
     </nav>
 
     <div class="row">
       <div ng-repeat="item in instructions" class="card col s4">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator cardImg" src="images/github.png">
+          <img class="activator cardImg" src="{{item.image}}">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
