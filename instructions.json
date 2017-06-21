@@ -5,6 +5,7 @@
             "name": "README",
             "title": "What the what is Git?",
             "image": "images/readme.png",
+            "description": "A basic overview to using git.",
             "paragraphs": [
               {
                 "paragraph1": "As software developers, we use git when working on projects with teammates and making our projects available on Github. Git tracks changes to our files and allows for easy collaboration between multiple users. Additionally, it allows us to continually save drafts of our project. If you ever make some changes and need to revert back to a previous version, git will be your best friend."
@@ -16,16 +17,16 @@
                 "paragraph3": "Next, notice the folder labeled Local Master. This will always serve as our starting point on our path towards using git. After all, anything that we store on Github had to built on our computer first. The Local Master is where it all begins. This master version will be worked on only when creating your initial files and folders. As I mentioned previously, the Github Master is the one shared by you and your teammates, so it will be critical to keep a copy of this master version on your computer. In this case, that’s what the Local Master is for. It keeps a master copy of what is available on Github on your local machine. That way, we can be sure to be working on the most up to date version of our project at all times. If we fail to do so, we may end up working on files that are out of date and this will create problems down the road when you try to add in your new code that contains old code people have already removed. "
               },
               {
-                "paragraph4": ""
+                "paragraph4": "If you only work by yourself, you could theoretically get by with just using Github Master and Local Master. Once you make changes you are happy with, you can immediately push them up the Github Master for the world to see. But, as we mentioned before, git allows us to work on projects with a team of developers, not to mention the ability to go to back to previous drafts of our project. This brings in the term “branching.” Using a branch serves a variety of useful purposes: checking for any conflicts that might accidentally override something on the master, sharing your proposed changes with your teammates, testing your code on a teammates machine, working on one task at a time to stay organized, etc. "
               },
               {
-                "paragraph5": ""
+                "paragraph5": "Let’s check out the folder labeled Local Branch. As mentioned before, a “branch” allows us to work on our project without fear of overriding our public version of the project. It makes a duplicate of the Local Master and allows us to get started on expanding our project, without fear of messing up all of our previous hard work. It is the location where, after all of your files and folders are in place, you will always work on your project. It’s much like a branch off of a tree. It is attached to the tree, but the tree will not die if a branch is trimmed or even removed. We can make all the changes and additions to our project we want without affecting our master version. Additionally, the Github Branch is where your teammates will be able to actually see your proposed changes and test them out for themselves on their local computer."
               },
               {
-                "paragraph6": ""
+                "paragraph6": "Lastly, let’s check out Github Branch. As you might suspect, this will simply serve as a copy of our local branch, but it will be used to allow our teammates to take a look at our proposed changes to the project. This is where your team can test your code and make sure it works on their computer, before merging it with the Github Master."
               },
               {
-                "paragraph7": ""
+                "paragraph7": "Working with the Github workflow is a like running the bases on a baseball diamond. Local Master is home base and we will always follow the same pattern. You can’t run directly from 1st to 3rd base, you’d be out immediately! We will get our files up in running in the Local Master (home base), work on updates and changes in our Local Branch (first base), push up those changes for our teammates to review in Github Branch (2nd base), merge those changes without Github Master (3rd base), and finally pull down the branch new Github Master into our Local Master (home run). Notice, jumping from Local Branch to Github Master was never mentioned, why? That would take our proposed changes and immediately merge them with our public Github Master. If there was any sort of problems that we missed, you could imagine, that would create some problems. The order in which we move is crucial."
               }
             ]
         },
@@ -34,6 +35,7 @@
             "name": "Tutorial 0",
             "title": "Getting Started",
             "image": "https://media.giphy.com/media/zaezT79s3Ng7C/giphy.gif",
+            "description": "Getting started using git, a step by step tutorial.",
             "steps": [
               {
                 "stepNum": 1,
@@ -91,6 +93,7 @@
             "name": "Tutorial 1",
             "title": "Github Workflow",
             "image": "images/baseball.png",
+            "description": "Here's a tutorial to practice using the Github workflow.",
             "steps": [
               {
                 "stepNum": 1,
@@ -205,6 +208,7 @@
             "name": "Challenge 1",
             "title": "Github Workflow Challenge",
             "image": "images/challenge1.png",
+            "description": "Let's test your knowledge of the Github workflow.",
             "steps": [
               {
                 "stepNum": 1,
@@ -257,6 +261,7 @@
             "name": "Tutorial 2",
             "title": "Git Checkout",
             "image": "images/checkout.png",
+            "description": "A tutorial to cover using git checkout and how it works",
             "steps": [
               {
                 "stepNum": 1,
@@ -311,6 +316,7 @@
             "name": "Challenge 2",
             "title": "Checkout Challenge",
             "image": "images/challenge2.png",
+            "description": "Let's text your knowledge of using git checkout in a real life setting.",
             "steps": [
               {
                 "stepNum": 1,
@@ -369,6 +375,7 @@
             "name": "Tutorial 3",
             "title": "Testing A Teammates Code",
             "image": "images/bugs.jpg",
+            "description": "A tutorial to learn how to test your teammates code.",
             "steps": [
                 {
                     "stepNum": 1,
@@ -413,9 +420,10 @@
                     "command1": "git checkout master",
                     "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
                     "command2": "git pull origin master",
-                    "terminal1": "Check out screenshot",
+                    "terminal1": "Switched to branch 'master'",
                     "answer1": "git checkout master",
                     "answer2": "git pull origin master",
+                    "terminal2": "",
                     "style1": "#lm",
                     "removeStyle1": "#lb"
                 },
@@ -425,7 +433,7 @@
                     "instructions1": "Let’s check back out to myBranch. Type in:",
                     "command1": "git checkout myBranch",
                     "command2": "",
-                    "terminal1": "Check out screenshot",
+                    "terminal1": "Switched to branch 'myBranch'",
                     "answer1": "git checkout myBranch",
                     "style1": "#lb",
                     "removeStyle1": "#lm"
@@ -436,7 +444,7 @@
                     "instructions1": "Now, let’s apply this new updated master into our branch we have been working. Type in:",
                     "command1": "git merge master",
                     "command2": "",
-                    "terminal1": "Check out screenshot",
+                    "terminal1": "Updating<br>Fast-forward<br>.gitignore<br>css/main.css<br>index.html<br>javascripts/main.js<br>4 files changed, 9 insertions(+)",
                     "answer1": "git merge master",
                     "style1": "#lb"
                 },
@@ -447,7 +455,7 @@
                     "command1": "git branch -D JohnStyling",
                     "command2": "",
                     "append1": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
-                    "terminal1": "Check out screenshot",
+                    "terminal1": "Deleted branch JohnStyling",
                     "answer1": "git branch -D JohnStyling",
                     "style1": "#lb"
                 }
@@ -458,6 +466,7 @@
             "name": "Challenge 3",
             "title": "Testing A Teammates Code Challenge",
             "image": "images/challenge3.png",
+            "description": "Test your knowledge of how to test a teammates code.",
             "steps": [
               {
                 "stepNum": 1,
