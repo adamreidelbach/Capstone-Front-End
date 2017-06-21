@@ -46,39 +46,48 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     //get correct answer from data
     //if true, check the box and append the appropriate instructions text, if applicable
     $scope.getAnswer = () => {
-        if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
-            console.log("CORRECT");
+        console.log("got the current step", $scope.currentStep);
+        if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
+            console.log("CORRECT1");
             $("#inst1").prop("checked", true);
             $("#appendText").append($scope.currentStep.append1);
+            $scope.addTerminalText($scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
-        } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
-            console.log("CORRECT");
+            $scope.removeHighlight($scope.currentStep.removeStyle1);
+            console.log("terminal text", $scope.currentStep.terminal1);
+        } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
+            console.log("CORRECT2");
             $("#inst2").prop("checked", true);
             $("#appendText").append($scope.currentStep.append2);
+            $scope.addTerminalText($scope.currentStep.terminal2);
             $scope.addHighlight($scope.currentStep.style2);
             $scope.removeHighlight($scope.currentStep.removeStyle2);
         } else if ($scope.currentStep.answer3.includes($scope.userAnswer)) {
-            console.log("CORRECT");
+            console.log("CORRECT3");
             $("#inst3").prop("checked", true);
             $("#appendText").append($scope.currentStep.append3);
+            $scope.addTerminalText($scope.currentStep.terminal3);
             $scope.addHighlight($scope.currentStep.style3);
             $scope.removeHighlight($scope.currentStep.removeStyle3);
         } else if ($scope.currentStep.answer4.includes($scope.userAnswer)) {
-            console.log("CORRECT");
+            console.log("CORRECT4");
             $("#inst4").prop("checked", true);
             $("#appendText").append($scope.currentStep.append4);
+            $scope.addTerminalText($scope.currentStep.terminal4);
             $scope.addHighlight($scope.currentStep.style4);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
-            console.log("CORRECT");
+            console.log("CORRECT5");
             $("#inst5").prop("checked", true);
             $("#appendText").append($scope.currentStep.append5);
+            $scope.addTerminalText($scope.currentStep.terminal5);
             $scope.addHighlight($scope.currentStep.style5);
             $scope.removeHighlight($scope.currentStep.removeStyle5);
         } else if ($scope.currentStep.answer6.includes($scope.userAnswer)) {
-            console.log("CORRECT");
+            console.log("CORRECT6");
             $("#inst6").prop("checked", true);
             $("#appendText").append($scope.currentStep.append6);
+            $scope.addTerminalText($scope.currentStep.terminal6);
             $scope.addHighlight($scope.currentStep.style6);
             $scope.removeHighlight($scope.currentStep.removeStyle6);
         } else {
@@ -107,51 +116,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         element.classList.add("highlight");
     };
 
-
-    // $scope.addStyling = (currentInstructions) => {
-    //     console.log("currentInstructions in addStyling", currentInstructions);
-    //     //logic for tutorial 1
-    //     // if (currentInstructions.name === "Tutorial 1") {
-    //         console.log("you are in tut1");
-    //         console.log("querySelector", document.querySelector($scope.currentStep.style));
-    //         // if ($scope.userAnswer === "git checkout -b myNavbar") {
-    //         //     $("#addTerminalText").append($scope.currentStep.terminal1);
-    //         //     $("#lb").addClass("highlight");
-    //         // }
-    //         // if ($scope.userAnswer === "git commit -m \"completed the navbar\"") {
-    //         //     $("#addTerminalText").append($scope.currentStep.terminal3);
-    //         //     console.log("terminal3", $scope.currentStep.terminal3);
-    //         // }
-    //         // if ($scope.userAnswer === "git push origin myNavbar") {
-    //         //     $("#addTerminalText").append($scope.currentStep.terminal4);
-    //         //     $scope.styling($("#lb"), $("#gb"));
-    //         // }
-    //         // if ($scope.userAnswer === "git pull origin master") {
-    //         //     $("#addTerminalText").append($scope.currentStep.terminal5);
-    //         //     $scope.styling($("#gb"), $("#lm"));
-    //         // }
-    //         // if ($scope.userAnswer === "git checkout -b myFooter") {
-    //         //     $("#addTerminalText").append($scope.currentStep.terminal6);
-    //         //     $scope.styling($("#lm"), $("#lb"));
-    //         // }
-    //     // }
-    //     // if (currentInstructions.name === "Tutorial 2") {
-    //     //     console.log("you are in tut2");
-    //     //     if ($scope.userAnswer === "git status") {
-    //     //         $("#addTerminalText").append($scope.currentStep.terminal1);
-    //     //         $("#lb").addClass("highlight");
-    //     //         console.log("git has been statused");
-    //     //     }
-    //     //     if ($scope.userAnswer === "git checkout master") {
-    //     //         $("#addTerminalText").append($scope.currentStep.terminal1);
-    //     //         $scope.styling($("#lb"), $("#lm"));
-    //     //     }
-    //     //     if ($scope.userAnswer === "git checkout myBranch") {
-    //     //         $("#addTerminalText").append($scope.currentStep.terminal1);
-    //     //         $scope.styling($("#lm"), $("#lb"));
-    //     //     }
-    //     // }
-    // };
+    $scope.addTerminalText = (currentStep) => {
+        console.log("terminal text - ", currentStep);
+        $("#addTerminalText").append(currentStep);
+    };
 
      // if statement for ensuring users complete answers in the appropriate order
      // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
