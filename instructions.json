@@ -55,7 +55,9 @@
                 "hint": "",
                 "answer1": "git pull origin master",
                 "style1": "#lm",
-                "removeStyle1": "#gb"
+                "removeStyle1": "#gm",
+                "preStyle": "#gm",
+                "removeOldStyle": "#gb"
               },
               {
                 "stepNum": 5,
@@ -104,8 +106,10 @@
                 "style5": "#lm",
                 "style6": "#lb",
                 "removeStyle4": "#lb",
-                "removeStyle5": "#gb",
-                "removeStyle6": "#lm"
+                "removeStyle5": "#gm",
+                "removeStyle6": "#lm",
+                "preStyle4": "#gm",
+                "removeOldStyle4": "#gb"
               }
             ]
         },

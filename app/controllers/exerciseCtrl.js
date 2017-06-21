@@ -11,6 +11,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.getStep(0, $scope.instructions);
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
+          $scope.addHighlight($scope.currentStep.styleStart);
           // $scope.addStyling($scope.instructions);
           return instructions;
         });
@@ -23,9 +24,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
-        $scope.addHighlight($scope.currentStep.styleStart);
-        // $scope.removeHighlight();
-        // $scope.addStyling($scope.currentStep);
+        // $scope.addHighlight($scope.currentStep.styleStart);
     };
 
     $scope.nextStep = () => {
@@ -36,6 +35,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst2").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
+        $scope.addHighlight($scope.currentStep.preStyle);
+        $scope.removeHighlight($scope.currentStep.removeOldStyle);
         //eventually will need to keep all previous code and add a line break
     };
 
@@ -54,7 +55,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addTerminalText($scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
             $scope.removeHighlight($scope.currentStep.removeStyle1);
-            console.log("terminal text", $scope.currentStep.terminal1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
             console.log("CORRECT2");
             $("#inst2").prop("checked", true);
@@ -76,6 +76,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addTerminalText($scope.currentStep.terminal4);
             $scope.addHighlight($scope.currentStep.style4);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
+            $scope.addHighlight($scope.currentStep.preStyle4);
+            $scope.removeHighlight($scope.currentStep.removeOldStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
             console.log("CORRECT5");
             $("#inst5").prop("checked", true);
