@@ -1,6 +1,63 @@
 {
     "exercises": [
         {
+            "id": "tut0",
+            "name": "Tutorial 0",
+            "title": "Getting Started",
+            "image": "https://media.giphy.com/media/zaezT79s3Ng7C/giphy.gif",
+            "steps": [
+              {
+                "stepNum": 1,
+                "learn": "When you first begin working on a new project, you will want to get your basic file structure put in place. I have taken the liberty of creating a few essential files and directories (or folders). We are currently inside of a directory called myProject which contains all of these necessary files that will get us started. In this tutorial, I have created a terminal. This the area (to right) is where we will enter all of our commands. These commands seem to have strange names, but they are always shorthand for something.",
+                "instructions1": "In this case, we want to see a “list” of all of our fies. To do so, after the $ in the terminal, type in type in “ls” followed by enter. Notice, “ls” is just a shorter way of writing list.",
+                "command1": "ls",
+                "terminal1": "README.md, css, index.html, javascripts",
+                "append1": "Notice in the terminal is now a list of all the files inside of the myProject directory (folder). Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
+                "answer1": "ls"
+              },
+              {
+                "stepNum": 2,
+                "learn": "As we continue down the road of getting started, we need to initialize the myProject directory in order to start using git. As I mentioned before, we are already inside of the myProject directory, that's the folder we will initialize.",
+                "instructions1": "Go ahead and type in “git init” into the terminal.",
+                "command1": "git init",
+                "answer1": "git init",
+                "terminal1": "Initialized empty Git repository in /Users/myComputer/workspace/myProject/.git/",
+                "append1": "Notice that Local Master has now been initialized and we are now able to use git commands.",
+                "style1": "#lm"
+              },
+              {
+                "stepNum": 3,
+                "learn": "This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once.<br>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.<br>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.",
+                "instructions1": "1. Let’s add those files and directories mentioned earlier.",
+                "command1": "git add .",
+                "answer1": "git add .",
+                "instructions2": "2. Let's commit our work",
+                "command2": "git commit -m \"file structure complete\"",
+                "answer2": "git commit -m \"file structure complete\"",
+                "terminal2": "check pics on phone",
+                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work."
+              },
+              {
+                "stepNum": 4,
+                "learn": "Lastly, we need to connect our project to a repository on Github and “push” up a copy those files we just committed. Notice, I said it’s pushing a copy, your local files will still stay on your computer, so not to worry. I have taken the liberty of setting us up an account and repository (where our project will be stored) on Github. NOTE: Once again, creating a project from strach is the only time where we will push directly from Local Master to Github Master. We need to push up something to Github in order to make it happy and get our project started. Thankfully, this long remote command is provided to you by Github, so you could simply copy paste it in the future.",
+                "instructions1": "1. Let's connect our directory to Github. Type in:",
+                "command1": "git remote add origin https://github.com/user/myProject.git",
+                "terminal1": "check out phone screenshot<br>",
+                "answer1": "git remote add origin https://github.com/user/myProject.git",
+                "instructions2": "2. Next, let's push up our Local Master containing all of our files and push it to our Github Master",
+                "command2": "git push origin master",
+                "terminal2": "check phone",
+                "answer2": "git push origin master.",
+                "style2": "#gm",
+                "removeStyle2": "#lm"
+              },
+              {
+                "stepNum": 5,
+                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!"
+              }
+            ]
+        },
+        {
             "id": "tut1",
             "name": "Tutorial 1",
             "title": "Github Workflow",
