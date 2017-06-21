@@ -23,6 +23,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
+        $scope.addHighlight($scope.currentStep.styleStart);
         // $scope.removeHighlight();
         // $scope.addStyling($scope.currentStep);
     };
@@ -43,8 +44,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
     };
 
-    //get correct answer from data
-    //if true, check the box and append the appropriate instructions text, if applicable
+    //get correct answer from data - if true, check the box and append the appropriate instructions text, if applicable
     $scope.getAnswer = () => {
         console.log("got the current step", $scope.currentStep);
         if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
@@ -120,10 +120,5 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         console.log("terminal text - ", currentStep);
         $("#addTerminalText").append(currentStep);
     };
-
-     // if statement for ensuring users complete answers in the appropriate order
-     // if ($scope.userAnswer !== "" && ("#inst2").prop("chcked") === false) {
-     //    alert("What the hell bro!");
-     // };
 
 });

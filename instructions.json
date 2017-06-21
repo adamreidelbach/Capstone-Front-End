@@ -17,6 +17,7 @@
                 "hint": "",
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
                 "answer1": "git checkout -b myNavbar",
+                "styleStart": "#lb",
                 "style1": "#lb"
               },
               {
@@ -142,7 +143,8 @@
                 "hint": "",
                 "answer1": "git status",
                 "append1": "",
-                "style1": "#lb"
+                "style1": "#lb",
+                "styleStart": "#lb"
               },
               {
                 "stepNum": 2,
@@ -216,7 +218,8 @@
                     "hint": "",
                     "answer1": "git add .",
                     "answer2": "git commit -m \"building splash page\"",
-                    "style1": "#lb"
+                    "style1": "#lb",
+                    "styleStart": "#lb"
                 },
                 {
                     "stepNum": 2,
