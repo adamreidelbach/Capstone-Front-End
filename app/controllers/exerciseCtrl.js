@@ -11,8 +11,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.getStep(0, $scope.instructions);
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
+          $scope.populateLearn($scope.currentStep);
           $scope.addHighlight($scope.currentStep.styleStart);
-          // $scope.addStyling($scope.instructions);
           return instructions;
         });
     };
@@ -24,7 +24,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
-        // $scope.addHighlight($scope.currentStep.styleStart);
     };
 
     $scope.nextStep = () => {
@@ -35,6 +34,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst2").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
+        console.log("currentStep in nextStep", $scope.currentStep);
+        $scope.populateLearn($scope.currentStep);
         $scope.addHighlight($scope.currentStep.preStyle);
         $scope.removeHighlight($scope.currentStep.removeOldStyle);
         //eventually will need to keep all previous code and add a line break
@@ -43,6 +44,13 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.backStep = () => {
         $scope.stepCounter--;
         $scope.getStep($scope.stepCounter, $scope.instructions);
+        $scope.populateLearn($scope.currentStep);
+    };
+
+    $scope.populateLearn = (currentInstructions) => {
+        let learn = document.getElementById("learn");
+        console.log(currentInstructions.learn);
+        learn.innerHTML = currentInstructions.learn;
     };
 
     //get correct answer from data - if true, check the box and append the appropriate instructions text, if applicable
@@ -76,8 +84,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addTerminalText($scope.currentStep.terminal4);
             $scope.addHighlight($scope.currentStep.style4);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
-            $scope.addHighlight($scope.currentStep.preStyle4);
-            $scope.removeHighlight($scope.currentStep.removeOldStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
             console.log("CORRECT5");
             $("#inst5").prop("checked", true);
