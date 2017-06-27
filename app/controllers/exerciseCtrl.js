@@ -55,58 +55,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     };
 
     //get correct answer from data - if true, check the box and append the appropriate instructions text, if applicable
-    // $scope.getAnswer = () => {
-    //     console.log("got the current step", $scope.currentStep);
-    //     if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
-    //         console.log("CORRECT1");
-    //         $("#inst1").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append1);
-    //         $scope.addTerminalText($scope.currentStep.terminal1);
-    //         $scope.addHighlight($scope.currentStep.style1);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle1);
-    //     } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
-    //         console.log("CORRECT2");
-    //         $("#inst2").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append2);
-    //         $scope.addTerminalText($scope.currentStep.terminal2);
-    //         $scope.addHighlight($scope.currentStep.style2);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle2);
-    //     } else if ($scope.currentStep.answer3.includes($scope.userAnswer)) {
-    //         console.log("CORRECT3");
-    //         $("#inst3").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append3);
-    //         $scope.addTerminalText($scope.currentStep.terminal3);
-    //         $scope.addHighlight($scope.currentStep.style3);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle3);
-    //     } else if ($scope.currentStep.answer4.includes($scope.userAnswer)) {
-    //         console.log("CORRECT4");
-    //         $("#inst4").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append4);
-    //         $scope.addTerminalText($scope.currentStep.terminal4);
-    //         $scope.addHighlight($scope.currentStep.style4);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle4);
-    //     } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
-    //         console.log("CORRECT5");
-    //         $("#inst5").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append5);
-    //         $scope.addTerminalText($scope.currentStep.terminal5);
-    //         $scope.addHighlight($scope.currentStep.style5);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle5);
-    //     } else if ($scope.currentStep.answer6.includes($scope.userAnswer)) {
-    //         console.log("CORRECT6");
-    //         $("#inst6").prop("checked", true);
-    //         $("#appendText").append($scope.currentStep.append6);
-    //         $scope.addTerminalText($scope.currentStep.terminal6);
-    //         $scope.addHighlight($scope.currentStep.style6);
-    //         $scope.removeHighlight($scope.currentStep.removeStyle6);
-    //     } else {
-    //         console.log("INCORRECT");
-    //         $scope.userAnswer = "";
-    //     }
-    // };
-
-    $("#thing").terminal(function(command, term) {
-        if ($scope.currentStep.answer1.includes(command) /*&& $("#inst2").prop("checked") === false*/) {
+    $scope.getAnswer = () => {
+        console.log("got the current step", $scope.currentStep);
+        if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
             console.log("CORRECT1");
             $("#inst1").prop("checked", true);
             $("#appendText").append($scope.currentStep.append1);
@@ -152,7 +103,15 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             console.log("INCORRECT");
             $scope.userAnswer = "";
         }
-    });
+    };
+
+    // $("#thing").terminal(function(command, term) {
+    //     if (command == 'help') {
+    //         term.echo("available commands are mysql, js, test");
+    //     } else {
+    //         term.echo("unknown command " + command);
+    //     }
+    // });
 
      // adding and remove classes for the visualization area
     $scope.styling = (previousBox, newBox) => {
