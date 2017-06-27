@@ -45,6 +45,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.stepCounter--;
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
+        $scope.removeHighlight($scope.currentStep.backRemove);
     };
 
     $scope.populateLearn = (currentInstructions) => {

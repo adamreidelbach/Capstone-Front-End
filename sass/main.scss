@@ -5,10 +5,8 @@ textarea {
   color: white;
 }
 
-/* splash page */
-
-.splashCards {
-    height: 475px;
+.indent {
+    text-indent: 50px;
 }
 
 /* Terminal */
@@ -27,6 +25,13 @@ textarea {
     background-color: black;
     color: white;
     margin-top: 16px;
+}
+
+.terminal-container {
+    background-color: black;
+    color: white;
+    margin-top: 16px;
+    max-height: 200px;
 }
 
 /* Visualization Area */
@@ -73,6 +78,11 @@ textarea {
 
 #visualize {
     margin-top: 10px;
+}
+
+.card-image {
+    padding: 10px 0;
+    height: 250px;
 }
 
 .cardImg {
