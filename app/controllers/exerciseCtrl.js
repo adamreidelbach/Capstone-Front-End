@@ -45,6 +45,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.stepCounter--;
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
+        $scope.removeHighlight($scope.currentStep.backRemove);
     };
 
     $scope.populateLearn = (currentInstructions) => {
@@ -104,6 +105,14 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
+    // $("#thing").terminal(function(command, term) {
+    //     if (command == 'help') {
+    //         term.echo("available commands are mysql, js, test");
+    //     } else {
+    //         term.echo("unknown command " + command);
+    //     }
+    // });
+
      // adding and remove classes for the visualization area
     $scope.styling = (previousBox, newBox) => {
         previousBox.removeClass("highlight");
@@ -128,5 +137,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         console.log("terminal text - ", currentStep);
         $("#addTerminalText").append(currentStep);
     };
+
 
 });

@@ -5,10 +5,8 @@ textarea {
   color: white;
 }
 
-/* splash page */
-
-.splashCards {
-    height: 475px;
+.indent {
+    text-indent: 50px;
 }
 
 /* Terminal */
@@ -73,6 +71,11 @@ textarea {
 
 #visualize {
     margin-top: 10px;
+}
+
+.card-image {
+    padding: 10px 0;
+    height: 250px;
 }
 
 .cardImg {
