@@ -52,10 +52,10 @@
     </div>
 
     <form ng-submit="getAnswer()" id="terminal" class="col s4">
-        <h4>Terminal</h4>
-        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
-        <div id="addTerminalText"></div>
-        <div class="terminal-container" angular-terminal="main"></div>
+        <div class="terminal-container" ng-model="userAnswer" angular-terminal="main">
+<!--             <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
+ --><!--             <div id="addTerminalText"></div>
+ -->        </div>
     </form>
 
     <div id="visualize" class="col s4">
