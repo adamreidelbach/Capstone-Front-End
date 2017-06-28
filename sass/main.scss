@@ -60,7 +60,24 @@ textarea {
 }
 
 .highlight {
-    border: 2px solid red;
+  padding: 20px 40px;
+  color: #fff;
+  background-color: lightblue;
+  animation: pulse 1s ease infinite;
+  /* transition: transform 0.2s; */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .github {
