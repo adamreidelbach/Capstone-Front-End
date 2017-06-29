@@ -1,0 +1,169 @@
+textarea {
+  margin-top: 10px;
+  height: 450px;
+  background-color: black;
+  color: white;
+}
+
+.indent {
+    text-indent: 50px;
+}
+
+/* Terminal */
+
+#userText {
+    background-color: black;
+    color: white;
+}
+
+#addTerminalText {
+    background-color: black;
+    color: white;
+}
+
+#terminal {
+    background-color: black;
+    color: white;
+    margin-top: 16px;
+}
+
+/* Visualization Area */
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+#gb {
+    position: relative;
+    left: 275px;
+    top: -120px;
+}
+
+.gbLabel {
+    position: relative;
+    left: 275px;
+    top: -120px;
+}
+
+#lb {
+    position: relative;
+    left: 275px;
+    top: -120px;
+}
+
+.lbLabel {
+    position: relative;
+    left: 275px;
+    top: -120px;
+}
+
+.highlight {
+    background-color: lightblue;
+    transition: transform 1s;
+}
+
+.github {
+    height: 50px;
+    position: relative;
+    left: 165px;
+}
+
+#visualize {
+    margin-top: 10px;
+}
+
+.card-image {
+    padding: 10px 0;
+    height: 250px;
+}
+
+.cardImg {
+    width: 80% !important;
+    margin: auto;
+}
+
+
+/* Learn / Instructions Area */
+
+.note {
+    font-style: italic;
+}
+
+#instructText {
+    overflow: auto;
+}
+
+.learnHeader {
+    background-color: lightgrey;
+}
+
+.instHeader {
+    background-color: lightgrey;
+}
+
+.command {
+    background-color: #4286f4;
+    color: white;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+#error {
+    color: red;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+/* Help Button Styling */
+
+#help {
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+     -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#help:hover {
+    background: #EEE;
+}
+
+.animate-show {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+    display: inline-block !important;
+}
+
+.animate-show.ng-hide {
+    opacity: 0;
+}
+
+.showHint {
+    color: black;
+}
+
+ul li span {
+    display: none;
+}
+
+ul li:hover span {
+    display: flex;
+}
+

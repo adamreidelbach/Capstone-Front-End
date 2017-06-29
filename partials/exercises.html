@@ -1,0 +1,91 @@
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Get Git</a>
+    <a href="#" class="brand-logo center">{{instructions.name}} - {{instructions.title}}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li id="help">?
+        <span class="animate-show">
+          <a class="showHint">{{currentStep.hint}}</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+    <div id="instructText" class="col s4">
+        <div class="learnHeader">
+            <h4><i class="material-icons">library_books</i> Learn</h4>
+        </div>
+        <div class="learnText">
+            <div id="learn"></div>
+        </div>
+
+        <div id="instructions" ng-show="currentStep.instructions1">
+            <div class="instHeader">
+                <h4><i class="material-icons">subject</i> Instructions</h4>
+            </div>
+            <div class="instText">
+                <input type="checkbox" id="inst1" />
+                <label for="inst1" ng-show="currentStep.instructions1">{{currentStep.instructions1}}</label>
+                <div class="command" ng-show="currentStep.command1">{{currentStep.command1}}</div>
+                <input type="checkbox" id="inst2" />
+                <label for="inst2" ng-show="currentStep.instructions2">{{currentStep.instructions2}}</label>
+                <div class="command" ng-show="currentStep.command2">{{currentStep.command2}}</div>
+                <input type="checkbox" id="inst3" />
+                <label for="inst3" ng-show="currentStep.instructions3">{{currentStep.instructions3}}</label>
+                <div class="command" ng-show="currentStep.command3">{{currentStep.command3}}</div>
+                <input type="checkbox" id="inst4" />
+                <label for="inst4" ng-show="currentStep.instructions4">{{currentStep.instructions4}}</label>
+                <div class="command" ng-show="currentStep.command4">{{currentStep.command4}}</div>
+                <input type="checkbox" id="inst5" />
+                <label for="inst5" ng-show="currentStep.instructions5">{{currentStep.instructions5}}</label>
+                <div class="command" ng-show="currentStep.command5">{{currentStep.command5}}</div>
+                <input type="checkbox" id="inst6" />
+                <label for="inst6" ng-show="currentStep.instructions6">{{currentStep.instructions6}}</label>
+                <div class="command" ng-show="currentStep.command6">{{currentStep.command6}}</div>
+
+                <div id="appendText"></div>
+            </div>
+        </div>
+    </div>
+
+    <form ng-submit="getAnswer()" id="terminal" class="col s4">
+        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
+        <div id="addTerminalText"></div>
+    </form>
+
+<!--     <form ng-submit="getAnswer()" id="terminal" class="col s4">
+        <div id="thing" class="terminal-container" ng-model="userAnswer" angular-terminal="main">
+        </div>
+    </form> -->
+
+    <div id="visualize" class="col s4">
+        <img class="github" src="images/github.png">
+
+        <div class="gmLabel">GitHub Master</div>
+        <div class="box" id="gm"></div>
+
+        <div class="gbLabel">GitHub Branch</div>
+        <div class="box" id="gb"></div>
+
+        <div class="lmLabel">Local Master</div>
+        <div class="box" id="lm"></div>
+
+        <div class="lbLabel">Local Branch</div>
+        <div class="box" id="lb"></div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="row">
+        <a class="grey-text text-lighten-4 col s4" ng-click="backStep()">Back</a>
+        <a class="grey-text text-lighten-4 col s4" href="#!">{{page + 1}} / {{steps}}</a>
+        <a class="grey-text text-lighten-4 col s4" ng-click="nextStep()">Next</a>
+        </button>
+      </div>
+    </div>
+</footer>
+
