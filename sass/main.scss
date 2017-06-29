@@ -126,7 +126,7 @@ textarea {
 #help {
     border: 1px solid white;
     height: 40px;
-    width: 40px;
+    width: 45px;
     line-height: 40px;
      -moz-border-radius: 30px;
     border-radius: 30px;
@@ -138,6 +138,15 @@ textarea {
 
 #help:hover {
     background: #EEE;
+}
+
+.dropdown-content {
+    min-width: 250px !important;
+    word-wrap: break-word !important;
+}
+
+.dropdown-content li {
+    text-align: center;
 }
 
 .animate-show {

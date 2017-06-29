@@ -14,7 +14,8 @@
                 "command1": "ls",
                 "terminal1": "README.md css index.html javascripts",
                 "append1": "Notice in the terminal is now a list of all the files inside of the myProject directory (folder). Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
-                "answer1": "ls"
+                "answer1": "ls",
+                "hint1": "ls"
               },
               {
                 "stepNum": 2,
@@ -24,7 +25,8 @@
                 "answer1": "git init",
                 "terminal1": "Initialized empty Git repository in /Users/myComputer/workspace/myProject/.git/",
                 "append1": "Notice that Local Master has now been initialized and we are now able to use git commands.",
-                "style1": "#lm"
+                "style1": "#lm",
+                "hint1": "git init"
               },
               {
                 "stepNum": 3,
@@ -36,7 +38,9 @@
                 "command2": "git commit -m \"file structure complete\"",
                 "answer2": "git commit -m \"file structure complete\"",
                 "terminal2": "[master (root-commit) abc12a1] file structure complete<br>4 files changed, 0 insertions(+), 0 deletions(-)<br>create mode 100644 README.md<br>createMODE 100644 css/main.css<br>create mode 100644 index.html<br>create mode 100644 javascripts/main.js",
-                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work."
+                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work.",
+                "hint1": "git add .",
+                "hint2": "git commit -m \"file structure complete\""
               },
               {
                 "stepNum": 4,
@@ -48,13 +52,16 @@
                 "instructions2": "2. Next, let's push up our Local Master containing all of our files and push it to our Github Master",
                 "command2": "git push origin master",
                 "terminal2": "Counting objects: 5, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (5/5), 395 bytes | 0 bytes/s , done.<br>Total 5 (delta 0), reused 0 (delta 0)<br>To https://github.com/user/myProject.git<br>* [new branch] master -> master",
-                "answer2": "git push origin master.",
+                "answer2": "git push origin master",
                 "style2": "#gm",
-                "removeStyle2": "#lm"
+                "removeStyle2": "#lm",
+                "hint1": "git remote add origin https://github.com/user/myProject.git",
+                "hint2": "git push origin master"
               },
               {
                 "stepNum": 5,
-                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!"
+                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!",
+                "hint1": ""
               }
             ]
         },
@@ -77,7 +84,8 @@
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
                 "answer1": "git checkout -b myNavbar",
                 "styleStart": "#lb",
-                "style1": "#lb"
+                "style1": "#lb",
+                "hint1": "git checkout -b myNavbar"
               },
               {
                 "stepNum": 2,
@@ -88,11 +96,12 @@
                 "command2": "git commit -m \"completed the navbar\"",
                 "terminal1": "",
                 "terminal2": "[version1 1234abc] completed the navbar<br>1 files changed, 23 insertions(+)<br>",
-                "hint": "",
                 "answer1": "git add .",
                 "answer2": "git commit -m \"completed the navbar\"",
                 "append1": "Pro tip: If you ever want to see exactly what files you have modified before adding and committing. Type in “git status” to see a list of the files.",
-                "style1": "#lb"
+                "style1": "#lb",
+                "hint1": "git add .",
+                "hint2": "git commit -m \"completed the navbar\""
               },
               {
                 "stepNum": 3,
@@ -103,7 +112,8 @@
                 "hint": "",
                 "answer1": "git push origin myNavbar",
                 "removeStyle1": "#lb",
-                "style1": "#gb"
+                "style1": "#gb",
+                "hint1": "git push origin myNavbar"
               },
               {
                 "stepNum": 4,
@@ -111,12 +121,12 @@
                 "instructions1": "Now that the Github Master is updated, the next step is to pull down the new master into your Local Master. This is very important. Type in:",
                 "command1": "git pull origin master",
                 "terminal1": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore<br>",
-                "hint": "",
                 "answer1": "git pull origin master",
                 "style1": "#lm",
                 "removeStyle1": "#gm",
                 "preStyle": "#gm",
-                "removeOldStyle": "#gb"
+                "removeOldStyle": "#gb",
+                "hint1": "git pull origin master"
               },
               {
                 "stepNum": 5,
@@ -124,10 +134,10 @@
                 "instructions1": " This time let’s say we are going to be working on the footer. Type in:",
                 "command1": "git checkout -b myFooter",
                 "terminal1": "Switched to a new branch 'myFooter'",
-                "hint": "",
                 "answer1": "git checkout -b myFooter",
                 "style1": "#lb",
-                "removeStyle1": "#lm"
+                "removeStyle1": "#lm",
+                "hint1": "git checkout -b myFooter"
               },
               {
                 "stepNum": 6,
@@ -169,7 +179,13 @@
                 "removeStyle5": "#gm",
                 "removeStyle6": "#lm",
                 "preStyle4": "#gm",
-                "removeOldStyle4": "#gb"
+                "removeOldStyle4": "#gb",
+                "hint1": "git checkout -b myNavbar",
+                "hint2": "git add .",
+                "hint3": "git commit -m \"completed the navbar\"",
+                "hint4": "git push origin myNavbar",
+                "hint5": "git pull origin master",
+                "hint6": "git checkout -b myFooter"
               }
             ]
         },
