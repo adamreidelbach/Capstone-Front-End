@@ -16,15 +16,15 @@
 <div class="row mainBackground">
     <div id="instructText" class="col s4 accordion-container">
         <div class="learnHeader accordion-section">
-            <h4><i class="material-icons">library_books</i> Learn</h4>
+            <h5 class="headerName"><i class="material-icons">library_books</i> Learn</h5>
         </div>
         <div class="learnText">
-            <div id="learn"></div>
+            <div id="learn" class="indent"></div>
         </div>
 
         <div id="instructions" ng-show="currentStep.instructions1">
             <div class="instHeader" class="accordion-section">
-                <h4><i class="material-icons">subject</i> Instructions</h4>
+                <h5 class="headerName"><i class="material-icons">subject</i> Instructions</h5>
             </div>
             <div class="instText">
                 <input type="checkbox" id="inst1" />
@@ -75,15 +75,21 @@
 
         <div class="lbLabel">Local Branch</div>
         <div class="box" id="lb"></div>
+
+        <div class="localIcons">
+            <img class="apple" src="images/apple.png">
+            <img class="linux" src="images/linux.png">
+            <img class="windows" src="images/windows.png">
+        </div>
     </div>
 </div>
 
 <footer class="page-footer">
     <div class="footer-copyright">
       <div class="row">
-        <a class="grey-text text-lighten-4 col s4" ng-click="backStep()">Back</a>
-        <a class="grey-text text-lighten-4 col s4" href="#!">{{page + 1}} / {{steps}}</a>
-        <a class="grey-text text-lighten-4 col s4" ng-click="nextStep()">Next</a>
+        <a class="grey-text text-lighten-4 col s4 backButton" ng-click="backStep()">Back</a>
+        <a class="grey-text text-lighten-4 col s4 pageCounter" href="#!">{{page + 1}} / {{steps}}</a>
+        <a class="grey-text text-lighten-4 col s4 nextButton" ng-click="nextStep()">Next</a>
         </button>
       </div>
     </div>
