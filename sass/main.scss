@@ -66,40 +66,54 @@ textarea {
 
 #gb {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
 }
 
 .gbLabel {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
     color: #204056;
 }
 
+#gm {
+    position: relative;
+    left: 15px;
+}
+
 .gmLabel {
     color: #204056;
+    position: relative;
+    left: 15px;
+}
+
+#lm {
+    position: relative;
+    left: 15px;
 }
 
 .lmLabel {
     color: #204056;
+    position: relative;
+    left: 15px;
 }
 
 #lb {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
 }
 
 .lbLabel {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
     color: #204056;
 }
 
 .highlight {
-    background-color: lightblue;
+    background-color: #26a69a;
     transition: transform 1s;
 }
 
@@ -192,7 +206,6 @@ textarea {
 }
 
 #learn {
-    margin-top: 10px;
     padding: 1.875rem;
 }
 
@@ -233,7 +246,7 @@ textarea {
 
 .backButton {
     background-color: #354551;
-    padding: 8px 20px 8px 12px !important;
+    padding: 10px 25px !important;
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -241,11 +254,27 @@ textarea {
 }
 
 .pageCounter {
-
+    line-height: 45px;
 }
 
 .nextButton {
+    background-color: #354551;
+    padding: 10px 25px !important;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    right: -20px !important;
+}
 
+.grey-text {
+    text-align: center !important;
+}
+
+.inactive {
+    background-color: grey;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
 
 /* Help Button Styling */
@@ -272,8 +301,9 @@ textarea {
     word-wrap: break-word !important;
 }
 
-.dropdown-content li {
+.dropdown-content li a {
     text-align: center;
+    color: #204056;
 }
 
 .animate-show {
