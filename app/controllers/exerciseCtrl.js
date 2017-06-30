@@ -2,6 +2,8 @@
 
 app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepFactory, $rootScope) {
 
+    let nextButton = document.getElementById("nextButton");
+
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
         DataFactory.getTutorial(whichOne)
@@ -39,6 +41,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         }
     };
 
+    $scope.enableNext = () => {
+        nextButton.classList.remove("inactive");
+    };
+
     $scope.nextStep = () => {
         $scope.stepCounter++;
         $scope.getStep($scope.stepCounter, $scope.instructions);
@@ -47,6 +53,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst2").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
+        // nextButton.classList.add("inactive");
         console.log("currentStep in nextStep", $scope.currentStep);
         $scope.populateLearn($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
