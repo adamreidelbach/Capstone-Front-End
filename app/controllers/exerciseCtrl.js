@@ -25,6 +25,18 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
+        let backButton = document.getElementById("backButton");
+        if (obj.steps[index].stepNum === 1) {
+            backButton.classList.add("inactive");
+        } else {
+            backButton.classList.remove("inactive");
+        }
+        let nextButton = document.getElementById("nextButton");
+        if (obj.steps.length === $rootScope.page + 1) {
+            nextButton.classList.add("inactive");
+        } else {
+            nextButton.classList.remove("inactive");
+        }
     };
 
     $scope.nextStep = () => {
