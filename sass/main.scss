@@ -61,7 +61,7 @@ textarea {
 .box {
     height: 100px;
     width: 100px;
-    border: 1px solid #204056;
+    content:url('../images/folder.png');
 }
 
 #gb {
@@ -113,8 +113,10 @@ textarea {
 }
 
 .highlight {
-    background-color: #26a69a;
+    background-color: #204056;
     transition: transform 1s;
+    border-radius: 20px;
+    content:url('../images/openFolder.png');
 }
 
 .github {

@@ -4,6 +4,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     let nextButton = document.getElementById("nextButton");
 
+    let lb = document.getElementById("lb");
+        lb.innerHTML = "currentHint";
+
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
         DataFactory.getTutorial(whichOne)
