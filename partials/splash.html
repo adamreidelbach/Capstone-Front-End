@@ -1,29 +1,30 @@
 <div ng-controller="SplashCtrl">
-    <nav>
+    <nav class="splashNav">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Get Git</a>
-            <a href="#" class="brand-logo center">Choose An Exercise</a>
+            <a href="#" class="brand-logo splashHeaderText">Get Git</a>
+            <a href="#" class="brand-logo center splashHeaderText">Choose An Exercise</a>
         </div>
     </nav>
 
-    <div class="row">
-        <div class="card col s3 splashCards">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img src="images/readme.png" class="activator cardImg" lass="#/" data-target="readmeModal" modal>
-            </div>
-        </div>
-        <div ng-repeat="item in instructions" class="card col s3 splashCards">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator cardImg" src="{{item.image}}">
+    <div class="allCards">
+        <div class="card splashCards">
+            <div class="cardBackground">
+                <img src="images/readme.png" class="cardImg" lass="#/" data-target="readmeModal" modal>
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
-                <span class="card-title activator grey-text text-darken-4">{{item.title}}</span>
-                <p><a href="#!/exercises/{{item.id}}" data-target="exercise--{{item.name}}">Begin Exercise</a></p>
+                <div class="cardTitle">README</div><br>
+                <div class="cardDescription">What is git?</div>
+                <p class="beginExercise" ><a lass="#/" data-target="readmeModal" modal>Check It Out</a></p>
             </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{item.title}}<i class="material-icons right">close</i></span>
-                <p>{{item.description}}</p>
+        </div>
+        <div ng-repeat="item in instructions" class="card splashCards">
+            <div class="cardBackground">
+                <img class="cardImg" src="{{item.image}}">
+            </div>
+            <div class="card-content">
+                <div class="cardTitle">{{item.title}}</div><br>
+                <div class="cardDescription">{{item.description}}</div>
+                <p class="beginExercise"><a href="#!/exercises/{{item.id}}" data-target="exercise--{{item.name}}">Begin</a></p>
             </div>
         </div>
     </div>

@@ -5,8 +5,17 @@ body, html {
     background-color: #152B39 !important;
 }
 
-nav, footer {
+.exerciseNav, footer {
     background-color: #152B39 !important;
+}
+
+.exerciseNavText {
+    color: white;
+    font-size: 1.5rem !important;
+}
+
+.exerciseNavLogo {
+    color: white;
 }
 
 footer {
@@ -19,6 +28,57 @@ textarea {
   height: 450px;
   background-color: black;
   color: white;
+}
+
+/* Splash Page */
+
+.allCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+.splashCards {
+    height: 29rem;
+    width: 26%;
+    margin: 1%;
+}
+
+.splashHeaderText {
+    color: #204056 !important;
+}
+
+.splashNav {
+    background-color: white !important;
+}
+
+.cardTitle {
+    color: #204056;
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+.cardDescription {
+    color: #76787B;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBackground {
+    background-color: #204056;
+    height: 12.5rem;
+}
+
+.cardImg {
+    width: 55% !important;
+    margin-left: 25%;
+}
+
+.beginExercise {
+    font-size: 1.3rem !important;
+    margin-top: 25px !important
 }
 
 // label {
@@ -189,12 +249,6 @@ textarea {
     height: 250px;
 }
 
-.cardImg {
-    width: 80% !important;
-    margin: auto;
-}
-
-
 /* Learn / Instructions Area */
 
 .note {
@@ -280,23 +334,19 @@ textarea {
 #backButton {
     background-color: #354551;
     padding: 10px 25px !important;
-    text-align: center;
     cursor: pointer;
-    position: relative;
-    left: -20px !important;
 }
 
 .pageCounter {
-    line-height: 45px;
+    background-color: #354551;
+    padding: 10px 25px !important;
+    cursor: pointer;
 }
 
 #nextButton {
     background-color: #354551;
     padding: 10px 25px !important;
-    text-align: center;
     cursor: pointer;
-    position: relative;
-    right: -20px !important;
 }
 
 .grey-text {
@@ -365,4 +415,3 @@ ul li span {
 ul li:hover span {
     display: flex;
 }
-
