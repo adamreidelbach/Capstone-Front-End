@@ -30,6 +30,11 @@ textarea {
   color: white;
 }
 
+.modal {
+    max-height: 80% !important;
+    width: 65% !important;
+}
+
 /* Splash Page */
 
 .allCards {
@@ -76,9 +81,14 @@ textarea {
     margin-left: 25%;
 }
 
+.readmeImg {
+    cursor: pointer;
+}
+
 .beginExercise {
     font-size: 1.3rem !important;
-    margin-top: 25px !important
+    margin-top: 25px !important;
+    cursor: pointer;
 }
 
 // label {

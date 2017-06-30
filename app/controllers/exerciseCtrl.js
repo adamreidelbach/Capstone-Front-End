@@ -43,7 +43,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         } else {
             backButton.classList.remove("inactive");
         }
-        let nextButton = document.getElementById("nextButton");
         if (obj.steps.length === $rootScope.page + 1) {
             nextButton.classList.add("inactive");
         } else {
@@ -63,8 +62,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst2").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
-        // nextButton.classList.add("inactive");
-        console.log("currentStep in nextStep", $scope.currentStep);
         $scope.populateLearn($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
         $scope.addHighlight($scope.currentStep.preStyle);
@@ -187,6 +184,5 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         // lmName.innerHTML = currentStep.branch1;
         // lmName2.innerHTML = currentStep.branch2;
     };
-
 
 });
