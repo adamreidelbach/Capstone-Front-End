@@ -87,9 +87,9 @@
 <footer class="page-footer">
     <div class="footer-copyright">
       <div class="row">
-        <a class="grey-text text-lighten-4 col s4 backButton" ng-click="backStep()">Back</a>
+        <a class="grey-text text-lighten-4 col s4" id="backButton" ng-click="backStep()">Back</a>
         <a class="grey-text text-lighten-4 col s4 pageCounter" href="#!">{{page + 1}} / {{steps}}</a>
-        <a class="grey-text text-lighten-4 col s4 nextButton" ng-click="nextStep()">Next</a>
+        <a class="grey-text text-lighten-4 col s4" id="nextButton" ng-click="nextStep()">Next</a>
         </button>
       </div>
     </div>
