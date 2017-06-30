@@ -4,8 +4,14 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     let nextButton = document.getElementById("nextButton");
 
-    let lb = document.getElementById("lb");
-        lb.innerHTML = "currentHint";
+    let lbName = document.getElementById("lbName");
+    lbName.innerHTML = "-";
+    let lbName2 = document.getElementById("lbName2");
+    lbName2.innerHTML = "-";
+    let lmName = document.getElementById("lmName");
+    lmName.innerHTML = "-";
+    let lmName2 = document.getElementById("lmName2");
+    lmName2.innerHTML = "-";
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -17,6 +23,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
           $scope.populateLearn($scope.currentStep);
+          $scope.populateBranch($scope.currentStep);
           $scope.populateHint($scope.currentStep.hint1);
           $scope.addHighlight($scope.currentStep.styleStart);
           return instructions;
@@ -166,6 +173,19 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.populateHint = (currentHint) => {
         let helpContent = document.getElementById("helpContent");
         helpContent.innerHTML = currentHint;
+    };
+
+    $scope.populateBranch = (currentStep) => {
+        // if (currentStep.branch1 && currentStep.branch2 === "") {
+        //     lbName.classList.add("branchEmpty");
+        //     lbName2.classList.add("branchEmpty");
+        //     lmName.classList.add("branchEmpty");
+        //     lmName2.classList.add("branchEmpty");
+        // }
+        // lbName.innerHTML = currentStep.branch1;
+        // lbName2.innerHTML = currentStep.branch2;
+        // lmName.innerHTML = currentStep.branch1;
+        // lmName2.innerHTML = currentStep.branch2;
     };
 
 

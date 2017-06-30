@@ -56,6 +56,36 @@ textarea {
     margin-top: 16px;
 }
 
+/* Branches Area */
+
+.branchEmpty {
+    color: lightgrey;
+}
+
+#lbName {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lbName2 {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lmName {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
+#lmName2 {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
 /* Visualization Area */
 
 .box {
@@ -91,24 +121,26 @@ textarea {
 #lm {
     position: relative;
     left: 15px;
+    bottom: 50px;
 }
 
 .lmLabel {
     color: #204056;
     position: relative;
     left: 15px;
+    bottom: 50px;
 }
 
 #lb {
     position: relative;
     left: 275px;
-    top: -120px;
+    top: -212px;
 }
 
 .lbLabel {
     position: relative;
     left: 275px;
-    top: -120px;
+    top: -214px;
     color: #204056;
 }
 
@@ -129,21 +161,21 @@ textarea {
 .apple {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 97px;
 }
 
 .linux {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 106px;
 }
 
 .windows {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 123px;
 }
 

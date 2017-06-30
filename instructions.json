@@ -90,7 +90,9 @@
                 "styleStart": "#lb",
                 "style1": "#lb",
                 "hint1": "git checkout -b myNavbar",
-                "hint2": ""
+                "hint2": "",
+                "branch1": "",
+                "branch2": ""
               },
               {
                 "stepNum": 2,
@@ -271,7 +273,9 @@
                 "style1": "#lb",
                 "styleStart": "#lb",
                 "hint1": "git status",
-                "hint2": ""
+                "hint2": "",
+                "branch1": "index.html",
+                "branch2": "css/main.css"
               },
               {
                 "stepNum": 2,
