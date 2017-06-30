@@ -1,7 +1,7 @@
 body, html {
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #152B39 !important;
 }
 
@@ -9,11 +9,25 @@ nav, footer {
     background-color: #152B39 !important;
 }
 
+footer {
+    font-size: 1.25em;
+    padding: 15px !important;
+}
+
 textarea {
   margin-top: 10px;
   height: 450px;
   background-color: black;
   color: white;
+}
+
+// label {
+//     background-color: lightgrey;
+//     border: 0;
+// }
+
+.row {
+    margin-bottom: 0;
 }
 
 .indent {
@@ -47,35 +61,59 @@ textarea {
 .box {
     height: 100px;
     width: 100px;
-    border: 1px solid black;
+    border: 1px solid #204056;
 }
 
 #gb {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
 }
 
 .gbLabel {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
+    color: #204056;
+}
+
+#gm {
+    position: relative;
+    left: 15px;
+}
+
+.gmLabel {
+    color: #204056;
+    position: relative;
+    left: 15px;
+}
+
+#lm {
+    position: relative;
+    left: 15px;
+}
+
+.lmLabel {
+    color: #204056;
+    position: relative;
+    left: 15px;
 }
 
 #lb {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
 }
 
 .lbLabel {
     position: relative;
-    left: 270px;
+    left: 275px;
     top: -120px;
+    color: #204056;
 }
 
 .highlight {
-    background-color: lightblue;
+    background-color: #26a69a;
     transition: transform 1s;
 }
 
@@ -83,12 +121,33 @@ textarea {
     height: 50px;
     position: relative;
     left: 165px;
+    margin-top: 5px;
+}
+
+.apple {
+    height: 50px;
+    position: relative;
+    top: -85px;
+    left: 97px;
+}
+
+.linux {
+    height: 50px;
+    position: relative;
+    top: -85px;
+    left: 106px;
+}
+
+.windows {
+    height: 50px;
+    position: relative;
+    top: -85px;
+    left: 123px;
 }
 
 #visualize {
-    margin-top: 10px;
     height: 520px;
-    background-color: white;
+    background-color: #d4d5d6;
 }
 
 .card-image {
@@ -112,6 +171,12 @@ textarea {
     overflow-y: auto;
     height: 520px;
     background-color: white;
+    padding: 0;
+}
+
+.instText {
+    margin-top: 10px;
+    padding: 1.875rem;
 }
 
 .according-container {
@@ -122,16 +187,45 @@ textarea {
     overflow-x: hidden;
 }
 
+.headerName {
+    margin-top: 0;
+}
+
 .learnHeader {
-    background-color: lightgrey;
+    background-color: #d4d5d6;
+    min-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #e9eaea;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #204056;
+}
+
+.learnHeader h5 {
+    font-size: 1.7rem;
+}
+
+#learn {
+    padding: 1.875rem;
+}
+
+.material-icons {
+    line-height: 40px;
+    vertical-align: center;
 }
 
 .instHeader {
-    background-color: lightgrey;
+    background-color: #d4d5d6;
+    min-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #e9eaea;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #204056;
 }
 
 .command {
-    background-color: #4286f4;
+    background-color: #354551;;
     color: white;
     margin-left: 35px;
     margin-top: 10px;
@@ -146,6 +240,41 @@ textarea {
 
 .brand-logo {
     margin-left: 10px;
+}
+
+/* Footer */
+
+.backButton {
+    background-color: #354551;
+    padding: 10px 25px !important;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    left: -20px !important;
+}
+
+.pageCounter {
+    line-height: 45px;
+}
+
+.nextButton {
+    background-color: #354551;
+    padding: 10px 25px !important;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    right: -20px !important;
+}
+
+.grey-text {
+    text-align: center !important;
+}
+
+.inactive {
+    background-color: grey;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
 
 /* Help Button Styling */
@@ -172,8 +301,9 @@ textarea {
     word-wrap: break-word !important;
 }
 
-.dropdown-content li {
+.dropdown-content li a {
     text-align: center;
+    color: #204056;
 }
 
 .animate-show {
