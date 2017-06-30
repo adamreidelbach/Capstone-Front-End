@@ -338,9 +338,9 @@ textarea {
 }
 
 .pageCounter {
-    background-color: #354551;
     padding: 10px 25px !important;
     cursor: pointer;
+    margin: 0 45px;
 }
 
 #nextButton {
@@ -358,6 +358,12 @@ textarea {
     pointer-events: none;
     cursor: default;
     opacity: 0.5;
+}
+
+.exerciseFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Help Button Styling */
