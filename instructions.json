@@ -14,7 +14,9 @@
                 "command1": "ls",
                 "terminal1": "README.md css index.html javascripts",
                 "append1": "Notice in the terminal is now a list of all the files inside of the myProject directory (folder). Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
-                "answer1": "ls"
+                "answer1": "ls",
+                "hint1": "ls",
+                "hint2": ""
               },
               {
                 "stepNum": 2,
@@ -24,11 +26,13 @@
                 "answer1": "git init",
                 "terminal1": "Initialized empty Git repository in /Users/myComputer/workspace/myProject/.git/",
                 "append1": "Notice that Local Master has now been initialized and we are now able to use git commands.",
-                "style1": "#lm"
+                "style1": "#lm",
+                "hint1": "git init",
+                "hint2": ""
               },
               {
                 "stepNum": 3,
-                "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>nWhat does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.</p>",
+                "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.</p>",
                 "instructions1": "1. Let’s add those files and directories mentioned earlier.",
                 "command1": "git add .",
                 "answer1": "git add .",
@@ -36,7 +40,10 @@
                 "command2": "git commit -m \"file structure complete\"",
                 "answer2": "git commit -m \"file structure complete\"",
                 "terminal2": "[master (root-commit) abc12a1] file structure complete<br>4 files changed, 0 insertions(+), 0 deletions(-)<br>create mode 100644 README.md<br>createMODE 100644 css/main.css<br>create mode 100644 index.html<br>create mode 100644 javascripts/main.js",
-                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work."
+                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work.",
+                "hint1": "git add .",
+                "hint2": "git commit -m \"file structure complete\"",
+                "hint3": ""
               },
               {
                 "stepNum": 4,
@@ -48,13 +55,17 @@
                 "instructions2": "2. Next, let's push up our Local Master containing all of our files and push it to our Github Master",
                 "command2": "git push origin master",
                 "terminal2": "Counting objects: 5, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (5/5), 395 bytes | 0 bytes/s , done.<br>Total 5 (delta 0), reused 0 (delta 0)<br>To https://github.com/user/myProject.git<br>* [new branch] master -> master",
-                "answer2": "git push origin master.",
+                "answer2": "git push origin master",
                 "style2": "#gm",
-                "removeStyle2": "#lm"
+                "removeStyle2": "#lm",
+                "hint1": "git remote add origin https://github.com/user/myProject.git",
+                "hint2": "git push origin master",
+                "hint2": ""
               },
               {
                 "stepNum": 5,
-                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!"
+                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!",
+                "hint1": ""
               }
             ]
         },
@@ -77,7 +88,9 @@
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
                 "answer1": "git checkout -b myNavbar",
                 "styleStart": "#lb",
-                "style1": "#lb"
+                "style1": "#lb",
+                "hint1": "git checkout -b myNavbar",
+                "hint2": ""
               },
               {
                 "stepNum": 2,
@@ -88,11 +101,13 @@
                 "command2": "git commit -m \"completed the navbar\"",
                 "terminal1": "",
                 "terminal2": "[version1 1234abc] completed the navbar<br>1 files changed, 23 insertions(+)<br>",
-                "hint": "",
                 "answer1": "git add .",
                 "answer2": "git commit -m \"completed the navbar\"",
                 "append1": "Pro tip: If you ever want to see exactly what files you have modified before adding and committing. Type in “git status” to see a list of the files.",
-                "style1": "#lb"
+                "style1": "#lb",
+                "hint1": "git add .",
+                "hint2": "git commit -m \"completed the navbar\"",
+                "hint3": ""
               },
               {
                 "stepNum": 3,
@@ -103,7 +118,9 @@
                 "hint": "",
                 "answer1": "git push origin myNavbar",
                 "removeStyle1": "#lb",
-                "style1": "#gb"
+                "style1": "#gb",
+                "hint1": "git push origin myNavbar",
+                "hint2": ""
               },
               {
                 "stepNum": 4,
@@ -111,12 +128,13 @@
                 "instructions1": "Now that the Github Master is updated, the next step is to pull down the new master into your Local Master. This is very important. Type in:",
                 "command1": "git pull origin master",
                 "terminal1": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore<br>",
-                "hint": "",
                 "answer1": "git pull origin master",
                 "style1": "#lm",
                 "removeStyle1": "#gm",
                 "preStyle": "#gm",
-                "removeOldStyle": "#gb"
+                "removeOldStyle": "#gb",
+                "hint1": "git pull origin master",
+                "hint2": ""
               },
               {
                 "stepNum": 5,
@@ -124,10 +142,11 @@
                 "instructions1": " This time let’s say we are going to be working on the footer. Type in:",
                 "command1": "git checkout -b myFooter",
                 "terminal1": "Switched to a new branch 'myFooter'",
-                "hint": "",
                 "answer1": "git checkout -b myFooter",
                 "style1": "#lb",
-                "removeStyle1": "#lm"
+                "removeStyle1": "#lm",
+                "hint1": "git checkout -b myFooter",
+                "hint2": ""
               },
               {
                 "stepNum": 6,
@@ -169,7 +188,13 @@
                 "removeStyle5": "#gm",
                 "removeStyle6": "#lm",
                 "preStyle4": "#gm",
-                "removeOldStyle4": "#gb"
+                "removeOldStyle4": "#gb",
+                "hint1": "git checkout -b myNavbar",
+                "hint2": "git add .",
+                "hint3": "git commit -m \"completed the navbar\"",
+                "hint4": "git push origin myNavbar",
+                "hint5": "git pull origin master",
+                "hint6": "git checkout -b myFooter"
               }
             ]
         },
@@ -202,7 +227,8 @@
                 "answer3": "git push origin myHomepage",
                 "style3": "#gb",
                 "removeStyle3": "#lb",
-                "backRemove": "#gm"
+                "backRemove": "#gm",
+                "hint4": ""
               },
               {
                 "stepNum": 2,
@@ -223,7 +249,8 @@
                 "style2": "#lb",
                 "removeStyle2": "#lm",
                 "preStyle": "#gm",
-                "removeOldStyle": "#gb"
+                "removeOldStyle": "#gb",
+                "hint3": ""
               }
             ]
         },
@@ -240,10 +267,11 @@
                 "instructions1": "Let’s say you’ve been working on a branch for a while. You have a few files inside of that branch that have been modified. Let’s take a look and see what files in particular have changed. Type in the command below into the terminal1 and hit enter",
                 "command1": "git status",
                 "terminal1": "On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"",
-                "hint": "",
                 "answer1": "git status",
                 "style1": "#lb",
-                "styleStart": "#lb"
+                "styleStart": "#lb",
+                "hint1": "git status",
+                "hint2": ""
               },
               {
                 "stepNum": 2,
@@ -254,12 +282,14 @@
                 "instructions2": "Next, let's take a look at the files",
                 "command2": "git status",
                 "terminal2": "On branch master<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"<br>",
-                "hint": "",
                 "answer1": "git checkout master",
                 "answer2": "git status",
                 "append1": "Notice how these same files are now moved over to our Local Master. As you might expect, this could create some problems if we added and committed these changes to the master instead of to the branch we wanted to push to Github.",
                 "style1": "#lm",
-                "removeStyle1": "#lb"
+                "removeStyle1": "#lb",
+                "hint1": "git checkout master",
+                "hint2": "git status",
+                "hint3": ""
               },
               {
                 "stepNum": 3,
@@ -267,16 +297,17 @@
                 "instructions1": " Type in the command below, notice the files will follow you back to myBranch.",
                 "command1": "git checkout myBranch",
                 "terminal1": "Switched to branch 'myBranch'",
-                "hint": "",
                 "answer1": "git checkout myBranch",
                 "style1": "#lb",
-                "removeStyle1": "#lm"
+                "removeStyle1": "#lm",
+                "hint1": "git checkout myBranch",
+                "hint2": ""
               },
               {
                 "stepNum": 4,
                 "learn": " Notice how we were able to commit those files in either location. Whenever we changed locations, the files came with. We could also create a new branch entirely and those same files will follow us, waiting to be committed. Node: this idea that files will follow if you don’t commit is important to remember for your next task.",
                 "terminal1": "",
-                "hint": "",
+                "hint1": "",
                 "answer1": ""
               }
             ]
@@ -315,7 +346,8 @@
                 "hint4": "git push origin myHomepage",
                 "answer4": "git push origin myHomepage",
                 "style4": "#gb",
-                "removeStyle4": "#lb"
+                "removeStyle4": "#lb",
+                "hint5": ""
               },
               {
                 "stepNum": 2,
@@ -336,7 +368,8 @@
                 "style2": "#lb",
                 "removeStyle2": "#lm",
                 "preStyle": "#gm",
-                "removeOldStyle": "#gb"
+                "removeOldStyle": "#gb",
+                "hint3": ""
               }
             ]
         },
@@ -355,11 +388,13 @@
                     "instructions2": "2. Next, let's commit our work. For this example, let's say we are in the middle of building a splash page for when users first visit our site. Type in:",
                     "command2": "git commit -m \"building splash page\"",
                     "terminal2": "[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)",
-                    "hint": "",
+                    "hint1": "git add.",
+                    "hint2": "git commit -m \"building splash page\"",
                     "answer1": "git add .",
                     "answer2": "git commit -m \"building splash page\"",
                     "style1": "#lb",
-                    "styleStart": "#lb"
+                    "styleStart": "#lb",
+                    "hint3": ""
                 },
                 {
                     "stepNum": 2,
@@ -370,7 +405,9 @@
                     "terminal1": "Switched to a new branch 'JohnStyling'",
                     "append1": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer1": "git checkout -b JohnStyling",
-                    "style1": "#lb"
+                    "style1": "#lb",
+                    "hint1": "git checkout -b JohnStyling",
+                    "hint2": ""
                 },
                 {
                     "stepNum": 3,
@@ -381,7 +418,9 @@
                     "terminal1": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore",
                     "append1": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer1": "git pull origin JohnStyling",
-                    "style1": "#lb"
+                    "style1": "#lb",
+                    "hint1": "git pull origin JohnStyling",
+                    "hint2": ""
                 },
                 {
                     "stepNum": 4,
@@ -395,7 +434,10 @@
                     "answer2": "git pull origin master",
                     "terminal2": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)",
                     "style1": "#lm",
-                    "removeStyle1": "#lb"
+                    "removeStyle1": "#lb",
+                    "hint1": "git checkout master",
+                    "hint2": "git pull origin master",
+                    "hint3": ""
                 },
                 {
                     "stepNum": 5,
@@ -406,7 +448,9 @@
                     "terminal1": "Switched to branch 'myBranch'",
                     "answer1": "git checkout myBranch",
                     "style1": "#lb",
-                    "removeStyle1": "#lm"
+                    "removeStyle1": "#lm",
+                    "hint1": "git checkout myBranch",
+                    "hint2": ""
                 },
                 {
                     "stepNum": 6,
@@ -416,7 +460,9 @@
                     "command2": "",
                     "terminal1": "Updating 123456a..b789876<br>Fast-forward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)",
                     "answer1": "git merge master",
-                    "style1": "#lb"
+                    "style1": "#lb",
+                    "hint1": "git merge master",
+                    "hint2": ""
                 },
                 {
                     "stepNum": 7,
@@ -427,7 +473,9 @@
                     "append1": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal1": "Deleted branch JohnStyling",
                     "answer1": "git branch -D JohnStyling",
-                    "style1": "#lb"
+                    "style1": "#lb",
+                    "hint1": "git branch -D JohnStyling",
+                    "hint2": ""
                 }
             ]
         },
@@ -452,7 +500,8 @@
                 "command2": "Grab a copy of John's code.",
                 "hint2": "git pull origin JohnStyling",
                 "answer2": "git pull origin JohnStyling",
-                "terminal2": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore"
+                "terminal2": "From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore",
+                "hint3": ""
               },
               {
                 "stepNum": 2,
@@ -472,7 +521,8 @@
                 "style2": "#lm",
                 "removeStyle2": "#gm",
                 "preStyle": "#gm",
-                "removeOldStyle": "#lb"
+                "removeOldStyle": "#lb",
+                "hint3": ""
               },
               {
                 "stepNum": 3,
@@ -494,7 +544,8 @@
                 "answer3": "git branch -D JohnStyling",
                 "hint3": "git branch -D JohnStyling",
                 "terminal3": "Deleted branch JohnStyling",
-                "preStyle": "#lm"
+                "preStyle": "#lm",
+                "hint4": ""
               }
             ]
         }
