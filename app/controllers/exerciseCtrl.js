@@ -2,7 +2,7 @@
 
 app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepFactory, $rootScope) {
 
-    let backButton = document.getElementById("backButton");
+    let nextButton = document.getElementById("nextButton");
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -34,11 +34,15 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             backButton.classList.remove("inactive");
         }
         let nextButton = document.getElementById("nextButton");
-        // if (obj.steps.length === $rootScope.page + 1) {
-        //     nextButton.classList.add("inactive");
-        // } else {
-        //     nextButton.classList.remove("inactive");
-        // }
+        if (obj.steps.length === $rootScope.page + 1) {
+            nextButton.classList.add("inactive");
+        } else {
+            nextButton.classList.remove("inactive");
+        }
+    };
+
+    $scope.enableNext = () => {
+        nextButton.classList.remove("inactive");
     };
 
     $scope.nextStep = () => {
@@ -49,6 +53,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst2").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
+        // nextButton.classList.add("inactive");
         console.log("currentStep in nextStep", $scope.currentStep);
         $scope.populateLearn($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
@@ -77,7 +82,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
             console.log("CORRECT1");
             $("#inst1").prop("checked", true);
-            backbutton.classList.remove("inactive");
             $scope.populateHint($scope.currentStep.hint2);
             $("#appendText").append($scope.currentStep.append1);
             $scope.addTerminalText($scope.currentStep.terminal1);
