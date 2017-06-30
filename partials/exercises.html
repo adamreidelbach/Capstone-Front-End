@@ -1,8 +1,8 @@
 
-<nav>
+<nav class="exerciseNav">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Get Git</a>
-    <a href="#" class="brand-logo center">{{instructions.name}} - {{instructions.title}}</a>
+    <a href="#" class="brand-logo exerciseNavLogo">Get Git</a>
+    <a href="#" class="brand-logo center exerciseNavText">{{instructions.name}} - {{instructions.title}}</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
         <a class='dropdown-button' id="help" href='javascript:void(0);' data-activates='helpDropdown' dropdown data-hover="true">?</a>
         <!-- Dropdown Structure -->
@@ -65,16 +65,22 @@
         <img class="github" src="images/github.png">
 
         <div class="gmLabel">GitHub Master</div>
-        <div class="box" id="gm"></div>
+        <div class="box" id="gm">
+            <img src="images/folder.png">
+        </div>
 
         <div class="gbLabel">GitHub Branch</div>
         <div class="box" id="gb"></div>
 
         <div class="lmLabel">Local Master</div>
         <div class="box" id="lm"></div>
+        <div id="lmName"></div>
+        <div id="lmName2"></div>
 
         <div class="lbLabel">Local Branch</div>
         <div class="box" id="lb"></div>
+        <div id="lbName"></div>
+        <div id="lbName2"></div>
 
         <div class="localIcons">
             <img class="apple" src="images/apple.png">
@@ -84,14 +90,9 @@
     </div>
 </div>
 
-<footer class="page-footer">
-    <div class="footer-copyright">
-      <div class="row">
-        <a class="grey-text text-lighten-4 col s4" id="backButton" ng-click="backStep()">Back</a>
-        <a class="grey-text text-lighten-4 col s4 pageCounter" href="#!">{{page + 1}} / {{steps}}</a>
-        <a class="grey-text text-lighten-4 col s4 inactive" id="nextButton" ng-click="nextStep()">Next</a>
-        </button>
-      </div>
-    </div>
+<footer class="exerciseFooter">
+    <div class="grey-text text-lighten-4 col s4" id="backButton" ng-click="backStep()">Back</div>
+    <div class="grey-text text-lighten-4 col s4 pageCounter" href="#!">{{page + 1}} / {{steps}}</div>
+    <div class="grey-text text-lighten-4 col s4 inactive" id="nextButton" ng-click="nextStep()">Next</div>
 </footer>
 

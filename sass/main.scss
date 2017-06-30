@@ -5,8 +5,17 @@ body, html {
     background-color: #152B39 !important;
 }
 
-nav, footer {
+.exerciseNav, footer {
     background-color: #152B39 !important;
+}
+
+.exerciseNavText {
+    color: white;
+    font-size: 1.5rem !important;
+}
+
+.exerciseNavLogo {
+    color: white;
 }
 
 footer {
@@ -19,6 +28,57 @@ textarea {
   height: 450px;
   background-color: black;
   color: white;
+}
+
+/* Splash Page */
+
+.allCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+.splashCards {
+    height: 29rem;
+    width: 26%;
+    margin: 1%;
+}
+
+.splashHeaderText {
+    color: #204056 !important;
+}
+
+.splashNav {
+    background-color: white !important;
+}
+
+.cardTitle {
+    color: #204056;
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+.cardDescription {
+    color: #76787B;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBackground {
+    background-color: #204056;
+    height: 12.5rem;
+}
+
+.cardImg {
+    width: 55% !important;
+    margin-left: 25%;
+}
+
+.beginExercise {
+    font-size: 1.3rem !important;
+    margin-top: 25px !important
 }
 
 // label {
@@ -56,12 +116,42 @@ textarea {
     margin-top: 16px;
 }
 
+/* Branches Area */
+
+.branchEmpty {
+    color: lightgrey;
+}
+
+#lbName {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lbName2 {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lmName {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
+#lmName2 {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
 /* Visualization Area */
 
 .box {
     height: 100px;
     width: 100px;
-    border: 1px solid #204056;
+    content:url('../images/folder.png');
 }
 
 #gb {
@@ -91,30 +181,34 @@ textarea {
 #lm {
     position: relative;
     left: 15px;
+    bottom: 50px;
 }
 
 .lmLabel {
     color: #204056;
     position: relative;
     left: 15px;
+    bottom: 50px;
 }
 
 #lb {
     position: relative;
     left: 275px;
-    top: -120px;
+    top: -212px;
 }
 
 .lbLabel {
     position: relative;
     left: 275px;
-    top: -120px;
+    top: -214px;
     color: #204056;
 }
 
 .highlight {
-    background-color: #26a69a;
+    background-color: #204056;
     transition: transform 1s;
+    border-radius: 20px;
+    content:url('../images/openFolder.png');
 }
 
 .github {
@@ -127,21 +221,21 @@ textarea {
 .apple {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 97px;
 }
 
 .linux {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 106px;
 }
 
 .windows {
     height: 50px;
     position: relative;
-    top: -85px;
+    top: -165px;
     left: 123px;
 }
 
@@ -154,12 +248,6 @@ textarea {
     padding: 10px 0;
     height: 250px;
 }
-
-.cardImg {
-    width: 80% !important;
-    margin: auto;
-}
-
 
 /* Learn / Instructions Area */
 
@@ -246,23 +334,19 @@ textarea {
 #backButton {
     background-color: #354551;
     padding: 10px 25px !important;
-    text-align: center;
     cursor: pointer;
-    position: relative;
-    left: -20px !important;
 }
 
 .pageCounter {
-    line-height: 45px;
+    padding: 10px 25px !important;
+    cursor: pointer;
+    margin: 0 45px;
 }
 
 #nextButton {
     background-color: #354551;
     padding: 10px 25px !important;
-    text-align: center;
     cursor: pointer;
-    position: relative;
-    right: -20px !important;
 }
 
 .grey-text {
@@ -274,6 +358,12 @@ textarea {
     pointer-events: none;
     cursor: default;
     opacity: 0.5;
+}
+
+.exerciseFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Help Button Styling */
@@ -331,4 +421,3 @@ ul li span {
 ul li:hover span {
     display: flex;
 }
-

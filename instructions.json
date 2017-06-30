@@ -4,7 +4,7 @@
             "id": "tut0",
             "name": "Tutorial 0",
             "title": "Getting Started",
-            "image": "https://media.giphy.com/media/zaezT79s3Ng7C/giphy.gif",
+            "image": "images/0.png",
             "description": "Getting started using git, a step by step tutorial.",
             "steps": [
               {
@@ -73,7 +73,7 @@
             "id": "tut1",
             "name": "Tutorial 1",
             "title": "Github Workflow",
-            "image": "images/baseball.png",
+            "image": "images/1.png",
             "description": "Here's a tutorial to practice using the Github workflow.",
             "steps": [
               {
@@ -90,7 +90,9 @@
                 "styleStart": "#lb",
                 "style1": "#lb",
                 "hint1": "git checkout -b myNavbar",
-                "hint2": ""
+                "hint2": "",
+                "branch1": "",
+                "branch2": ""
               },
               {
                 "stepNum": 2,
@@ -202,7 +204,7 @@
             "id": "challenge1",
             "name": "Challenge 1",
             "title": "Github Workflow Challenge",
-            "image": "images/challenge1.png",
+            "image": "images/2.png",
             "description": "Let's test your knowledge of the Github workflow.",
             "steps": [
               {
@@ -258,7 +260,7 @@
             "id": "tut2",
             "name": "Tutorial 2",
             "title": "Git Checkout",
-            "image": "images/checkout.png",
+            "image": "images/3.png",
             "description": "A tutorial to cover using git checkout and how it works",
             "steps": [
               {
@@ -271,7 +273,9 @@
                 "style1": "#lb",
                 "styleStart": "#lb",
                 "hint1": "git status",
-                "hint2": ""
+                "hint2": "",
+                "branch1": "index.html",
+                "branch2": "css/main.css"
               },
               {
                 "stepNum": 2,
@@ -316,7 +320,7 @@
             "id": "challenge2",
             "name": "Challenge 2",
             "title": "Checkout Challenge",
-            "image": "images/challenge2.png",
+            "image": "images/4.png",
             "description": "Let's text your knowledge of using git checkout in a real life setting.",
             "steps": [
               {
@@ -377,7 +381,7 @@
             "id": "tut3",
             "name": "Tutorial 3",
             "title": "Testing A Teammates Code",
-            "image": "images/bugs.jpg",
+            "image": "images/5.png",
             "description": "A tutorial to learn how to test your teammates code.",
             "steps": [
                 {
@@ -483,7 +487,7 @@
             "id": "challenge3",
             "name": "Challenge 3",
             "title": "Testing A Teammates Code Challenge",
-            "image": "images/challenge3.png",
+            "image": "images/6.png",
             "description": "Test your knowledge of how to test a teammates code.",
             "steps": [
               {
