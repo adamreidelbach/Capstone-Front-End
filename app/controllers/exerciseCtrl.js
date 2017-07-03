@@ -12,6 +12,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     lmName.innerHTML = "-";
     let lmName2 = document.getElementById("lmName2");
     lmName2.innerHTML = "-";
+    let addTerminalText = document.getElementById("addTerminalText");
+    let previousTerminal = document.getElementById("previousTerminal");
+    let backButton = document.getElementById("backButton");
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -37,7 +40,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
-        let backButton = document.getElementById("backButton");
         if (obj.steps[index].stepNum === 1) {
             backButton.classList.add("inactive");
         } else {
@@ -48,6 +50,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         } else {
             nextButton.classList.remove("inactive");
         }
+        // if ($("#inst1").prop("checked", false)) {
+        //     nextButton.classList.add("inactive");
+        // }
     };
 
     $scope.enableNext = () => {
@@ -63,6 +68,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#appendText").html("");
         $("#addTerminalText").html("");
         $scope.populateLearn($scope.currentStep);
+        $scope.previousTerminalText($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
         $scope.addHighlight($scope.currentStep.preStyle);
         $scope.removeHighlight($scope.currentStep.removeOldStyle);
@@ -71,8 +77,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.backStep = () => {
         $scope.stepCounter--;
+        $scope.userAnswer = "";
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
+        $scope.previousTerminalText($scope.currentStep);
+        // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
         $scope.removeHighlight($scope.currentStep.backRemove);
     };
@@ -85,56 +94,63 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     //get correct answer from data - if true, check the box and append the appropriate instructions text, if applicable
     $scope.getAnswer = () => {
-        console.log("got the current step", $scope.currentStep);
         if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
             console.log("CORRECT1");
+            nextButton.classList.remove("inactive");
+            $scope.userAnswer = "";
             $("#inst1").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint2);
             $("#appendText").append($scope.currentStep.append1);
             $scope.addTerminalText($scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
             $scope.removeHighlight($scope.currentStep.removeStyle1);
-        } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
-            console.log("CORRECT2");
-            $("#inst2").prop("checked", true);
-            $scope.populateHint($scope.currentStep.hint3);
-            $("#appendText").append($scope.currentStep.append2);
-            $scope.addTerminalText($scope.currentStep.terminal2);
-            $scope.addHighlight($scope.currentStep.style2);
-            $scope.removeHighlight($scope.currentStep.removeStyle2);
-        } else if ($scope.currentStep.answer3.includes($scope.userAnswer)) {
-            console.log("CORRECT3");
-            $("#inst3").prop("checked", true);
-            $scope.populateHint($scope.currentStep.hint4);
-            $("#appendText").append($scope.currentStep.append3);
-            $scope.addTerminalText($scope.currentStep.terminal3);
-            $scope.addHighlight($scope.currentStep.style3);
-            $scope.removeHighlight($scope.currentStep.removeStyle3);
-        } else if ($scope.currentStep.answer4.includes($scope.userAnswer)) {
-            console.log("CORRECT4");
-            $("#inst4").prop("checked", true);
-            $scope.populateHint($scope.currentStep.hint5);
-            $("#appendText").append($scope.currentStep.append4);
-            $scope.addTerminalText($scope.currentStep.terminal4);
-            $scope.addHighlight($scope.currentStep.style4);
-            $scope.removeHighlight($scope.currentStep.removeStyle4);
-        } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
-            console.log("CORRECT5");
-            $("#inst5").prop("checked", true);
-            $scope.populateHint($scope.currentStep.hint6);
-            $("#appendText").append($scope.currentStep.append5);
-            $scope.addTerminalText($scope.currentStep.terminal5);
-            $scope.addHighlight($scope.currentStep.style5);
-            $scope.removeHighlight($scope.currentStep.removeStyle5);
-        } else if ($scope.currentStep.answer6.includes($scope.userAnswer)) {
-            console.log("CORRECT6");
-            $("#inst6").prop("checked", true);
-            $("#appendText").append($scope.currentStep.append6);
-            $scope.addTerminalText($scope.currentStep.terminal6);
-            $scope.addHighlight($scope.currentStep.style6);
-            $scope.removeHighlight($scope.currentStep.removeStyle6);
+        // } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
+        //     console.log("CORRECT2");
+        //     $scope.userAnswer = "";
+        //     $("#inst2").prop("checked", true);
+        //     $scope.populateHint($scope.currentStep.hint3);
+        //     $("#appendText").append($scope.currentStep.append2);
+        //     $scope.addTerminalText($scope.currentStep.terminal2);
+        //     $scope.addHighlight($scope.currentStep.style2);
+        //     $scope.removeHighlight($scope.currentStep.removeStyle2);
+        // } // else if ($scope.currentStep.answer3.includes($scope.userAnswer)) {
+        //     console.log("CORRECT3");
+        //     $scope.userAnswer = "";
+        //     $("#inst3").prop("checked", true);
+        //     $scope.populateHint($scope.currentStep.hint4);
+        //     $("#appendText").append($scope.currentStep.append3);
+        //     $scope.addTerminalText($scope.currentStep.terminal3);
+        //     $scope.addHighlight($scope.currentStep.style3);
+        //     $scope.removeHighlight($scope.currentStep.removeStyle3);
+        // } else if ($scope.currentStep.answer4.includes($scope.userAnswer)) {
+        //     console.log("CORRECT4");
+        //     $scope.userAnswer = "";
+        //     $("#inst4").prop("checked", true);
+        //     $scope.populateHint($scope.currentStep.hint5);
+        //     $("#appendText").append($scope.currentStep.append4);
+        //     $scope.addTerminalText($scope.currentStep.terminal4);
+        //     $scope.addHighlight($scope.currentStep.style4);
+        //     $scope.removeHighlight($scope.currentStep.removeStyle4);
+        // } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
+        //     console.log("CORRECT5");
+        //     $scope.userAnswer = "";
+        //     $("#inst5").prop("checked", true);
+        //     $scope.populateHint($scope.currentStep.hint6);
+        //     $("#appendText").append($scope.currentStep.append5);
+        //     $scope.addTerminalText($scope.currentStep.terminal5);
+        //     $scope.addHighlight($scope.currentStep.style5);
+        //     $scope.removeHighlight($scope.currentStep.removeStyle5);
+        // } else if ($scope.currentStep.answer6.includes($scope.userAnswer)) {
+        //     console.log("CORRECT6");
+        //     $scope.userAnswer = "";
+        //     $("#inst6").prop("checked", true);
+        //     $("#appendText").append($scope.currentStep.append6);
+        //     $scope.addTerminalText($scope.currentStep.terminal6);
+        //     $scope.addHighlight($scope.currentStep.style6);
+        //     $scope.removeHighlight($scope.currentStep.removeStyle6);
         } else {
             console.log("INCORRECT");
+            $("#addTerminalText").append("<p>command not found: " + $scope.userAnswer);
             $scope.userAnswer = "";
         }
     };
@@ -183,6 +199,12 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         // lbName2.innerHTML = currentStep.branch2;
         // lmName.innerHTML = currentStep.branch1;
         // lmName2.innerHTML = currentStep.branch2;
+    };
+
+    $scope.previousTerminalText = (currentStep) => {
+        previousTerminal.innerHTML = currentStep.previousTerminal;
+        addTerminalText.innerHTML = "";
+        $("#previousTerminal").append(currentStep.backTerminal);
     };
 
 });

@@ -35,6 +35,92 @@ textarea {
     width: 65% !important;
 }
 
+/* Learn / Instructions Area */
+
+.note {
+    font-style: italic;
+}
+
+#instructText {
+    overflow-y: auto;
+    height: 520px;
+    background-color: white;
+    padding: 0;
+}
+
+.instText {
+    padding: 1.875rem;
+}
+
+.according-container {
+    position: absolute;
+}
+
+.according-section {
+    overflow-x: hidden;
+}
+
+.headerName {
+    margin-top: 0;
+}
+
+.learnHeader {
+    background-color: #d4d5d6;
+    min-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #e9eaea;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #204056;
+}
+
+.learnHeader h5 {
+    font-size: 1.7rem;
+}
+
+#learn {
+    padding: 1.875rem;
+}
+
+.material-icons {
+    line-height: 40px;
+    vertical-align: center;
+}
+
+.instHeader {
+    background-color: #d4d5d6;
+    min-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #e9eaea;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #204056;
+}
+
+.command {
+    background-color: #354551;;
+    color: white;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+#error {
+    color: red;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+#appendText {
+    margin-top: 1em;
+    margin-left: 34px;
+    font-weight: bold;
+}
+
 /* Splash Page */
 
 .allCards {
@@ -102,10 +188,11 @@ textarea {
 
 .indent {
     text-indent: 50px;
+    margin-top: 0;
 }
 
 .mainBackground {
-    background-color: #354551;
+    background-color: black;
 }
 
 /* Terminal */
@@ -120,10 +207,19 @@ textarea {
     color: white;
 }
 
+#addTerminalText p {
+    margin: 0;
+}
+
 #terminal {
     background-color: black;
     color: white;
     margin-top: 16px;
+    overflow-y: auto;
+}
+
+#previousTerminal p {
+    margin: 0;
 }
 
 /* Branches Area */
@@ -257,86 +353,6 @@ textarea {
 .card-image {
     padding: 10px 0;
     height: 250px;
-}
-
-/* Learn / Instructions Area */
-
-.note {
-    font-style: italic;
-}
-
-#instructText {
-    overflow-y: auto;
-    height: 520px;
-    background-color: white;
-    padding: 0;
-}
-
-.instText {
-    padding: 1.875rem;
-}
-
-.according-container {
-    position: absolute;
-}
-
-.according-section {
-    overflow-x: hidden;
-}
-
-.headerName {
-    margin-top: 0;
-}
-
-.learnHeader {
-    background-color: #d4d5d6;
-    min-height: 40px;
-    font-size: 16px;
-    border-bottom: 1px solid #e9eaea;
-    cursor: pointer;
-    padding-left: 10px;
-    color: #204056;
-}
-
-.learnHeader h5 {
-    font-size: 1.7rem;
-}
-
-#learn {
-    padding: 1.875rem;
-}
-
-.material-icons {
-    line-height: 40px;
-    vertical-align: center;
-}
-
-.instHeader {
-    background-color: #d4d5d6;
-    min-height: 40px;
-    font-size: 16px;
-    border-bottom: 1px solid #e9eaea;
-    cursor: pointer;
-    padding-left: 10px;
-    color: #204056;
-}
-
-.command {
-    background-color: #354551;;
-    color: white;
-    margin-left: 35px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px 5px;
-    text-align: center;
-}
-
-#error {
-    color: red;
-}
-
-.brand-logo {
-    margin-left: 10px;
 }
 
 /* Footer */
