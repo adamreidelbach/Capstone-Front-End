@@ -74,9 +74,7 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": "",
-                "backRemove1": "#lm"
-              },
+                "answer7": ""              },
               {
                 "stepNum": 3,
                 "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.</p>",
@@ -98,8 +96,7 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
-                "preStyle1": "#lm",
-                "previousStyle": "#lm"
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -123,7 +120,7 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
-                "previousStyle": "#lm"
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 5,
@@ -160,7 +157,6 @@
                 "hint": "",
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
                 "answer1": "git checkout -b myNavbar",
-                "styleStart": "#lb",
                 "style1": "#lb",
                 "hint1": "git checkout -b myNavbar",
                 "hint2": "",
@@ -173,7 +169,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm",
+                "removeStyle1": "#lm"
               },
               {
                 "stepNum": 2,
@@ -196,7 +194,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 3,
@@ -206,7 +205,6 @@
                 "terminal1": "<p>git push origin myNavbar</p><p>Counting objects: 3, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (3/3), 286 bytes | 0 bytes/s , done.<br>Total 3 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), completed with 1 local object.<br>To https://github.com/user/myProject.git<br>* [a123456...b123ab1] myNavbar -> myNavbar</p>",
                 "hint": "",
                 "answer1": "git push origin myNavbar",
-                "removeStyle1": "#lb",
                 "style1": "#gb",
                 "hint1": "git push origin myNavbar",
                 "hint2": "",
@@ -216,7 +214,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 4,
@@ -228,6 +227,7 @@
                 "style1": "#lm",
                 "removeStyle1": "#lb",
                 "preStyle1": "#gm",
+                "preStyle2": "#lb",
                 "removeOldStyle": "#gb",
                 "hint1": "git checkout master",
                 "hint2": "",
@@ -237,7 +237,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "preStyle2": "#lb"
               },
               {
                 "stepNum": 5,
@@ -258,7 +260,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "preStyle2": "#lm"
               },
               {
                 "stepNum": 6,
@@ -277,7 +281,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 7,
@@ -314,13 +319,16 @@
                 "answer7": "git checkout -b myFooter",
                 "style1": "#lb",
                 "style2": "#lb",
-                "style3": "#lb",
+                "style3": "#gb",
                 "style4": "#gb",
                 "style5": "#lm",
                 "style6": "#lb",
+                "removeStyle1": "#lm",
                 "removeStyle4": "#lb",
                 "removeStyle5": "#gm",
                 "removeStyle6": "#lm",
+                "preStyle1": "#lm",
+                "preStyle3": "#lb",
                 "preStyle4": "#gm",
                 "removeOldStyle4": "#gb",
                 "hint1": "git checkout -b myNavbar",

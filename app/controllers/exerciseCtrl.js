@@ -33,7 +33,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.populateLearn($scope.currentStep);
           $scope.populateBranch($scope.currentStep);
           $scope.populateHint($scope.currentStep.hint1);
-          $scope.addHighlight($scope.currentStep.styleStart);
+          $scope.addHighlight($scope.currentStep.preStyle1);
           return instructions;
         });
     };
@@ -76,6 +76,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
+        $scope.resetStyle();
         $scope.addHighlight($scope.currentStep.preStyle1);
         $scope.removeHighlight($scope.currentStep.removeOldStyle);
         $scope.addHighlight($scope.currentStep.preStyle2);
@@ -92,7 +93,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.populateHint($scope.currentStep.hint1);
         appendText.innerHTML = "";
         $scope.resetStyle();
-        $scope.addHighlight($scope.currentStep.previousStyle);
+        $scope.addHighlight($scope.currentStep.preStyle1);
+        $scope.addHighlight($scope.currentStep.preStyle2);
     };
 
     $scope.populateLearn = (currentInstructions) => {
@@ -199,6 +201,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.addHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);
+        console.log(element);
         element.classList.add("highlight");
     };
 
