@@ -425,6 +425,7 @@
                 "branch1": "index.html",
                 "branch2": "css/main.css",
                 "backTerminal": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
+                "previousTerminal": "",
                 "answer2": "",
                 "answer3": "",
                 "answer4": "",
@@ -532,6 +533,7 @@
                 "answer6": "",
                 "answer7": "",
                 "backTerminal": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p><p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 2 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
+                "previousTerminal": "",
                 "append4": "Great work! Your team is now ready to take a look at your updated project. Let's move on to some more exercises."
               }
             ]
@@ -560,6 +562,7 @@
                     "styleStart": "#lb",
                     "hint3": "",
                     "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p>",
+                    "previousTerminal": "",
                     "answer3": "",
                     "answer4": "",
                     "answer5": "",
@@ -722,6 +725,7 @@
                 "terminal4": "<p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
                 "hint4": "",
                 "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p><p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p><p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
+                "previousTerminal": "",
                 "answer5": "",
                 "answer6": "",
                 "answer7": ""
