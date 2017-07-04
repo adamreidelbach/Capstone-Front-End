@@ -4,14 +4,14 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     let nextButton = document.getElementById("nextButton");
 
-    let lbName = document.getElementById("lbName");
-    lbName.innerHTML = "-";
-    let lbName2 = document.getElementById("lbName2");
-    lbName2.innerHTML = "-";
-    let lmName = document.getElementById("lmName");
-    lmName.innerHTML = "-";
-    let lmName2 = document.getElementById("lmName2");
-    lmName2.innerHTML = "-";
+    // let lbName = document.getElementById("lbName");
+    // lbName.innerHTML = "-";
+    // let lbName2 = document.getElementById("lbName2");
+    // lbName2.innerHTML = "-";
+    // let lmName = document.getElementById("lmName");
+    // lmName.innerHTML = "-";
+    // let lmName2 = document.getElementById("lmName2");
+    // lmName2.innerHTML = "-";
     let addTerminalText = document.getElementById("addTerminalText"),
     previousTerminal = document.getElementById("previousTerminal"),
     backButton = document.getElementById("backButton"),
@@ -42,6 +42,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
+        console.log("obj.steps[index].stepNum", obj.steps[index].stepNum);
+        console.log("obj.steps.length", obj.steps.length);
+        console.log("$rootScope.page", $rootScope.page + 1);
+        //make back button inactive is page is less than 1
         if (obj.steps[index].stepNum === 1) {
             backButton.classList.add("inactive");
         } else {
@@ -55,10 +59,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         // if ($("#inst1").prop("checked", false)) {
         //     nextButton.classList.add("inactive");
         // }
-    };
-
-    $scope.enableNext = () => {
-        nextButton.classList.remove("inactive");
     };
 
     $scope.nextStep = () => {
@@ -101,7 +101,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getAnswer = () => {
         if ($scope.currentStep.answer1.includes($scope.userAnswer) /*&& $("#inst2").prop("checked") === false*/) {
             console.log("CORRECT1");
-            nextButton.classList.remove("inactive");
             $scope.userAnswer = "";
             $("#inst1").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint2);
