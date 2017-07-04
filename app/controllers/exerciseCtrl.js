@@ -15,8 +15,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     let addTerminalText = document.getElementById("addTerminalText"),
     previousTerminal = document.getElementById("previousTerminal"),
     backButton = document.getElementById("backButton"),
-    appendText = document.getElementById("appendText");
-
+    appendText = document.getElementById("appendText"),
+    gb = document.getElementById("gb"),
+    lb = document.getElementById("lb"),
+    gm = document.getElementById("gm"),
+    lm = document.getElementById("lm");
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -88,13 +91,12 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
         appendText.innerHTML = "";
+        $scope.resetStyle();
         $scope.addHighlight($scope.currentStep.previousStyle);
-        $scope.removeHighlight($scope.currentStep.backRemove);
     };
 
     $scope.populateLearn = (currentInstructions) => {
         let learn = document.getElementById("learn");
-        console.log(currentInstructions.learn);
         learn.innerHTML = currentInstructions.learn;
     };
 
@@ -177,11 +179,18 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     //     }
     // });
 
-     // adding and remove classes for the visualization area
-    $scope.styling = (previousBox, newBox) => {
-        previousBox.removeClass("highlight");
-        newBox.addClass("highlight");
+    $scope.resetStyle = () => {
+        lb.classList.remove("highlight");
+        gb.classList.remove("highlight");
+        lm.classList.remove("highlight");
+        gm.classList.remove("highlight");
     };
+
+     // adding and remove classes for the visualization area
+    // $scope.styling = (previousBox, newBox) => {
+    //     previousBox.removeClass("highlight");
+    //     newBox.addClass("highlight");
+    // };
 
     $scope.removeHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);

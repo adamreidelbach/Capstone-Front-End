@@ -98,7 +98,8 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
-                "preStyle1": "#lm"
+                "preStyle1": "#lm",
+                "previousStyle": "#lm"
               },
               {
                 "stepNum": 4,
@@ -122,7 +123,6 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
-                "backRemove": "#gm",
                 "previousStyle": "#lm"
               },
               {
