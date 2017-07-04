@@ -12,9 +12,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     lmName.innerHTML = "-";
     let lmName2 = document.getElementById("lmName2");
     lmName2.innerHTML = "-";
-    let addTerminalText = document.getElementById("addTerminalText");
-    let previousTerminal = document.getElementById("previousTerminal");
-    let backButton = document.getElementById("backButton");
+    let addTerminalText = document.getElementById("addTerminalText"),
+    previousTerminal = document.getElementById("previousTerminal"),
+    backButton = document.getElementById("backButton"),
+    appendText = document.getElementById("appendText");
+
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -66,8 +68,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst1").prop("checked", false);
         $("#inst2").prop("checked", false);
         $("#inst3").prop("checked", false);
-        $("#appendText").html("");
-        $("#addTerminalText").html("");
+        appendText.innerHTML = "";
+        addTerminalText.innerHTML = "";
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
@@ -84,6 +86,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.previousTerminalText($scope.currentStep);
         // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
+        appendText.innerHTML = "";
         $scope.removeHighlight($scope.currentStep.backRemove);
     };
 
