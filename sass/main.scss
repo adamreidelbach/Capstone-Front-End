@@ -30,229 +30,17 @@ textarea {
   color: white;
 }
 
-/* Splash Page */
-
-.allCards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: lightgrey;
-}
-
-.splashCards {
-    height: 29rem;
-    width: 26%;
-    margin: 1%;
-}
-
-.splashHeaderText {
-    color: #204056 !important;
-}
-
-.splashNav {
-    background-color: white !important;
-}
-
-.cardTitle {
-    color: #204056;
-    font-size: 1.75rem;
-    line-height: 2rem;
-}
-
-.cardDescription {
-    color: #76787B;
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
-.cardBackground {
-    background-color: #204056;
-    height: 12.5rem;
-}
-
-.cardImg {
-    width: 55% !important;
-    margin-left: 25%;
-}
-
-.beginExercise {
-    font-size: 1.3rem !important;
-    margin-top: 25px !important
-}
-
-// label {
-//     background-color: lightgrey;
-//     border: 0;
-// }
-
-.row {
-    margin-bottom: 0;
-}
-
-.indent {
-    text-indent: 50px;
-}
-
-.mainBackground {
-    background-color: #354551;
-}
-
-/* Terminal */
-
-#userText {
-    background-color: black;
-    color: white;
-}
-
-#addTerminalText {
-    background-color: black;
-    color: white;
-}
-
-#terminal {
-    background-color: black;
-    color: white;
-    margin-top: 16px;
-}
-
-/* Branches Area */
-
-.branchEmpty {
-    color: lightgrey;
-}
-
-#lbName {
-    position: relative;
-    left: 293px;
-    bottom: 205px;
-}
-
-#lbName2 {
-    position: relative;
-    left: 293px;
-    bottom: 205px;
-}
-
-#lmName {
-    position: relative;
-    left: 29px;
-    bottom: 42px;
-}
-
-#lmName2 {
-    position: relative;
-    left: 29px;
-    bottom: 42px;
-}
-
-/* Visualization Area */
-
-.box {
-    height: 100px;
-    width: 100px;
-    content:url('../images/folder.png');
-}
-
-#gb {
-    position: relative;
-    left: 275px;
-    top: -120px;
-}
-
-.gbLabel {
-    position: relative;
-    left: 275px;
-    top: -120px;
-    color: #204056;
-}
-
-#gm {
-    position: relative;
-    left: 15px;
-}
-
-.gmLabel {
-    color: #204056;
-    position: relative;
-    left: 15px;
-}
-
-#lm {
-    position: relative;
-    left: 15px;
-    bottom: 50px;
-}
-
-.lmLabel {
-    color: #204056;
-    position: relative;
-    left: 15px;
-    bottom: 50px;
-}
-
-#lb {
-    position: relative;
-    left: 275px;
-    top: -212px;
-}
-
-.lbLabel {
-    position: relative;
-    left: 275px;
-    top: -214px;
-    color: #204056;
-}
-
-.highlight {
-    background-color: #204056;
-    transition: transform 1s;
-    border-radius: 20px;
-    content:url('../images/openFolder.png');
-}
-
-.github {
-    height: 50px;
-    position: relative;
-    left: 165px;
-    margin-top: 5px;
-}
-
-.apple {
-    height: 50px;
-    position: relative;
-    top: -165px;
-    left: 97px;
-}
-
-.linux {
-    height: 50px;
-    position: relative;
-    top: -165px;
-    left: 106px;
-}
-
-.windows {
-    height: 50px;
-    position: relative;
-    top: -165px;
-    left: 123px;
-}
-
-#visualize {
-    height: 520px;
-    background-color: #d4d5d6;
-}
-
-.card-image {
-    padding: 10px 0;
-    height: 250px;
+.modal {
+    max-height: 80% !important;
+    width: 65% !important;
 }
 
 /* Learn / Instructions Area */
 
 .note {
     font-style: italic;
+    text-indent: 0;
+    color: grey;
 }
 
 #instructText {
@@ -327,6 +115,249 @@ textarea {
 
 .brand-logo {
     margin-left: 10px;
+}
+
+#appendText {
+    margin-top: 1em;
+    margin-left: 34px;
+    font-weight: bold;
+}
+
+/* Splash Page */
+
+.allCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+.splashCards {
+    height: 29rem;
+    width: 26%;
+    margin: 1%;
+}
+
+.splashHeaderText {
+    color: #204056 !important;
+}
+
+.splashNav {
+    background-color: white !important;
+}
+
+.cardTitle {
+    color: #204056;
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+.cardDescription {
+    color: #76787B;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBackground {
+    background-color: #204056;
+    height: 12.5rem;
+}
+
+.cardImg {
+    width: 55% !important;
+    margin-left: 25%;
+}
+
+.readmeImg {
+    cursor: pointer;
+}
+
+.beginExercise {
+    font-size: 1.3rem !important;
+    margin-top: 25px !important;
+    cursor: pointer;
+}
+
+// label {
+//     background-color: lightgrey;
+//     border: 0;
+// }
+
+.row {
+    margin-bottom: 0;
+}
+
+.indent {
+    text-indent: 50px;
+    margin-top: 0;
+}
+
+.mainBackground {
+    background-color: black;
+}
+
+/* Terminal */
+
+#userText {
+    background-color: black;
+    color: white;
+}
+
+#addTerminalText {
+    background-color: black;
+    color: white;
+}
+
+#addTerminalText p {
+    margin: 0;
+}
+
+#terminal {
+    background-color: black;
+    color: white;
+    margin-top: 16px;
+    overflow-y: auto;
+    height: 503px;
+}
+
+#previousTerminal p {
+    margin: 0;
+}
+
+/* Branches Area */
+
+.branchEmpty {
+    color: lightgrey;
+}
+
+#lbName {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lbName2 {
+    position: relative;
+    left: 293px;
+    bottom: 205px;
+}
+
+#lmName {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
+#lmName2 {
+    position: relative;
+    left: 29px;
+    bottom: 42px;
+}
+
+/* Visualization Area */
+
+.box {
+    height: 100px;
+    width: 100px;
+    content:url('../images/folder.png');
+}
+
+#gb {
+    position: relative;
+    left: 265px;
+    top: -32px;
+}
+
+.gbLabel {
+    position: relative;
+    left: 265px;
+    top: -32px;
+    color: #204056;
+}
+
+#gm {
+    position: relative;
+    left: 20px;
+    top: 90px;
+}
+
+.gmLabel {
+    color: #204056;
+    position: relative;
+    left: 20px;
+    top: 90px;
+}
+
+#lm {
+    position: relative;
+    left: 20px;
+    bottom: -50px;
+}
+
+.lmLabel {
+    color: #204056;
+    position: relative;
+    left: 20px;
+    bottom: -50px;
+}
+
+#lb {
+    position: relative;
+    left: 265px;
+    bottom: 72px;
+}
+
+.lbLabel {
+    position: relative;
+    left: 265px;
+    bottom: 72px;
+    color: #204056;
+}
+
+.highlight {
+    background-color: #204056;
+    transition: transform 1s;
+    border-radius: 20px;
+    content:url('../images/openFolder.png');
+}
+
+.github {
+    height: 50px;
+    position: relative;
+    left: 165px;
+    margin-top: 5px;
+}
+
+.apple {
+    height: 50px;
+    position: relative;
+    top: -165px;
+    left: 97px;
+}
+
+.linux {
+    height: 50px;
+    position: relative;
+    top: -165px;
+    left: 106px;
+}
+
+.windows {
+    height: 50px;
+    position: relative;
+    top: -165px;
+    left: 123px;
+}
+
+#visualize {
+    height: 520px;
+    background-color: #d4d5d6;
+}
+
+.card-image {
+    padding: 10px 0;
+    height: 250px;
 }
 
 /* Footer */

@@ -45,6 +45,9 @@
                 <input type="checkbox" id="inst6" />
                 <label for="inst6" ng-show="currentStep.instructions6">{{currentStep.instructions6}}</label>
                 <div class="command" ng-show="currentStep.command6">{{currentStep.command6}}</div>
+                <input type="checkbox" id="inst7" />
+                <label for="inst7" ng-show="currentStep.instructions7">{{currentStep.instructions7}}</label>
+                <div class="command" ng-show="currentStep.command7">{{currentStep.command7}}</div>
 
                 <div id="appendText"></div>
             </div>
@@ -52,8 +55,9 @@
     </div>
 
     <form ng-submit="getAnswer()" id="terminal" class="col s4">
-        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" />
+        <div id="previousTerminal"></div>
         <div id="addTerminalText"></div>
+        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" placeholder="$"/>
     </form>
 
 <!--     <form ng-submit="getAnswer()" id="terminal" class="col s4">
@@ -62,8 +66,8 @@
     </form> -->
 
     <div id="visualize" class="col s4">
-        <img class="github" src="images/github.png">
-
+<!--         <img class="github" src="images/github.png">
+ -->
         <div class="gmLabel">GitHub Master</div>
         <div class="box" id="gm">
             <img src="images/folder.png">
@@ -82,11 +86,11 @@
         <div id="lbName"></div>
         <div id="lbName2"></div>
 
-        <div class="localIcons">
+<!--         <div class="localIcons">
             <img class="apple" src="images/apple.png">
             <img class="linux" src="images/linux.png">
             <img class="windows" src="images/windows.png">
-        </div>
+        </div> -->
     </div>
 </div>
 
