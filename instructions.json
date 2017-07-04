@@ -74,7 +74,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "backRemove1": "#lm"
               },
               {
                 "stepNum": 3,
@@ -96,7 +97,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -119,7 +121,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "backRemove": "#gm",
+                "previousStyle": "#lm"
               },
               {
                 "stepNum": 5,
@@ -132,7 +136,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "removeOldStyle": "#lm"
               }
             ]
         },
@@ -358,7 +364,7 @@
                 "style3": "#gb",
                 "removeStyle3": "#lb",
                 "hint4": "",
-                "backRemove": "#gm",
+                "backRemove1": "#gm",
                 "previousTerminal": "",
                 "backTerminal": "<p>git add .</p><p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
                 "answer4": "",

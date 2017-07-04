@@ -88,6 +88,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
         appendText.innerHTML = "";
+        $scope.addHighlight($scope.currentStep.previousStyle);
         $scope.removeHighlight($scope.currentStep.backRemove);
     };
 
