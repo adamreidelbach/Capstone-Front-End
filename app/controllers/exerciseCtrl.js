@@ -65,6 +65,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.userAnswer = "";
         $("#inst1").prop("checked", false);
         $("#inst2").prop("checked", false);
+        $("#inst3").prop("checked", false);
         $("#appendText").html("");
         $("#addTerminalText").html("");
         $scope.populateLearn($scope.currentStep);
@@ -144,6 +145,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             console.log("CORRECT6");
             $scope.userAnswer = "";
             $("#inst6").prop("checked", true);
+            $scope.populateHint($scope.currentStep.hint7);
             $("#appendText").append($scope.currentStep.append6);
             $scope.addTerminalText($scope.currentStep.terminal6);
             $scope.addHighlight($scope.currentStep.style6);
