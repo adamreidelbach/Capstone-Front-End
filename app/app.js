@@ -1,6 +1,6 @@
 "use strict";
 
-const app = angular.module('GitApp', ["ngRoute", "ui.materialize", "angular-terminal"]);
+const app = angular.module('GitApp', ["ngRoute", "ui.materialize"]);
 
 // .run(function ($rootScope) {
 //                 $rootScope.$on('terminal.main', function (e, input, terminal) {
