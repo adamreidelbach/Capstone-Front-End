@@ -90,6 +90,13 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.backStep = () => {
         $scope.stepCounter--;
         $scope.userAnswer = "";
+        $("#inst1").prop("checked", false);
+        $("#inst2").prop("checked", false);
+        $("#inst3").prop("checked", false);
+        $("#inst4").prop("checked", false);
+        $("#inst5").prop("checked", false);
+        $("#inst6").prop("checked", false);
+        $("#inst7").prop("checked", false);
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);

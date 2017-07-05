@@ -350,7 +350,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working in a new branch named “myHomepage” and have made several edits to the files inside your project. In this example, let’s say you finished building the navbar and did some basic styling, commit it, and continue through the rest of the workflow path.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working in a new branch named “myHomepage” and have made several edits to the files inside your project. In this example, let’s say you finished building the navbar and did some basic styling. Remember to add and commit your files before you continue through the rest of the workflow path.</p>",
                 "instructions1": "1.",
                 "command1": "Add your files",
                 "terminal1": "<p>git add .</p>",
@@ -373,11 +373,12 @@
                 "hint4": "",
                 "backRemove1": "#gm",
                 "previousTerminal": "",
-                "backTerminal": "<p>git add .</p><p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
+                "backTerminal": "",
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -389,7 +390,7 @@
                 "answer1": "git checkout master",
                 "append1": "",
                 "style1": "#lm",
-                "removeStyle1": "#gm",
+                "removeStyle1": "#lb",
                 "hint1": "git checkout master",
                 "instructions2": "2.",
                 "command2": "Pull down your files into your local master",
@@ -407,6 +408,7 @@
                 "style3": "#lb",
                 "removeStyle3": "#lm",
                 "preStyle1": "#gm",
+                "preStyle2": "#lb",
                 "removeOldStyle": "#gb",
                 "hint4": "",
                 "previousTerminal": "<p>git add .</p><p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
