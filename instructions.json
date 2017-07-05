@@ -566,7 +566,7 @@
             "steps": [
                 {
                     "stepNum": 1,
-                    "learn": "<p>It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves.</p><p>Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while (let's say we were buidling a splash page), so we’ll need to checkout of our old branch and into a new one in order to take a look at John’s work. Note: We want to make a new branch so the new files won't override what we have have been working on in our current branch (which I have simply named, splashPage).</p>",
+                    "learn": "<p>It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves.</p><p>Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while (let's say we were buidling a splash page), so we’ll need to checkout of our old branch and into a new one in order to take a look at John’s work.</p><p>Note: We want to make a new branch so the new files won't override what we have have been working on in our current branch (which I have simply named, splashPage).</p>",
                     "instructions1": "1. To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Type in:",
                     "command1": "git add .",
                     "terminal1": "<p>git add .</p>",
@@ -580,13 +580,14 @@
                     "style1": "#lb",
                     "styleStart": "#lb",
                     "hint3": "",
-                    "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p>",
+                    "backTerminal": "",
                     "previousTerminal": "",
                     "answer3": "",
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 },
                 {
                     "stepNum": 2,
@@ -594,7 +595,6 @@
                     "instructions1": "Type in:",
                     "command1": "git checkout -b JohnStyling",
                     "terminal1": "<p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p>",
-                    "append1": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer1": "git checkout -b JohnStyling",
                     "style1": "#lb",
                     "hint1": "git checkout -b JohnStyling",
@@ -605,7 +605,10 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "removeStyle1": "#lb",
+                    "append1": "We are now inside of a new branch called JohnStyling."
                 },
                 {
                     "stepNum": 3,
@@ -614,7 +617,7 @@
                     "command1": "git pull origin JohnStyling",
                     "command2": "",
                     "terminal1": "<p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
-                    "append1": "We have now pulled down a copy of JohnStyling to test it out.",
+                    "append1": "We have now pulled down a copy of John's code to test it on our computer.",
                     "answer1": "git pull origin JohnStyling",
                     "style1": "#lb",
                     "hint1": "git pull origin JohnStyling",
@@ -625,11 +628,13 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "removeStyle1": ""
                 },
                 {
                     "stepNum": 4,
-                    "learn": "Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.",
+                    "learn": "<p>Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.</p><p>Again, we will assume that this has already happened. Notice once again, the Local Branch is still highlighted to indicate that we need to checkout to our Local Master before we are able to update it with the new Github Master.</p>",
                     "instructions1": "1. Let’s pull down the Github Master to your Local Master. We have to do something first before we can pull down the new version. We need to checkout to the master. Type in:",
                     "command1": "git checkout master",
                     "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
@@ -639,7 +644,9 @@
                     "answer2": "git pull origin master",
                     "terminal2": "<p>git pull origin master</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)</p>",
                     "style1": "#lm",
+                    "style2": "#lm",
                     "removeStyle1": "#lb",
+                    "removeStyle2": "#gm",
                     "hint1": "git checkout master",
                     "hint2": "git pull origin master",
                     "hint3": "",
@@ -648,7 +655,9 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "preStyle2": "#gm"
                 },
                 {
                     "stepNum": 5,
@@ -668,7 +677,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lm"
                 },
                 {
                     "stepNum": 6,
@@ -687,7 +697,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 },
                 {
                     "stepNum": 7,
@@ -695,7 +706,7 @@
                     "instructions1": "For our last step, let’s go ahead and delete the JohnStyling branch, so we don’t need it anymore. Type in:",
                     "command1": "git branch -D JohnStyling",
                     "command2": "",
-                    "append1": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
+                    "append1": "The JohnStyling branch has now been deleted. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal1": "<p>git branch -D JohnStyling</p><p>Deleted branch JohnStyling</p>",
                     "answer1": "git branch -D JohnStyling",
                     "style1": "#lb",
@@ -707,7 +718,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 }
             ]
         },

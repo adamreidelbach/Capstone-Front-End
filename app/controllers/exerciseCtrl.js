@@ -82,8 +82,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.populateHint($scope.currentStep.hint1);
         $scope.resetStyle();
         $scope.addHighlight($scope.currentStep.preStyle1);
-        $scope.removeHighlight($scope.currentStep.removeOldStyle);
         $scope.addHighlight($scope.currentStep.preStyle2);
+        $scope.removeHighlight($scope.currentStep.removeOldStyle);
         //eventually will need to keep all previous code and add a line break
     };
 
@@ -122,8 +122,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.populateHint($scope.currentStep.hint2);
             $scope.addTerminalText($scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
-            $scope.removeHighlight($scope.currentStep.removeStyle1);
             $("#appendText").append($scope.currentStep.append1);
+            $scope.removeHighlight($scope.currentStep.removeStyle1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
             console.log("CORRECT2");
             $scope.userAnswer = "";
@@ -150,7 +150,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $("#appendText").append($scope.currentStep.append4);
             $scope.addTerminalText($scope.currentStep.terminal4);
             $scope.addHighlight($scope.currentStep.style4);
-            $scope.addHighlight($scope.currentStep.style4a);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
             console.log("CORRECT5");
