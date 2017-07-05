@@ -49,7 +49,7 @@
                 "hint1": "ls",
                 "hint2": "",
                 "previousTerminal": "",
-                "backTerminal": "<p>ls</p><p>README.md css index.html javascripts</p>",
+                "backTerminal": "",
                 "answer3": "",
                 "answer4": "",
                 "answer5": "",
@@ -162,7 +162,7 @@
                 "hint2": "",
                 "branch1": "",
                 "branch2": "",
-                "backTerminal": "<p>git checkout -b myNavbar</p><p>Switched to a new branch 'myNavbar'</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer2": "",
                 "answer3": "",
@@ -439,14 +439,15 @@
                 "hint2": "",
                 "branch1": "index.html",
                 "branch2": "css/main.css",
-                "backTerminal": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer2": "",
                 "answer3": "",
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -470,7 +471,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 3,
@@ -489,7 +491,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -503,7 +506,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               }
             ]
         },
