@@ -71,6 +71,10 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst1").prop("checked", false);
         $("#inst2").prop("checked", false);
         $("#inst3").prop("checked", false);
+        $("#inst4").prop("checked", false);
+        $("#inst5").prop("checked", false);
+        $("#inst6").prop("checked", false);
+        $("#inst7").prop("checked", false);
         appendText.innerHTML = "";
         addTerminalText.innerHTML = "";
         $scope.populateLearn($scope.currentStep);
@@ -139,6 +143,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $("#appendText").append($scope.currentStep.append4);
             $scope.addTerminalText($scope.currentStep.terminal4);
             $scope.addHighlight($scope.currentStep.style4);
+            $scope.addHighlight($scope.currentStep.style4a);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer)) {
             console.log("CORRECT5");
@@ -161,7 +166,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         } else if ($scope.currentStep.answer7.includes($scope.userAnswer)) {
             console.log("CORRECT7");
             $scope.userAnswer = "";
-            $("#inst6").prop("checked", true);
+            $("#inst7").prop("checked", true);
             $("#appendText").append($scope.currentStep.append7);
             $scope.addTerminalText($scope.currentStep.terminal7);
             $scope.addHighlight($scope.currentStep.style7);
