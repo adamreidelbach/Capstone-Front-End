@@ -34,11 +34,11 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>When you first begin working on a new project, you will want to get your basic file structure put in place. Let's assume that right now we are inside of a folder (or directory) called myProject. It currently contains a few essential files to get us started.</p><p>Notice, to the right is a virtual terminal. This is the area where we will enter all of our commands. These commands seem to have strange names, but they are always shorthand for something.</p>",
-                "instructions1": "In this case, we want to see a “list” of all of the files that I have already created. To do so, type in “ls” followed by enter. The \"ls\" command is simply short for \"list\"",
+                "learn": "<p>When you first begin working on a new project, you will want to get your basic file structure in place. Let's assume that right now we are inside of a folder (or directory) called myProject. It currently contains a few essential files to get us started.</p><p>Notice, to the right is a virtual terminal. This is the area where we will enter all of our commands. These commands seem to have strange names, but they are always shorthand for something.</p>",
+                "instructions1": "In this case, we want to see a “list” of all of the files that have already been created. To do so, type in “ls” followed by enter. The \"ls\" command is simply short for \"list\"",
                 "command1": "ls",
                 "terminal1": "<p>ls</p><p>README.md css index.html javascripts</p>",
-                "append1": "Notice in the terminal is now a list of all the files inside of the myProject directory (folder). Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
+                "append1": "Notice, there is now a list of all the files inside of the myProject directory. Inside of the css folder is a main.css file and inside of the javascripts folder is a main.js file.",
                 "append2": "",
                 "answer1": "ls",
                 "answer2": "",
@@ -64,7 +64,7 @@
                 "answer1": "git init",
                 "answer2": "",
                 "terminal1": "<p>git init</p><p>Initialized empty Git repository in /Users/myComputer/workspace/myProject/.git/</p>",
-                "append1": "Notice that Local Master has now been initialized and we are now able to use git commands. Our files are sitting inside of the Local Master",
+                "append1": "Notice that Local Master has been initialized and we are now able to use git commands. Our files are sitting inside of the Local Master",
                 "style1": "#lm",
                 "hint1": "git init",
                 "hint2": "",
@@ -77,8 +77,8 @@
                 "answer7": ""              },
               {
                 "stepNum": 3,
-                "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.</p>",
-                "instructions1": "1. Let’s add those files and directories mentioned earlier.",
+                "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming exercises. Because we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely empty project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. Committing often is always a good rule of thumb.</p>",
+                "instructions1": "1. Let’s add those files and folders mentioned earlier.",
                 "command1": "git add .",
                 "answer1": "git add .",
                 "instructions2": "2. Let's commit our work",
@@ -86,7 +86,7 @@
                 "answer2": "git commit -m \"file structure complete\"",
                 "terminal1": "<p>git add .</p>",
                 "terminal2": "<p>git commit -m \"file structure complete\"</p><p>[master (root-commit) abc12a1] file structure complete<br>4 files changed, 0 insertions(+), 0 deletions(-)<br>create mode 100644 README.md<br>create mode 100644 css/main.css<br>create mode 100644 index.html<br>create mode 100644 javascripts/main.js</p>",
-                "append1": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work.",
+                "append2": "Note: Once again, it’s important to have descriptive names for each commit. This will be very useful if you need to recover previous work.",
                 "hint1": "git add .",
                 "hint2": "git commit -m \"file structure complete\"",
                 "hint3": "",
@@ -96,11 +96,13 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
-                "preStyle1": "#lm"
+                "preStyle1": "#lm",
+                "style1": "#lm",
+                "style2": "#lm"
               },
               {
                 "stepNum": 4,
-                "learn": "<p>Lastly, we need to connect our project to a repository on Github and “push” up a copy those files we just committed. Notice, I said it’s pushing a copy, your local files will still stay on your computer, so not to worry. I have taken the liberty of setting us up an account and repository (where our project will be stored) on Github.</p><p class='note'>NOTE: Once again, creating a project from strach is the only time where we will push directly from Local Master to Github Master. We need to push up something to Github in order to make it happy and get our project started. Thankfully, this long remote command is provided to you by Github, so you could simply copy paste it in the future.</p>",
+                "learn": "<p>Lastly, we need to connect our project to a repository on Github and “push” up a copy of those files we just committed. Notice, I said it’s pushing a copy. Your local files will still stay on your computer, so not to worry. I have taken the liberty of setting us up an account and repository (where our project will be stored) on Github.</p><p class='note'>NOTE: Once again, creating a project from strach is the only time where we will push directly from Local Master to Github Master. We need to push up something to Github in order to make it happy and get our project started. Thankfully, this long remote command is provided to you by Github, so you could simply copy paste it in the future.</p>",
                 "instructions1": "1. Let's connect our directory to Github. Type in:",
                 "command1": "git remote add origin https://github.com/user/myProject.git",
                 "terminal1": "<p>git remote add origin https://github.com/user/myProject.git</p>",
@@ -124,7 +126,7 @@
               },
               {
                 "stepNum": 5,
-                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. You are now ready to begin the Tutorial 1 - Github Workflow Overview. Let’s go!",
+                "learn": "What’s up with this remote and origin? Remote allows us to connect our project to a repository on Github. It tells git where to look. Origin refers to where we are pushing the files from. In this case, we are push directly from the Local Master. Let's keep moving!",
                 "hint1": "",
                 "previousTerminal": "<p>ls</p><p>README.md css index.html javascripts</p><p>git init</p><p>Initialized empty Git repository in /Users/myComputer/workspace/myProject/.git/</p><p>git add .</p><p>git commit -m \"file structure complete\"</p><p>[master (root-commit) abc12a1] file structure complete<br>4 files changed, 0 insertions(+), 0 deletions(-)<br>create mode 100644 README.md<br>create mode 100644 css/main.css<br>create mode 100644 index.html<br>create mode 100644 javascripts/main.js</p><p>git remote add origin https://github.com/user/myProject.git</p><p>git push origin master</p><p>Counting objects: 5, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (5/5), 395 bytes | 0 bytes/s , done.<br>Total 5 (delta 0), reused 0 (delta 0)<br>To https://github.com/user/myProject.git<br>* [new branch] master -> master</p>",
                 "answer1": "",
@@ -148,8 +150,8 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "Picking up where we left on the Getting Started Tutorial, we are now ready to start working on our project, along with our teammates. As mentioned before, branches help us share our work with teammates and work on individual, bite sized tasks.",
-                "instructions1": "In this example, let’s work on the navigation bar inside of the index page. We will create a branch and jump into that branch using “checkout.” Type in:",
+                "learn": "Picking up where we left on the Getting Started Tutorial, we are now ready to start working on our project, along with our teammates. As mentioned before, branches help us share our work with teammates and work on individual, bite sized tasks. Additionally, we <i>never</i> want to work on our master (aka Local Master) during group projects. This is reserved for storing a local and continually updated copy of our Github Master. Branches are your friend and you should always use them.",
+                "instructions1": "In this example, we've been tasked with working on the navigation bar inside of the index page. We will create a branch and jump into that branch using “checkout.” Type in:",
                 "command1": "git checkout -b myNavbar",
                 "instructions2": "",
                 "command2": "",
@@ -175,8 +177,8 @@
               },
               {
                 "stepNum": 2,
-                "learn": "Let’s pretend the new navbar is now complete and we are ready to send it up to our Github branch so our team can take a look at it. First, we will need to add and then commit the files. When committing, don’t forget that you must provide a log message, describe what the commit contains.",
-                "instructions1": "In this examples, let’s type in: “git add .” “git commit -m “completed the navbar”.",
+                "learn": "Let’s pretend that the new navbar is complete and we are ready to send it up to Github so our team can take a look. First, we will need to add and commit the files. When committing, don’t forget that you must provide a log message, describing what the commit contains.",
+                "instructions1": "Type in:",
                 "command1": "git add .",
                 "instructions2": "Followed by:",
                 "command2": "git commit -m \"completed the navbar\"",
@@ -186,6 +188,7 @@
                 "answer2": "git commit -m \"completed the navbar\"",
                 "append2": "Pro tip: If you ever want to see exactly what files you have modified before adding and committing. Type in “git status” to see a list of the files.",
                 "style1": "#lb",
+                "style2": "#lb",
                 "hint1": "git add .",
                 "hint2": "git commit -m \"completed the navbar\"",
                 "hint3": "",
@@ -199,8 +202,8 @@
               },
               {
                 "stepNum": 3,
-                "learn": "Now we are ready to push up the files to our Github Branch.",
-                "instructions1": "Type in the command below to push up our files to Github. Notice that the origin refers to the name of the branch. In this case, myNavbar.",
+                "learn": "Now that the files have been committed, we are ready to push them up to our Github Branch.",
+                "instructions1": "Notice in this command that the origin refers to the name of the branch. In this case, myNavbar. Type in:",
                 "command1": "git push origin myNavbar",
                 "terminal1": "<p>git push origin myNavbar</p><p>Counting objects: 3, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (3/3), 286 bytes | 0 bytes/s , done.<br>Total 3 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), completed with 1 local object.<br>To https://github.com/user/myProject.git<br>* [a123456...b123ab1] myNavbar -> myNavbar</p>",
                 "hint": "",
@@ -219,8 +222,8 @@
               },
               {
                 "stepNum": 4,
-                "learn": "Now that your new branch is available for your team to view, you will need to go to Github and create a “pull request.” This allows your team to review your work, pull down a copy of it for themselves to test out, and give it a thumbs up if it works as expected. For our purposes, let’s assume the pull request was successful and your team approved a merge to the Github Master. This merge means that your branch is now a part of the Github Master. Your new navbar is now public!",
-                "instructions1": "Now that the Github Master is updated, the next step is to pull down the new master into your Local Master. Before we can do so, we need to switch back to the Local Master. Type in:",
+                "learn": "Now that your new branch is available for your team to view, you will need to go to Github and create a “pull request.” This allows your team to review your work, pull down a copy of the code for testing, and give it a thumbs up if it works as expected. For our purposes, let’s assume that the pull request was successful and your team approved a merge to the Github Master. This merge means that your branch is now a part of the Github Master. Your new navbar is now public!",
+                "instructions1": "Now that the Github Master is updated, the next step is to pull down the new master into your Local Master. Remember, I mentioned that our Local Master acts as a continually updated copy of our Github Master. Before we can do so, we need to switch back to the Local Master. Type in:",
                 "command1": "git checkout master",
                 "terminal1": "<p>git checkout master</p><p>Switched to branch 'master'</p>",
                 "answer1": "git checkout master",
@@ -267,7 +270,7 @@
               {
                 "stepNum": 6,
                 "learn": "Last of all, let’s make a new branch in order to start working on a new task.",
-                "instructions1": " This time let’s say we are going to be working on the footer. Type in:",
+                "instructions1": " This time let’s say we are going to be working on the footer. Let's name the branch accordingly. Type in:",
                 "command1": "git checkout -b myFooter",
                 "terminal1": "<p>git checkout -b myFooter</p><p>Switched to a new branch 'myFooter'</p>",
                 "answer1": "git checkout -b myFooter",
@@ -286,28 +289,28 @@
               },
               {
                 "stepNum": 7,
-                "learn": "Great work! Let’s do a quick review of everything we’ve covered so far. For the sake of review, let’s once again pretend we will be working on updating the Navbar. Remember, the flow of using git/github is like rounding the bases of a baseball diamond. Local Master is homebase, the Local Branch is 1st base, Github Branch is 2nd base, Github Master is 3rd base, and once you pull down that updated directory onto your Local Master, you’ve hit a homerun. Remember, before you can be work, you must always create a new branch.",
+                "learn": "<p>Great work! Let’s do a quick review of everything we’ve covered so far. We will once again pretend we are working on the navigation bar inside of the index page. Remember, the flow of using git/github is like rounding the bases of a baseball diamond.</p><p>Local Master is homebase, the Local Branch is 1st base, Github Branch is 2nd base, Github Master is 3rd base, and once you pull down that updated directory onto your Local Master, you’ve hit a homerun. Any skipping bases is a no no. Lastly, before you can begin working, you must always checkout of the master and create a new branch.</p>",
                 "instructions1": "1. Before we begin working on the Navbar, we must create a branch. Type in:",
                 "command1": "git checkout -b myNavbar",
                 "terminal1": "<p>git checkout -b myNavbar</p><p>Switched to a new branch 'myNavbar'</p>",
                 "append7": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command.",
-                "instructions2": "2. The Navbar is now complete. Let’s add our work.",
+                "instructions2": "2. Let's pretened that the navbar is complete. Let’s add our work.",
                 "command2": "git ",
                 "command2": "git add .",
                 "terminal2": "<p>git add .</p>",
                 "instructions3": "3. Now commit it.",
                 "command3": "git commit -m \"completed the navbar\"",
                 "terminal3": "<p>git commit -m \"completed the navbar\"</p><p>[version1 1234abc] completed the navbar<br>1 files changed, 23 insertions(+)</p>",
-                "instructions4": "4. Next, let’s push up our branch so our teammates can take a look, and review our work before merging it with the Github Master. We will pretend that you have made a pull request on the Github website. Type in the command below. Notice that the origin refers to the name of the branch. In this case, myNavbar. NOTE: For this example, when you push to Github Branch, let's just assume that the merge to Github Master happened immediately.",
+                "instructions4": "4. Next, let’s push up our branch so our teammates can take a look, and review our work before merging it with the Github Master. We will pretend that you have made a pull request on the Github website. For this example, when you push to Github Branch, let's just assume that the merge to Github Master happened immediately.",
                 "command4": "git push origin myNavbar",
                 "terminal4": "<p>git push origin myNavbar</p><p>Counting objects: 3, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (3/3), 286 bytes | 0 bytes/s , done.<br>Total 3 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), completed with 1 local object.<br>To https://github.com/user/myProject.git<br>* [a123456...b123ab1] myNavbar -> myNavbar</p>",
-                "instructions5": "5. Let’s assume that everything looked great and the merge was successful. We are now ready to update our Local Master with the most up to date version of our project. Before we do so, we need to switch back to our Local Master. NOTE: The Local Branch is still highlighted to show that we are still checked out into that directory, even though we pushed our files up to Github. Type in:",
+                "instructions5": "5. Let’s assume that everything looked great and the merge was successful. We are now ready to update our Local Master with the most up to date version of our project. Before we do so, we need to switch back to our Local Master. NOTE: The Local Branch is still highlighted to show that we are still inside of that directory, even though we pushed our files up to Github. Type in:",
                 "command5": "git checkout master",
                 "terminal5": "<p>git checkout master</p><p>Switched to branch 'master'</p>",
-                "instructions6": "6. Let’s now update the Local Master with the newly updated files in our Github Master. Remember, we always want to keep our Local Master up to date with changes made to our Github Master. If we don't, we will be working on a project that is no longer up to date with that the public is able to see. Type in:",
+                "instructions6": "6. Let’s now update the Local Master with the newly updated files in our Github Master. Remember, we always want to keep our Local Master up to date with changes made to our Github Master. If we don't, we will be working on a project that is no longer up to date! Type in:",
                 "command6": "git pull origin master",
                 "terminal6": "<p>git pull origin master</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
-                "instructions7": "7. As always, the final step is to make a new branch off of the Local Master. That way we don’t accidentally override our now updated master. Let’s once again pretend that our next task will be to build a footer for the page. Type in:",
+                "instructions7": "7. As always, the final step is to make a new branch off of the Local Master. That way we don’t override our newly updated master. Let’s once again pretend that our next task will be to build a footer for the page. Type in:",
                 "command7": "git checkout -b myFooter",
                 "terminal7": "<p>git checkout -b myFooter</p><p>Switched to a new branch 'myFooter'</p>",
                 "answer1": "git checkout -b myNavbar",
@@ -359,7 +362,7 @@
                 "append1": "",
                 "styleStart": "#lb",
                 "instructions2": "2.",
-                "command2": "Use the log message - \"completed page layout\"",
+                "command2": "Use the log message \"completed page layout\"",
                 "terminal2": "<p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p>",
                 "hint2": "git commit -m \"completed page layout\"",
                 "answer2": "git commit -m \"completed page layout\"",
@@ -382,7 +385,7 @@
               },
               {
                 "stepNum": 2,
-                "learn": "Let’s once again image you have created a pull request on Github, your team has checked out your code, approved it, and your Github Master is now up to date with the approved changes. Type in your next steps to complete the workflow. Let's pretend that the next task will be to create a company history page, our new branch name should reflect that.",
+                "learn": "Let’s once again imagine that you have created a pull request on Github, your team has checked out your code, approved it, and your Github Master is now up to date with the approved changes. Type in your next steps to complete the workflow. Let's pretend that the next task will be to create a company history page, which will be reflected in the branch name.",
                 "instructions1": "1.",
                 "command1": "Go back to your local master",
                 "terminal1": "<p>git checkout master</p><p>Switched to branch 'master'</p>",
@@ -415,7 +418,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "append3": "Great work! Let's keep moving on to more exercises."
               }
             ]
         },
@@ -428,7 +432,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "Checkout is used to switch between any of your branches or to your local master. Confusion often lies when checking out to the master or your branches, without adding and committing beforehand. This tutorial aims to clear up some of this confusion and give you some real world context.",
+                "learn": "Checkout is used to switch between any of your branches or to your local master. Confusion often lies when checking out to the master or to your branches, <i>without adding and committing beforehand</i>. This tutorial aims to clear up some of this confusion and give you some real world context.",
                 "instructions1": "Let’s say you’ve been working on a branch for a while. You have a few files inside of that branch that have been modified. Let’s take a look and see what files in particular have changed. Type in the command below into the terminal and hit enter",
                 "command1": "git status",
                 "terminal1": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\")</p>",
@@ -451,7 +455,7 @@
               },
               {
                 "stepNum": 2,
-                "learn": "Index.html, the css directory, and main.css are a part of my Local Branch, in this case, we have called it myBranch. Now, let’s checkout to the master and see what happens to the files.",
+                "learn": "Index.html, the css directory, and main.css are inside of Local Branch. In this case, we have simply named the branch, myBranch. Now, let’s checkout to the master and see what happens to the files.",
                 "instructions1": "For the sake of example, we will purposely not add or commit these files. Type in:",
                 "command1": "git checkout master",
                 "terminal1": "<p>Switched to branch 'master'</p>",
@@ -460,8 +464,9 @@
                 "terminal2": "<p>git status</p><p>On branch master<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
                 "answer1": "git checkout master",
                 "answer2": "git status",
-                "append2": "Notice how these same files are now moved over to our Local Master. As you might expect, this could create some problems if we added and committed these changes to the master instead of to the branch we wanted to push to Github.",
+                "append2": "Notice how these same files haved moved over to our Local Master. As you might expect, this would create some problems if we added and committed these changes to the master instead of to the branch we want to push up to Github.",
                 "style1": "#lm",
+                "style2": "#lm",
                 "removeStyle1": "#lb",
                 "hint1": "git checkout master",
                 "hint2": "git status",
@@ -476,7 +481,7 @@
               },
               {
                 "stepNum": 3,
-                "learn": "One advantage that git will offer you, if there are conflicts that would occur during the checkout, it will warn you. It will say something like:<br><p class='note'>error: Your local changes to the following files would be overwritten by checkout: index.html css/main.css<br>Please commit your changes or stash them before you switch branches.<br>Aborting<br></p><p>This git error will often save you some headache, but this tutorial is to show you what to do when that error is <i>not</i> given. Notice that we are now in the Local Master with some files we need to commit elsewhere. We need to move back to our branch and commit them there, not in our master.</p>",
+                "learn": "Git offers a helpful safeguard, if there are conflicts that would occur during the checkout, it will warn you. It will say something like:<br><p class='note'>error: Your local changes to the following files would be overwritten by checkout: index.html css/main.css<br>Please commit your changes or stash them before you switch branches.<br>Aborting<br></p><p>This git error will often save you some headache, but this tutorial is to show you what to do when that error is <i>not</i> given. Notice that we are now in the Local Master with some files we need to commit elsewhere. We need to move back to our branch and commit them there, not in our master.</p>",
                 "instructions1": " Type in the command below, notice the files will follow you back to myBranch.",
                 "command1": "git checkout myBranch",
                 "terminal1": "<p>Switched to branch 'myBranch'</p>",
@@ -496,7 +501,7 @@
               },
               {
                 "stepNum": 4,
-                "learn": " Notice how we were able to commit those files in either location. Whenever we changed locations, the files followed. We could also create a new branch entirely and those same files will follow us, waiting to be committed. <i>Note: the rule that files will follow if you don’t commit them is important to remember for your next task.</i>",
+                "learn": " Notice how we were able to commit those files in either location. Whenever we changed locations, the files followed. We could also create a new branch entirely and those same files would follow us, waiting to be committed. <i>Note: The rule that files will follow if you don’t commit them is important to remember in order to complete the upcoming challenge.</i>",
                 "terminal1": "",
                 "hint1": "",
                 "previousTerminal": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p><p>Switched to branch 'master'</p><p>git status</p><p>On branch master<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\")</p><p>Switched to branch 'myBranch'</p>",
@@ -520,7 +525,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github. <i>Remember, your files will follow you until you add and commit them</i></p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note: These files are currently located inside of the Local Master.</p>",
                 "instructions1": "1.",
                 "command1": "1. Use myHomepage",
                 "terminal1": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p>",
@@ -553,7 +558,8 @@
                 "answer7": "",
                 "backTerminal": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p><p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 2 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
                 "previousTerminal": "",
-                "append4": "Great work! Your team is now ready to take a look at your updated project. Let's move on to some more exercises."
+                "append4": "Great work! Your team is now ready to take a look at your updated project. Let's move on to some more exercises.",
+                "preStyle1": "#lm"
               }
             ]
         },
@@ -829,6 +835,7 @@
                 "answer5": "",
                 "answer6": "",
                 "answer7": "",
+                "style3": "#lb",
                 "append3": "Great work! You are well on your way to working with git. I hope you have found these exercises helpful!"
               }
             ]
