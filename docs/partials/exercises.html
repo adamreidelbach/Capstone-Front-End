@@ -1,0 +1,102 @@
+
+<nav class="exerciseNav">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo exerciseNavLogo">Get Git</a>
+    <a href="#" class="brand-logo center exerciseNavText">{{instructions.name}} - {{instructions.title}}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a class='dropdown-button' id="help" href='javascript:void(0);' data-activates='helpDropdown' dropdown data-hover="true">?</a>
+        <!-- Dropdown Structure -->
+        <ul id='helpDropdown' class='dropdown-content'>
+            <li><a href="javascript:void(0);" id="helpContent"></a></li>
+        </ul>
+    </ul>
+  </div>
+</nav>
+
+<div class="row mainBackground">
+    <div id="instructText" class="col s4 accordion-container">
+        <div class="learnHeader accordion-section">
+            <h5 class="headerName"><i class="material-icons">library_books</i> Learn</h5>
+        </div>
+        <div class="learnText">
+            <div id="learn" class="indent"></div>
+        </div>
+
+        <div id="instructions" ng-show="currentStep.instructions1">
+            <div class="instHeader" class="accordion-section">
+                <h5 class="headerName"><i class="material-icons">subject</i> Instructions</h5>
+            </div>
+            <div class="instText">
+                <input type="checkbox" id="inst1" />
+                <label for="inst1" ng-show="currentStep.instructions1">{{currentStep.instructions1}}</label>
+                <div class="command" ng-show="currentStep.command1">{{currentStep.command1}}</div>
+                <input type="checkbox" id="inst2" />
+                <label for="inst2" ng-show="currentStep.instructions2">{{currentStep.instructions2}}</label>
+                <div class="command" ng-show="currentStep.command2">{{currentStep.command2}}</div>
+                <input type="checkbox" id="inst3" />
+                <label for="inst3" ng-show="currentStep.instructions3">{{currentStep.instructions3}}</label>
+                <div class="command" ng-show="currentStep.command3">{{currentStep.command3}}</div>
+                <input type="checkbox" id="inst4" />
+                <label for="inst4" ng-show="currentStep.instructions4">{{currentStep.instructions4}}</label>
+                <div class="command" ng-show="currentStep.command4">{{currentStep.command4}}</div>
+                <input type="checkbox" id="inst5" />
+                <label for="inst5" ng-show="currentStep.instructions5">{{currentStep.instructions5}}</label>
+                <div class="command" ng-show="currentStep.command5">{{currentStep.command5}}</div>
+                <input type="checkbox" id="inst6" />
+                <label for="inst6" ng-show="currentStep.instructions6">{{currentStep.instructions6}}</label>
+                <div class="command" ng-show="currentStep.command6">{{currentStep.command6}}</div>
+                <input type="checkbox" id="inst7" />
+                <label for="inst7" ng-show="currentStep.instructions7">{{currentStep.instructions7}}</label>
+                <div class="command" ng-show="currentStep.command7">{{currentStep.command7}}</div>
+
+                <div id="appendText"></div>
+            </div>
+        </div>
+    </div>
+
+    <form ng-submit="getAnswer()" id="terminal" class="col s4">
+        <div id="previousTerminal"></div>
+        <div id="addTerminalText"></div>
+        <input ng-model="userAnswer" type="text" rows="4" cols="35" id="userText" placeholder="$"/>
+    </form>
+
+<!--     <form ng-submit="getAnswer()" id="terminal" class="col s4">
+        <div id="thing" class="terminal-container" ng-model="userAnswer" angular-terminal="main">
+        </div>
+    </form> -->
+
+    <div id="visualize" class="col s4">
+<!--         <img class="github" src="images/github.png">
+ -->
+        <div id="gmLabel">GitHub Master</div>
+        <div class="box" id="gm">
+            <img src="images/folder.png">
+        </div>
+
+        <div id="gbLabel">GitHub Branch</div>
+        <div class="box" id="gb"></div>
+
+        <div id="lmLabel">Local Master</div>
+        <div class="box" id="lm"></div>
+        <div id="lmName"></div>
+        <div id="lmName2"></div>
+
+        <div id="lbLabel">Local Branch</div>
+        <div class="box" id="lb"></div>
+        <div id="lbName"></div>
+        <div id="lbName2"></div>
+
+<!--         <div class="localIcons">
+            <img class="apple" src="images/apple.png">
+            <img class="linux" src="images/linux.png">
+            <img class="windows" src="images/windows.png">
+        </div> -->
+    </div>
+</div>
+
+<footer class="exerciseFooter">
+    <div class="grey-text text-lighten-4 col s4" id="backButton" ng-click="backStep()">Back</div>
+    <div class="grey-text text-lighten-4 col s4 pageCounter" href="#!">{{page + 1}} / {{steps}}</div>
+    <div class="grey-text text-lighten-4 col s4 inactive" id="nextButton" ng-click="nextStep()">Next</div>
+</footer>
+
