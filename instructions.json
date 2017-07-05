@@ -520,7 +520,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github. <i>Remember, your files will follow you until you add and commit them</i></p>",
                 "instructions1": "1.",
                 "command1": "1. Use myHomepage",
                 "terminal1": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p>",
