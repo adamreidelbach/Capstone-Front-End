@@ -49,7 +49,7 @@
                 "hint1": "ls",
                 "hint2": "",
                 "previousTerminal": "",
-                "backTerminal": "<p>ls</p><p>README.md css index.html javascripts</p>",
+                "backTerminal": "",
                 "answer3": "",
                 "answer4": "",
                 "answer5": "",
@@ -74,8 +74,7 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
-              },
+                "answer7": ""              },
               {
                 "stepNum": 3,
                 "learn": "<p>This next step, admittedly, will be the one contradiction to the workflow I will discuss in the upcoming Git Workflow Tutorial. Becuase we are just getting started, we need to give Github something to start with in order to create our project. Unfortunately, Github won’t allow us to start with a completely blank project. So, to make Github happy, we will add, commit, and push up directly from our Local Master to the Github Master, but just this once</p><p>What does adding, committing mean? Adding and committing is much like saving a draft of your project. This is really handy if something goes wrong with your project. You can always revert back to a previous commit, if necessary. When committing, you must provide a log message to describe your changes. It’s kind of like hitting Save As, with the ability to write as short or as long as a description as you feel necessary to remember what that commit contains.</p><p>Adding and committing will appear many times when working with git. It’s kind of like trying to close a text editor and your computer reminding you to save your work before doing so. Git will usually remind you to add and commit, but sometimes it won’t, particularly when first getting started with a project. Committing often is always a good rule of thumb.</p>",
@@ -96,7 +95,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -119,7 +119,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 5,
@@ -132,7 +133,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "removeOldStyle": "#lm"
               }
             ]
         },
@@ -154,20 +157,21 @@
                 "hint": "",
                 "append1": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command. What is checkout? This command simply allows us to switch between branches and the master. We will cover more of this in the next tutorial.",
                 "answer1": "git checkout -b myNavbar",
-                "styleStart": "#lb",
                 "style1": "#lb",
                 "hint1": "git checkout -b myNavbar",
                 "hint2": "",
                 "branch1": "",
                 "branch2": "",
-                "backTerminal": "<p>git checkout -b myNavbar</p><p>Switched to a new branch 'myNavbar'</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer2": "",
                 "answer3": "",
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm",
+                "removeStyle1": "#lm"
               },
               {
                 "stepNum": 2,
@@ -190,7 +194,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 3,
@@ -200,7 +205,6 @@
                 "terminal1": "<p>git push origin myNavbar</p><p>Counting objects: 3, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (3/3), 286 bytes | 0 bytes/s , done.<br>Total 3 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), completed with 1 local object.<br>To https://github.com/user/myProject.git<br>* [a123456...b123ab1] myNavbar -> myNavbar</p>",
                 "hint": "",
                 "answer1": "git push origin myNavbar",
-                "removeStyle1": "#lb",
                 "style1": "#gb",
                 "hint1": "git push origin myNavbar",
                 "hint2": "",
@@ -210,7 +214,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 4,
@@ -222,6 +227,7 @@
                 "style1": "#lm",
                 "removeStyle1": "#lb",
                 "preStyle1": "#gm",
+                "preStyle2": "#lb",
                 "removeOldStyle": "#gb",
                 "hint1": "git checkout master",
                 "hint2": "",
@@ -231,7 +237,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "preStyle2": "#lb"
               },
               {
                 "stepNum": 5,
@@ -252,7 +260,9 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#gm",
+                "preStyle2": "#lm"
               },
               {
                 "stepNum": 6,
@@ -271,7 +281,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 7,
@@ -279,7 +290,7 @@
                 "instructions1": "1. Before we begin working on the Navbar, we must create a branch. Type in:",
                 "command1": "git checkout -b myNavbar",
                 "terminal1": "<p>git checkout -b myNavbar</p><p>Switched to a new branch 'myNavbar'</p>",
-                "append6": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command.",
+                "append7": "We now have a local branch called myNavbar that we can start working in. Notice that we skipped using “git branch myNavbar” followed by “git checkout myNavbar.” We just combined them into one command.",
                 "instructions2": "2. The Navbar is now complete. Let’s add our work.",
                 "command2": "git ",
                 "command2": "git add .",
@@ -287,10 +298,10 @@
                 "instructions3": "3. Now commit it.",
                 "command3": "git commit -m \"completed the navbar\"",
                 "terminal3": "<p>git commit -m \"completed the navbar\"</p><p>[version1 1234abc] completed the navbar<br>1 files changed, 23 insertions(+)</p>",
-                "instructions4": "4. Next, let’s push up our branch so our teammates can take a look, and review our work before merging it with the Github Master. We will pretend that you have made a pull request on the Github website. Type in the command below. Notice that the origin refers to the name of the branch. In this case, myNavbar.",
+                "instructions4": "4. Next, let’s push up our branch so our teammates can take a look, and review our work before merging it with the Github Master. We will pretend that you have made a pull request on the Github website. Type in the command below. Notice that the origin refers to the name of the branch. In this case, myNavbar. NOTE: For this example, when you push to Github Branch, let's just assume that the merge to Github Master happened immediately.",
                 "command4": "git push origin myNavbar",
                 "terminal4": "<p>git push origin myNavbar</p><p>Counting objects: 3, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (2/2), done.<br>Writing objects: 100% (3/3), 286 bytes | 0 bytes/s , done.<br>Total 3 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), completed with 1 local object.<br>To https://github.com/user/myProject.git<br>* [a123456...b123ab1] myNavbar -> myNavbar</p>",
-                "instructions5": "5. Let’s assume that everything looked great and the merge was successful. We are now ready to update our Local Master with the most up to date version of our project. Before we do so, we need to switch back to our Local Master. Type in:",
+                "instructions5": "5. Let’s assume that everything looked great and the merge was successful. We are now ready to update our Local Master with the most up to date version of our project. Before we do so, we need to switch back to our Local Master. NOTE: The Local Branch is still highlighted to show that we are still checked out into that directory, even though we pushed our files up to Github. Type in:",
                 "command5": "git checkout master",
                 "terminal5": "<p>git checkout master</p><p>Switched to branch 'master'</p>",
                 "instructions6": "6. Let’s now update the Local Master with the newly updated files in our Github Master. Remember, we always want to keep our Local Master up to date with changes made to our Github Master. If we don't, we will be working on a project that is no longer up to date with that the public is able to see. Type in:",
@@ -309,14 +320,16 @@
                 "style1": "#lb",
                 "style2": "#lb",
                 "style3": "#lb",
-                "style4": "#gb",
+                "style4": "#gm",
                 "style5": "#lm",
-                "style6": "#lb",
-                "removeStyle4": "#lb",
-                "removeStyle5": "#gm",
-                "removeStyle6": "#lm",
-                "preStyle4": "#gm",
-                "removeOldStyle4": "#gb",
+                "style6": "#lm",
+                "style7": "#lb",
+                "removeStyle1": "#lm",
+                "removeStyle4": "#gb",
+                "removeStyle5": "#lb",
+                "removeStyle6": "#gm",
+                "removeStyle7": "#lm",
+                "preStyle1": "#lm",
                 "hint1": "git checkout -b myNavbar",
                 "hint2": "git add .",
                 "hint3": "git commit -m \"completed the navbar\"",
@@ -337,7 +350,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working in a new branch named “myHomepage” and have made several edits to the files inside your project. In this example, let’s say you finished building the navbar and did some basic styling, commit it, and continue through the rest of the workflow path.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working in a new branch named “myHomepage” and have made several edits to the files inside your project. In this example, let’s say you finished building the navbar and did some basic styling. Remember to add and commit your files before you continue through the rest of the workflow path.</p>",
                 "instructions1": "1.",
                 "command1": "Add your files",
                 "terminal1": "<p>git add .</p>",
@@ -358,13 +371,14 @@
                 "style3": "#gb",
                 "removeStyle3": "#lb",
                 "hint4": "",
-                "backRemove": "#gm",
+                "backRemove1": "#gm",
                 "previousTerminal": "",
-                "backTerminal": "<p>git add .</p><p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
+                "backTerminal": "",
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -376,7 +390,7 @@
                 "answer1": "git checkout master",
                 "append1": "",
                 "style1": "#lm",
-                "removeStyle1": "#gm",
+                "removeStyle1": "#lb",
                 "hint1": "git checkout master",
                 "instructions2": "2.",
                 "command2": "Pull down your files into your local master",
@@ -394,6 +408,7 @@
                 "style3": "#lb",
                 "removeStyle3": "#lm",
                 "preStyle1": "#gm",
+                "preStyle2": "#lb",
                 "removeOldStyle": "#gb",
                 "hint4": "",
                 "previousTerminal": "<p>git add .</p><p>git commit -m \"completed page layout\"</p><p>[version1 1234abc] completed page layout<br>2 files changed, 30 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
@@ -424,14 +439,15 @@
                 "hint2": "",
                 "branch1": "index.html",
                 "branch2": "css/main.css",
-                "backTerminal": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer2": "",
                 "answer3": "",
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -455,7 +471,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 3,
@@ -474,7 +491,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lm"
               },
               {
                 "stepNum": 4,
@@ -488,7 +506,8 @@
                 "answer4": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               }
             ]
         },
@@ -501,7 +520,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github. <i>Remember, your files will follow you until you add and commit them</i></p>",
                 "instructions1": "1.",
                 "command1": "1. Use myHomepage",
                 "terminal1": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p>",
@@ -547,7 +566,7 @@
             "steps": [
                 {
                     "stepNum": 1,
-                    "learn": "<p>It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves.</p><p>Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while (let's say we were buidling a splash page), so we’ll need to checkout of our old branch and into a new one in order to take a look at John’s work. Note: We want to make a new branch so the new files won't override what we have have been working on in our current branch (which I have simply named, splashPage).</p>",
+                    "learn": "<p>It’s now time to learn how to actually test another teammates code before they merge it with the master. For this exercise, let’s assume that your teammate has already pushed up their branch to Github and they made a pull request. Thankfully, all we need to know is the name of their branch in order to pull it down and check it out for ourselves.</p><p>Your teammate has been working on styling the page and has made a few changes to the css file, his branch is called JohnStyling. We have been working on a branch of our own for a while (let's say we were buidling a splash page), so we’ll need to checkout of our old branch and into a new one in order to take a look at John’s work.</p><p>Note: We want to make a new branch so the new files won't override what we have have been working on in our current branch (which I have simply named, splashPage).</p>",
                     "instructions1": "1. To avoid any conflicts and to keep things simple. I recommend testing in a new branch with the same name as your teammates branch. I find it easier to keep things organized this way. Before we create a new branch, let’s save our work. Type in:",
                     "command1": "git add .",
                     "terminal1": "<p>git add .</p>",
@@ -561,13 +580,14 @@
                     "style1": "#lb",
                     "styleStart": "#lb",
                     "hint3": "",
-                    "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p>",
+                    "backTerminal": "",
                     "previousTerminal": "",
                     "answer3": "",
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 },
                 {
                     "stepNum": 2,
@@ -575,7 +595,6 @@
                     "instructions1": "Type in:",
                     "command1": "git checkout -b JohnStyling",
                     "terminal1": "<p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p>",
-                    "append1": "We have now pulled down a copy of JohnStyling to test it out.",
                     "answer1": "git checkout -b JohnStyling",
                     "style1": "#lb",
                     "hint1": "git checkout -b JohnStyling",
@@ -586,7 +605,10 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "removeStyle1": "#lb",
+                    "append1": "We are now inside of a new branch called JohnStyling."
                 },
                 {
                     "stepNum": 3,
@@ -595,7 +617,7 @@
                     "command1": "git pull origin JohnStyling",
                     "command2": "",
                     "terminal1": "<p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
-                    "append1": "We have now pulled down a copy of JohnStyling to test it out.",
+                    "append1": "We have now pulled down a copy of John's code to test it on our computer.",
                     "answer1": "git pull origin JohnStyling",
                     "style1": "#lb",
                     "hint1": "git pull origin JohnStyling",
@@ -606,11 +628,13 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "removeStyle1": ""
                 },
                 {
                     "stepNum": 4,
-                    "learn": "Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.",
+                    "learn": "<p>Nice work. Let’s now pretend that you’ve tested John’s code on your local machine and things are looking great. This is when you would give his code a thumbs up on Github, make sure all your other teammates have tested the code, and merge the pull request with your Github Master.</p><p>Again, we will assume that this has already happened. Notice once again, the Local Branch is still highlighted to indicate that we need to checkout to our Local Master before we are able to update it with the new Github Master.</p>",
                     "instructions1": "1. Let’s pull down the Github Master to your Local Master. We have to do something first before we can pull down the new version. We need to checkout to the master. Type in:",
                     "command1": "git checkout master",
                     "instructions2": "2. We are now ready to pull down the files into our master. Type in:",
@@ -620,7 +644,9 @@
                     "answer2": "git pull origin master",
                     "terminal2": "<p>git pull origin master</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)</p>",
                     "style1": "#lm",
+                    "style2": "#lm",
                     "removeStyle1": "#lb",
+                    "removeStyle2": "#gm",
                     "hint1": "git checkout master",
                     "hint2": "git pull origin master",
                     "hint3": "",
@@ -629,7 +655,9 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb",
+                    "preStyle2": "#gm"
                 },
                 {
                     "stepNum": 5,
@@ -649,7 +677,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lm"
                 },
                 {
                     "stepNum": 6,
@@ -668,7 +697,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 },
                 {
                     "stepNum": 7,
@@ -676,7 +706,7 @@
                     "instructions1": "For our last step, let’s go ahead and delete the JohnStyling branch, so we don’t need it anymore. Type in:",
                     "command1": "git branch -D JohnStyling",
                     "command2": "",
-                    "append1": "Notice, the JohnStyling branch has been removed. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
+                    "append1": "The JohnStyling branch has now been deleted. Seem like a lot to remember? Let’s move on the next challenge for both review, and to sharpen your skills.",
                     "terminal1": "<p>git branch -D JohnStyling</p><p>Deleted branch JohnStyling</p>",
                     "answer1": "git branch -D JohnStyling",
                     "style1": "#lb",
@@ -688,7 +718,8 @@
                     "answer4": "",
                     "answer5": "",
                     "answer6": "",
-                    "answer7": ""
+                    "answer7": "",
+                    "preStyle1": "#lb"
                 }
             ]
         },
@@ -701,7 +732,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. This challenge will be in two parts. Once with some light cues to help you remember the necessary commands, and another pass with no cues. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You have been working in your branch (let's say it was simply called, myBranch) and now you need to pull down someone else’s code to test it and make sure it works properly. Don’t forgot to commit your changes before making a new branch. Afterwards, be sure to merge your branch with the new master. Let’s use John’s branch from before, titled JohnStyling.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. This challenge will be in two parts. Once with some light cues to help you remember the necessary commands, and another pass with no cues. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You are currently working in branch building a splash page (let's simply call it splashPage) and now you need to pull down someone else’s code to test it and make sure it works properly. Don’t forgot to commit your changes before making a new branch. Afterwards, be sure to merge your branch with the new master. Let’s use John’s branch from before, titled JohnStyling.</p>",
                 "instructions1": "1. Before you can create a new branch, add and commit your files",
                 "command1": "",
                 "terminal1": "<p>git add .</p>",
@@ -724,11 +755,12 @@
                 "answer4": "git pull origin JohnStyling",
                 "terminal4": "<p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
                 "hint4": "",
-                "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p><p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p><p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -750,7 +782,6 @@
                 "removeStyle2": "#gm",
                 "preStyle1": "#gm",
                 "preStyle2": "#lb",
-                "removeOldStyle": "#lb",
                 "hint3": "",
                 "previousTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p><p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p><p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
                 "answer3": "",

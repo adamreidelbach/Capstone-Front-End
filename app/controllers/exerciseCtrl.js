@@ -15,8 +15,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     let addTerminalText = document.getElementById("addTerminalText"),
     previousTerminal = document.getElementById("previousTerminal"),
     backButton = document.getElementById("backButton"),
-    appendText = document.getElementById("appendText");
-
+    appendText = document.getElementById("appendText"),
+    gb = document.getElementById("gb"),
+    lb = document.getElementById("lb"),
+    gm = document.getElementById("gm"),
+    lm = document.getElementById("lm");
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -30,7 +33,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           $scope.populateLearn($scope.currentStep);
           $scope.populateBranch($scope.currentStep);
           $scope.populateHint($scope.currentStep.hint1);
-          $scope.addHighlight($scope.currentStep.styleStart);
+          $scope.addHighlight($scope.currentStep.preStyle1);
           return instructions;
         });
     };
@@ -68,32 +71,45 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $("#inst1").prop("checked", false);
         $("#inst2").prop("checked", false);
         $("#inst3").prop("checked", false);
+        $("#inst4").prop("checked", false);
+        $("#inst5").prop("checked", false);
+        $("#inst6").prop("checked", false);
+        $("#inst7").prop("checked", false);
         appendText.innerHTML = "";
         addTerminalText.innerHTML = "";
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);
         $scope.populateHint($scope.currentStep.hint1);
+        $scope.resetStyle();
         $scope.addHighlight($scope.currentStep.preStyle1);
-        $scope.removeHighlight($scope.currentStep.removeOldStyle);
         $scope.addHighlight($scope.currentStep.preStyle2);
+        $scope.removeHighlight($scope.currentStep.removeOldStyle);
         //eventually will need to keep all previous code and add a line break
     };
 
     $scope.backStep = () => {
         $scope.stepCounter--;
         $scope.userAnswer = "";
+        $("#inst1").prop("checked", false);
+        $("#inst2").prop("checked", false);
+        $("#inst3").prop("checked", false);
+        $("#inst4").prop("checked", false);
+        $("#inst5").prop("checked", false);
+        $("#inst6").prop("checked", false);
+        $("#inst7").prop("checked", false);
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);
         // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
         appendText.innerHTML = "";
-        $scope.removeHighlight($scope.currentStep.backRemove);
+        $scope.resetStyle();
+        $scope.addHighlight($scope.currentStep.preStyle1);
+        $scope.addHighlight($scope.currentStep.preStyle2);
     };
 
     $scope.populateLearn = (currentInstructions) => {
         let learn = document.getElementById("learn");
-        console.log(currentInstructions.learn);
         learn.innerHTML = currentInstructions.learn;
     };
 
@@ -106,8 +122,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.populateHint($scope.currentStep.hint2);
             $scope.addTerminalText($scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
-            $scope.removeHighlight($scope.currentStep.removeStyle1);
             $("#appendText").append($scope.currentStep.append1);
+            $scope.removeHighlight($scope.currentStep.removeStyle1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) /*&& $("#inst1").prop("checked") === true*/) {
             console.log("CORRECT2");
             $scope.userAnswer = "";
@@ -156,7 +172,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         } else if ($scope.currentStep.answer7.includes($scope.userAnswer)) {
             console.log("CORRECT7");
             $scope.userAnswer = "";
-            $("#inst6").prop("checked", true);
+            $("#inst7").prop("checked", true);
             $("#appendText").append($scope.currentStep.append7);
             $scope.addTerminalText($scope.currentStep.terminal7);
             $scope.addHighlight($scope.currentStep.style7);
@@ -176,11 +192,18 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     //     }
     // });
 
-     // adding and remove classes for the visualization area
-    $scope.styling = (previousBox, newBox) => {
-        previousBox.removeClass("highlight");
-        newBox.addClass("highlight");
+    $scope.resetStyle = () => {
+        lb.classList.remove("highlight");
+        gb.classList.remove("highlight");
+        lm.classList.remove("highlight");
+        gm.classList.remove("highlight");
     };
+
+     // adding and remove classes for the visualization area
+    // $scope.styling = (previousBox, newBox) => {
+    //     previousBox.removeClass("highlight");
+    //     newBox.addClass("highlight");
+    // };
 
     $scope.removeHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);
@@ -189,6 +212,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.addHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);
+        console.log(element);
         element.classList.add("highlight");
     };
 
