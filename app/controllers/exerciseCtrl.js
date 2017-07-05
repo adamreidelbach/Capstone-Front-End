@@ -19,7 +19,8 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     gb = document.getElementById("gb"),
     lb = document.getElementById("lb"),
     gm = document.getElementById("gm"),
-    lm = document.getElementById("lm");
+    lm = document.getElementById("lm"),
+    terminal = document.getElementById("terminal");
 
     let getTutorial = (whichOne) => {
         console.log("route", $routeParams.id);
@@ -218,6 +219,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.addTerminalText = (currentStep) => {
         $("#addTerminalText").append(currentStep);
+        $scope.updateScroll();
     };
 
     $scope.populateHint = (currentHint) => {
@@ -242,6 +244,11 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         previousTerminal.innerHTML = currentStep.previousTerminal;
         addTerminalText.innerHTML = "";
         $("#previousTerminal").append(currentStep.backTerminal);
+        $scope.updateScroll();
+    };
+
+    $scope.updateScroll = () => {
+        terminal.scrollTop = terminal.scrollHeight;
     };
 
 });

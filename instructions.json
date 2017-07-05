@@ -431,7 +431,7 @@
                 "learn": "Checkout is used to switch between any of your branches or to your local master. Confusion often lies when checking out to the master or your branches, without adding and committing beforehand. This tutorial aims to clear up some of this confusion and give you some real world context.",
                 "instructions1": "Let’s say you’ve been working on a branch for a while. You have a few files inside of that branch that have been modified. Let’s take a look and see what files in particular have changed. Type in the command below into the terminal and hit enter",
                 "command1": "git status",
-                "terminal1": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
+                "terminal1": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\")</p>",
                 "answer1": "git status",
                 "style1": "#lb",
                 "styleStart": "#lb",
