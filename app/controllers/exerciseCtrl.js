@@ -120,13 +120,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.userAnswer = "";
             $("#inst1").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint2);
-            console.log("hint2", $scope.currentStep.hint2);
             $scope.addTerminalText($scope.currentStep.terminal1);
-            console.log("terminal1", $scope.currentStep.terminal1);
-            $scope.addHighlight($scope.currentStep.style1);
-            console.log("style1", $scope.currentStep.style1);
             $("#appendText").append($scope.currentStep.append1);
-            console.log("append1", $scope.currentStep.append1);
+            $scope.addHighlight($scope.currentStep.style1);
             $scope.removeHighlight($scope.currentStep.removeStyle1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
             $scope.userAnswer = "";
