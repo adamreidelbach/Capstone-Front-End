@@ -117,16 +117,18 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     //get correct answer from data - if true, check the box and append the appropriate instructions text, if applicable
     $scope.getAnswer = () => {
         if ($scope.currentStep.answer1.includes($scope.userAnswer) && $("#inst2").prop("checked") === false) {
-            console.log("CORRECT1");
             $scope.userAnswer = "";
             $("#inst1").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint2);
+            console.log("hint2", $scope.currentStep.hint2);
             $scope.addTerminalText($scope.currentStep.terminal1);
+            console.log("terminal1", $scope.currentStep.terminal1);
             $scope.addHighlight($scope.currentStep.style1);
+            console.log("style1", $scope.currentStep.style1);
             $("#appendText").append($scope.currentStep.append1);
+            console.log("append1", $scope.currentStep.append1);
             $scope.removeHighlight($scope.currentStep.removeStyle1);
         } else if ($scope.currentStep.answer2.includes($scope.userAnswer) && $("#inst1").prop("checked") === true) {
-            console.log("CORRECT2");
             $scope.userAnswer = "";
             $("#inst2").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint3);
@@ -135,7 +137,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style2);
             $scope.removeHighlight($scope.currentStep.removeStyle2);
         } else if ($scope.currentStep.answer3.includes($scope.userAnswer) && $("#inst1").prop("checked") === true && $("#inst2").prop("checked") === true) {
-            console.log("CORRECT3");
             $scope.userAnswer = "";
             $("#inst3").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint4);
@@ -144,7 +145,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style3);
             $scope.removeHighlight($scope.currentStep.removeStyle3);
         } else if ($scope.currentStep.answer4.includes($scope.userAnswer) && $("#inst1").prop("checked") === true && $("#inst2").prop("checked") === true && $("#inst3").prop("checked") === true) {
-            console.log("CORRECT4");
             $scope.userAnswer = "";
             $("#inst4").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint5);
@@ -153,7 +153,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style4);
             $scope.removeHighlight($scope.currentStep.removeStyle4);
         } else if ($scope.currentStep.answer5.includes($scope.userAnswer) && $("#inst1").prop("checked") === true && $("#inst2").prop("checked") === true && $("#inst3").prop("checked") === true && $("#inst4").prop("checked") === true) {
-            console.log("CORRECT5");
             $scope.userAnswer = "";
             $("#inst5").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint6);
@@ -162,7 +161,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style5);
             $scope.removeHighlight($scope.currentStep.removeStyle5);
         } else if ($scope.currentStep.answer6.includes($scope.userAnswer) && $("#inst1").prop("checked") === true && $("#inst2").prop("checked") === true && $("#inst3").prop("checked") === true && $("#inst4").prop("checked") === true && $("#inst5").prop("checked") === true) {
-            console.log("CORRECT6");
             $scope.userAnswer = "";
             $("#inst6").prop("checked", true);
             $scope.populateHint($scope.currentStep.hint7);
@@ -171,7 +169,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style6);
             $scope.removeHighlight($scope.currentStep.removeStyle6);
         } else if ($scope.currentStep.answer7.includes($scope.userAnswer) && $("#inst1").prop("checked") === true && $("#inst2").prop("checked") === true && $("#inst3").prop("checked") === true && $("#inst4").prop("checked") === true && $("#inst5").prop("checked") === true && $("#inst6").prop("checked") === true) {
-            console.log("CORRECT7");
             $scope.userAnswer = "";
             $("#inst7").prop("checked", true);
             $("#appendText").append($scope.currentStep.append7);
@@ -179,7 +176,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.addHighlight($scope.currentStep.style7);
             $scope.removeHighlight($scope.currentStep.removeStyle7);
         } else {
-            console.log("INCORRECT");
             $("#addTerminalText").append("<p>command not found: " + $scope.userAnswer);
             $scope.userAnswer = "";
         }
