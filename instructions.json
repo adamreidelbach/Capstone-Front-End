@@ -428,7 +428,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "Checkout is used to switch between any of your branches or to your local master. Confusion often lies when checking out to the master or your branches, without adding and committing beforehand. This tutorial aims to clear up some of this confusion and give you some real world context.",
+                "learn": "Checkout is used to switch between any of your branches or to your local master. Confusion often lies when checking out to the master or to your branches, <i>without adding and committing beforehand</i>. This tutorial aims to clear up some of this confusion and give you some real world context.",
                 "instructions1": "Let’s say you’ve been working on a branch for a while. You have a few files inside of that branch that have been modified. Let’s take a look and see what files in particular have changed. Type in the command below into the terminal and hit enter",
                 "command1": "git status",
                 "terminal1": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\")</p>",
@@ -451,7 +451,7 @@
               },
               {
                 "stepNum": 2,
-                "learn": "Index.html, the css directory, and main.css are a part of my Local Branch, in this case, we have called it myBranch. Now, let’s checkout to the master and see what happens to the files.",
+                "learn": "Index.html, the css directory, and main.css are inside of Local Branch. In this case, we have simply named the branch, myBranch. Now, let’s checkout to the master and see what happens to the files.",
                 "instructions1": "For the sake of example, we will purposely not add or commit these files. Type in:",
                 "command1": "git checkout master",
                 "terminal1": "<p>Switched to branch 'master'</p>",
@@ -460,7 +460,7 @@
                 "terminal2": "<p>git status</p><p>On branch master<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p>",
                 "answer1": "git checkout master",
                 "answer2": "git status",
-                "append2": "Notice how these same files are now moved over to our Local Master. As you might expect, this could create some problems if we added and committed these changes to the master instead of to the branch we wanted to push to Github.",
+                "append2": "Notice how these same files haved moved over to our Local Master. As you might expect, this could create some problems if we add and commit these changes to the master instead of to the branch we want to push to Github.",
                 "style1": "#lm",
                 "removeStyle1": "#lb",
                 "hint1": "git checkout master",
@@ -476,7 +476,7 @@
               },
               {
                 "stepNum": 3,
-                "learn": "One advantage that git will offer you, if there are conflicts that would occur during the checkout, it will warn you. It will say something like:<br><p class='note'>error: Your local changes to the following files would be overwritten by checkout: index.html css/main.css<br>Please commit your changes or stash them before you switch branches.<br>Aborting<br></p><p>This git error will often save you some headache, but this tutorial is to show you what to do when that error is <i>not</i> given. Notice that we are now in the Local Master with some files we need to commit elsewhere. We need to move back to our branch and commit them there, not in our master.</p>",
+                "learn": "Git offers a helpful safeguard, if there are conflicts that would occur during the checkout, it will warn you. It will say something like:<br><p class='note'>error: Your local changes to the following files would be overwritten by checkout: index.html css/main.css<br>Please commit your changes or stash them before you switch branches.<br>Aborting<br></p><p>This git error will often save you some headache, but this tutorial is to show you what to do when that error is <i>not</i> given. Notice that we are now in the Local Master with some files we need to commit elsewhere. We need to move back to our branch and commit them there, not in our master.</p>",
                 "instructions1": " Type in the command below, notice the files will follow you back to myBranch.",
                 "command1": "git checkout myBranch",
                 "terminal1": "<p>Switched to branch 'myBranch'</p>",
@@ -496,7 +496,7 @@
               },
               {
                 "stepNum": 4,
-                "learn": " Notice how we were able to commit those files in either location. Whenever we changed locations, the files followed. We could also create a new branch entirely and those same files will follow us, waiting to be committed. <i>Note: the rule that files will follow if you don’t commit them is important to remember for your next task.</i>",
+                "learn": " Notice how we were able to commit those files in either location. Whenever we changed locations, the files followed. We could also create a new branch entirely and those same files would follow us, waiting to be committed. <i>Note: the rule that files will follow if you don’t commit them is important to remember in order to complete the upcoming challenge.</i>",
                 "terminal1": "",
                 "hint1": "",
                 "previousTerminal": "<p>git status</p><p>On branch myBranch<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\"</p><p>Switched to branch 'master'</p><p>git status</p><p>On branch master<br>Your branch is up-to-date with 'origin/master'.<br>Changes not staged for commit: <br>(use \"git add <file>...\" to update what will be committed)<br>Changes not staged for commit: <br>(use \"git checkout -- <file>. . .\" to discard changes in working directory)<br>modified: index.html<br>modified: css/main.css<br>no changes added to commit (use \"git add\" and/or \"git commit -a\")</p><p>Switched to branch 'myBranch'</p>",
@@ -520,7 +520,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note that these files are currently located inside of the Local Master. You need to push these changes up to Github. Resolve this issue and then push up your changes to Github. <i>Remember, your files will follow you until you add and commit them</i></p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You’ve been working for a while now and just realized you’ve been working on the master by mistake! You need to push these changes up to Github. Resolve this issue and then update your project on Github.</p><p>Note: These files are currently located inside of the Local Master.</p>",
                 "instructions1": "1.",
                 "command1": "1. Use myHomepage",
                 "terminal1": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p>",
@@ -553,7 +553,8 @@
                 "answer7": "",
                 "backTerminal": "<p>git checkout -b myHomepage</p><p>Switched to a new branch 'myHomepage'</p><p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 2 insertions(+)</p><p>git push origin myHomepage</p><p>Counting objects: 16, done.<br>Delta compression using up to 4 threads.<br>Compressing objects: 100% (6/6), done.<br>Writing objects: 100% (16/16), 1.19 KiB | 0 bytes/s , done.<br>Total 16 (delta 1), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (1/1), done.<br>To https://github.com/user/myProject.git<br>* [new branch] myHomepage -> myHomepage</p>",
                 "previousTerminal": "",
-                "append4": "Great work! Your team is now ready to take a look at your updated project. Let's move on to some more exercises."
+                "append4": "Great work! Your team is now ready to take a look at your updated project. Let's move on to some more exercises.",
+                "preStyle1": "#lm"
               }
             ]
         },
