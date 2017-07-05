@@ -732,7 +732,7 @@
             "steps": [
               {
                 "stepNum": 1,
-                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. This challenge will be in two parts. Once with some light cues to help you remember the necessary commands, and another pass with no cues. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You have been working in your branch (let's say it was simply called, myBranch) and now you need to pull down someone else’s code to test it and make sure it works properly. Don’t forgot to commit your changes before making a new branch. Afterwards, be sure to merge your branch with the new master. Let’s use John’s branch from before, titled JohnStyling.</p>",
+                "learn": "<p>You will be tasked with completing the following task, with appropriate commands, and in the appropriate order. This challenge will be in two parts. Once with some light cues to help you remember the necessary commands, and another pass with no cues. If you get stuck, hover over the ? icon in the upper right hand corner.</p><p>Scenario: You are currently working in branch building a splash page (let's simply call it splashPage) and now you need to pull down someone else’s code to test it and make sure it works properly. Don’t forgot to commit your changes before making a new branch. Afterwards, be sure to merge your branch with the new master. Let’s use John’s branch from before, titled JohnStyling.</p>",
                 "instructions1": "1. Before you can create a new branch, add and commit your files",
                 "command1": "",
                 "terminal1": "<p>git add .</p>",
@@ -755,11 +755,12 @@
                 "answer4": "git pull origin JohnStyling",
                 "terminal4": "<p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
                 "hint4": "",
-                "backTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p><p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p><p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
+                "backTerminal": "",
                 "previousTerminal": "",
                 "answer5": "",
                 "answer6": "",
-                "answer7": ""
+                "answer7": "",
+                "preStyle1": "#lb"
               },
               {
                 "stepNum": 2,
@@ -781,7 +782,6 @@
                 "removeStyle2": "#gm",
                 "preStyle1": "#gm",
                 "preStyle2": "#lb",
-                "removeOldStyle": "#lb",
                 "hint3": "",
                 "previousTerminal": "<p>git add .</p><p>git commit -m \"building splash page\"</p><p>[version1 1234abc] building splash page<br>2 files changed, 52 insertions(+)</p><p>git checkout -b JohnStyling</p><p>Switched to a new branch 'JohnStyling'</p><p>git pull origin JohnStyling</p><p>From https://github.com/user/myProject<br>* branch master -> FETCH_HEAD<br>123456a..b789876 master -> origin/master<br>Updating 123456a..b789876<br>Fast-foward<br>.gitignore | 0<br>css/main.css | 3<br>index.html | 3<br>javascripts/main.js | 3<br>4 files changed, 9 insertions(+)<br>123456 create mode .gitignore</p>",
                 "answer3": "",
