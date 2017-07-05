@@ -1,0 +1,21 @@
+<div ng-controller="SplashCtrl">
+    <nav class="splashNav">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo splashHeaderText">Get Git</a>
+            <a href="#" class="brand-logo center splashHeaderText">Choose An Exercise</a>
+        </div>
+    </nav>
+
+    <div class="allCards">
+        <div ng-repeat="item in instructions" class="card splashCards">
+            <div class="cardBackground">
+                <img class="cardImg" src="{{item.image}}">
+            </div>
+            <div class="card-content">
+                <div class="cardTitle">{{item.title}}</div><br>
+                <div class="cardDescription">{{item.description}}</div>
+                <p class="beginExercise"><a href="#!/exercises/{{item.id}}" data-target="exercise--{{item.name}}">Begin</a></p>
+            </div>
+        </div>
+    </div>
+</div>
