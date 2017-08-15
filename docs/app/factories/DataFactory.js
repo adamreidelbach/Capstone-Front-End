@@ -17,7 +17,6 @@ app.factory("DataFactory", function($q, $http) {
 
     const getTutorial = (whichOne) => {
         return $q((resolve, reject) => {
-            console.log("whichOne2", whichOne);
             $http.get("instructions.json")
                 .then((instructObj) => {
                     let newObj = instructObj.data.exercises;
@@ -36,7 +35,6 @@ app.factory("DataFactory", function($q, $http) {
         return $q((resolve, reject) => {
             $http.get("instructions.json")
                 .then((instructObj) => {
-                    console.log("getTitle", instructObj);
                     resolve(instructObj);
                 })
                 .catch((error) => {
