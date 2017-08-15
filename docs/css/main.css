@@ -109,9 +109,10 @@ textarea {
   background-color: lightgrey; }
 
 .splashCards {
-  height: 29rem;
+  height: 30rem;
   width: 26%;
-  margin: 1%; }
+  margin: 1%;
+  overflow-y: auto; }
 
 .splashHeaderText {
   color: #204056 !important; }
@@ -134,8 +135,9 @@ textarea {
   height: 12.5rem; }
 
 .cardImg {
-  width: 55% !important;
-  margin-left: 25%; }
+  width: 11.5rem !important;
+  display: block;
+  margin: auto; }
 
 .readmeImg {
   cursor: pointer; }
@@ -363,5 +365,10 @@ ul li span {
 
 ul li:hover span {
   display: flex; }
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 5%;
+    transform: translateX(-50%); } }
 
 /*# sourceMappingURL=main.css.map */

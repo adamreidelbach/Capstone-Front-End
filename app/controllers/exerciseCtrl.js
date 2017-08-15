@@ -4,14 +4,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     let nextButton = document.getElementById("nextButton");
 
-    // let lbName = document.getElementById("lbName");
-    // lbName.innerHTML = "-";
-    // let lbName2 = document.getElementById("lbName2");
-    // lbName2.innerHTML = "-";
-    // let lmName = document.getElementById("lmName");
-    // lmName.innerHTML = "-";
-    // let lmName2 = document.getElementById("lmName2");
-    // lmName2.innerHTML = "-";
     let addTerminalText = document.getElementById("addTerminalText"),
     previousTerminal = document.getElementById("previousTerminal"),
     backButton = document.getElementById("backButton"),
@@ -23,11 +15,9 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     terminal = document.getElementById("terminal");
 
     let getTutorial = (whichOne) => {
-        console.log("route", $routeParams.id);
         DataFactory.getTutorial(whichOne)
         .then( (instructions) => {
           $scope.instructions = instructions;
-          console.log("Got the tutorial", instructions);
           $scope.getStep(0, $scope.instructions);
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
@@ -46,9 +36,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.getStep = (index, obj) => {
         $scope.currentStep = obj.steps[index];
         $rootScope.page = index;
-        console.log("obj.steps[index].stepNum", obj.steps[index].stepNum);
-        console.log("obj.steps.length", obj.steps.length);
-        console.log("$rootScope.page", $rootScope.page + 1);
         //make back button inactive is page is less than 1
         if (obj.steps[index].stepNum === 1) {
             backButton.classList.add("inactive");
@@ -176,15 +163,7 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
             $scope.userAnswer = "";
         }
     };
-
-    // $("#thing").terminal(function(command, term) {
-    //     if (command == 'help') {
-    //         term.echo("available commands are mysql, js, test");
-    //     } else {
-    //         term.echo("unknown command " + command);
-    //     }
-    // });
-
+    
     $scope.resetStyle = () => {
         lb.classList.remove("highlight");
         gb.classList.remove("highlight");
@@ -205,7 +184,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
 
     $scope.addHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);
-        console.log(element);
         element.classList.add("highlight");
     };
 
