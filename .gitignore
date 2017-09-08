@@ -4,3 +4,4 @@ lib/bower_components
 lib/.sass-cache
 sass/
 app/values/fb-creds.js
+.vscode/

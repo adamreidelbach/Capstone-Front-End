@@ -2,9 +2,8 @@
 
 app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepFactory, $rootScope) {
 
-    let nextButton = document.getElementById("nextButton");
-
-    let addTerminalText = document.getElementById("addTerminalText"),
+    let nextButton = document.getElementById("nextButton"),
+    addTerminalText = document.getElementById("addTerminalText"),
     previousTerminal = document.getElementById("previousTerminal"),
     backButton = document.getElementById("backButton"),
     appendText = document.getElementById("appendText"),
@@ -22,7 +21,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
           StepFactory.setStepsNum(instructions.steps.length);
           $rootScope.steps = instructions.steps.length;
           $scope.populateLearn($scope.currentStep);
-          $scope.populateBranch($scope.currentStep);
           $scope.populateHint($scope.currentStep.hint1);
           $scope.addHighlight($scope.currentStep.preStyle1);
           return instructions;
@@ -47,9 +45,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         } else {
             nextButton.classList.remove("inactive");
         }
-        // if ($("#inst1").prop("checked", false)) {
-        //     nextButton.classList.add("inactive");
-        // }
     };
 
     $scope.nextStep = () => {
@@ -72,7 +67,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.addHighlight($scope.currentStep.preStyle1);
         $scope.addHighlight($scope.currentStep.preStyle2);
         $scope.removeHighlight($scope.currentStep.removeOldStyle);
-        //eventually will need to keep all previous code and add a line break
     };
 
     $scope.backStep = () => {
@@ -88,7 +82,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         $scope.getStep($scope.stepCounter, $scope.instructions);
         $scope.populateLearn($scope.currentStep);
         $scope.previousTerminalText($scope.currentStep);
-        // $("#inst1").prop("checked", true);
         $scope.populateHint($scope.currentStep.hint1);
         appendText.innerHTML = "";
         $scope.resetStyle();
@@ -171,12 +164,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
         gm.classList.remove("highlight");
     };
 
-     // adding and remove classes for the visualization area
-    // $scope.styling = (previousBox, newBox) => {
-    //     previousBox.removeClass("highlight");
-    //     newBox.addClass("highlight");
-    // };
-
     $scope.removeHighlight = (currentStep) => {
         let element = document.querySelector(currentStep);
         element.classList.remove("highlight");
@@ -195,19 +182,6 @@ app.controller('ExerciseCtrl', function(DataFactory, $scope, $routeParams, StepF
     $scope.populateHint = (currentHint) => {
         let helpContent = document.getElementById("helpContent");
         helpContent.innerHTML = currentHint;
-    };
-
-    $scope.populateBranch = (currentStep) => {
-        // if (currentStep.branch1 && currentStep.branch2 === "") {
-        //     lbName.classList.add("branchEmpty");
-        //     lbName2.classList.add("branchEmpty");
-        //     lmName.classList.add("branchEmpty");
-        //     lmName2.classList.add("branchEmpty");
-        // }
-        // lbName.innerHTML = currentStep.branch1;
-        // lbName2.innerHTML = currentStep.branch2;
-        // lmName.innerHTML = currentStep.branch1;
-        // lmName2.innerHTML = currentStep.branch2;
     };
 
     $scope.previousTerminalText = (currentStep) => {

@@ -144,7 +144,7 @@
         {
             "id": "tut1",
             "name": "Tutorial 1",
-            "title": "Github Workflow",
+            "title": "Tutorial 1 - Github Workflow",
             "image": "images/1.png",
             "description": "Here's a tutorial to practice using the Github workflow.",
             "steps": [
@@ -347,7 +347,7 @@
         {
             "id": "challenge1",
             "name": "Challenge 1",
-            "title": "Github Workflow Challenge",
+            "title": "Challenge 1 - Github Workflow",
             "image": "images/2.png",
             "description": "Let's test your knowledge of the Github workflow.",
             "steps": [
@@ -426,7 +426,7 @@
         {
             "id": "tut2",
             "name": "Tutorial 2",
-            "title": "Git Checkout",
+            "title": "Tutorial 2 - Checkout",
             "image": "images/3.png",
             "description": "A tutorial to cover using git checkout and how it works",
             "steps": [
@@ -519,7 +519,7 @@
         {
             "id": "challenge2",
             "name": "Challenge 2",
-            "title": "Checkout Challenge",
+            "title": "Challenge 2 - Checkout",
             "image": "images/4.png",
             "description": "Let's text your knowledge of using git checkout in a real life setting.",
             "steps": [
@@ -566,7 +566,7 @@
         {
             "id": "tut3",
             "name": "Tutorial 3",
-            "title": "Testing A Teammates Code",
+            "title": "Tutorial 3 - Testing A Teammates Code",
             "image": "images/5.png",
             "description": "A tutorial to learn how to test your teammates code.",
             "steps": [
@@ -737,7 +737,7 @@
         {
             "id": "challenge3",
             "name": "Challenge 3",
-            "title": "Testing A Teammates Code Challenge",
+            "title": "Challenge 3 - Testing A Teammates Code Challenge",
             "image": "images/6.png",
             "description": "Test your knowledge of how to test a teammates code.",
             "steps": [
